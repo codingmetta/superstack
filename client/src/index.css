@@ -56,14 +56,33 @@ body {
   z-index: 1;
 }
 
-/*text animations*/
 
-.fadeIn {
-  opacity: 0; /* Initially set to transparent */
-  transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity property */
+
+.container {
+  position: relative;
 }
 
-.fadeIn.loaded {
-  opacity: 1; /* When the 'loaded' class is added, text will fade in smoothly */
+.tooltip {
+  position: absolute;
+  color: black;
+  background: #fff;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 100%;
+  width: 22px;
+  border: 1px solid black;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  pointer-events: none;
+  z-index: 1000;
 }
-
+#map-container{
+  position: relative;
+}
+#map-container span {
+  position: absolute;
+  left: 0;
+  width: 60px;
+  color: #fff;
+  text-align: center;
+}

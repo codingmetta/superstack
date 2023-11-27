@@ -1,5 +1,8 @@
+'use client';
 import Tabs from './Tabs'
 import TabPane from './TabPane'
+import ImageMap from './ImageMap'
+import VanillaMapper from './VanillaMapper';
 
 function TabStrip() {
     return (
@@ -17,8 +20,14 @@ function TabStrip() {
                     <button className="p-2 pl-6 pr-6 ml-4 text-sm font-bold text-black uppercase border border-black rounded-full w-44 bg-limone">
                         Piercing Guide
                     </button>
-                    <div>
-                        {/* Piercing Anzeigen Komponente*/}
+                
+                    <div className="w-full h-full -translate-x-20">
+
+                        <ImageMap 
+                            responsive={true}
+                            parentWidth={340}
+                            active={true}
+                            />
                     </div>
                 </TabPane>
                 <TabPane title="Pflege">
@@ -54,7 +63,7 @@ function TabStrip() {
                     <button className="p-2 pl-6 pr-6 ml-4 text-sm font-bold text-black uppercase border border-black rounded-full w-44 bg-limone">
                         Stacking Guide
                     </button>
-                    <img className="translate-y-6"src="/images/woman-standing-removebg-preview.png" alt="" />
+                    <img className="translate-y-6" src="/images/woman-standing-removebg-preview.png" alt="" />
                 </TabPane>
             </Tabs>
         </div>
