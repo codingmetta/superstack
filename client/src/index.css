@@ -66,15 +66,16 @@ body {
   position: absolute;
   color: black;
   background: #fff;
-  transform: translate3d(-50%, -50%, 0);
   border-radius: 100%;
-  width: 22px;
+  width: 24px;
+  transform: translate3d(-10%, -20%, -10%);
   border: 1px solid black;
-  height: 22px;
+  height: 24px;
   text-align: center;
-  line-height: 22px;
+  line-height: 24px;
   pointer-events: none;
   z-index: 1000;
+  cursor: pointer;
 }
 #map-container{
   position: relative;
@@ -85,4 +86,9 @@ body {
   width: 60px;
   color: #fff;
   text-align: center;
+}
+
+.selected {
+  @apply
+  border-black border-2
 }

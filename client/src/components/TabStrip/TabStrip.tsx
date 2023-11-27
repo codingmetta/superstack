@@ -2,11 +2,10 @@
 import Tabs from './Tabs'
 import TabPane from './TabPane'
 import ImageMap from './ImageMap'
-import VanillaMapper from './VanillaMapper';
 
 function TabStrip() {
     return (
-        <div className='w-full h-full p-4 pt-12 pb-12 bg-lila'>
+        <div className='w-full min-w-[370px] h-full p-4 pt-12 pb-12 bg-lila'>
             <Tabs>
                 <TabPane title="Piercing">
                     <h3 className="text-2xl leading-[1.5rem] tracking-widest  font-climate">
@@ -21,11 +20,10 @@ function TabStrip() {
                         Piercing Guide
                     </button>
                 
-                    <div className="w-full h-full -translate-x-20">
-
+                    <div className="">
                         <ImageMap 
                             responsive={true}
-                            parentWidth={340}
+                            parentWidth={360}
                             active={true}
                             />
                     </div>
