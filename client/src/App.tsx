@@ -29,15 +29,6 @@ function App() {
       })
   }, []);
 
-  /*fetch test data from public api*/
-  /*    useEffect(() => {
-  fetch("https://fakestoreapi.com/products")
-    .then((res) => res.json())
-    .then((productData) => {
-      setProducts(productData);
-    });
-}, []);*/
-
   console.log(products);
   return (
     <div className="flex flex-col w-full h-full font-brico">
