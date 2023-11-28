@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
+import axios from 'axios';
+
 import './App.css'
+import './fonts/KODARO.ttf';
 
 import Header from './components/Header';
 import ProductSearch from './components/ProductSearch';
@@ -7,14 +10,18 @@ import Jumbotron from './components/Jumbotron';
 import Banner from './components/Banner';
 import TabStrip from './components/TabStrip/TabStrip';
 import SkeletonLoader from './components/SkeletonLoader';
+import ShoppingCart from './components/ShoppingCart';
+
+import { ShoppingCartContext } from './Context';
 
 
-import './fonts/KODARO.ttf';
-import axios from 'axios';
+
 
 function App() {
   const [products, setProducts] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [cart, updateCart] = useState([]);
+
 
 
   useEffect(() => {
@@ -29,18 +36,27 @@ function App() {
       })
   }, []);
 
-  console.log(products);
   return (
     <div className="flex flex-col w-full h-full font-brico">
-      <Header></Header>
-      <Jumbotron></Jumbotron>
-      <Banner></Banner>
-      {isLoading ?
-        <SkeletonLoader />
-        :
-        <ProductSearch products={products} />
-      }
-      <TabStrip></TabStrip>
+      <ShoppingCartContext.Provider
+              value={{
+                cart,
+                updateCart
+              }} 
+              >
+
+        <Header></Header>
+        <Jumbotron></Jumbotron>
+        <Banner></Banner>
+        <ShoppingCart></ShoppingCart>
+        {isLoading ?
+          <SkeletonLoader />
+          :
+          <ProductSearch products={products} />
+        }
+        <TabStrip></TabStrip>
+      </ShoppingCartContext.Provider>
+
     </div>
   );
 }

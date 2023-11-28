@@ -1,15 +1,20 @@
 'use client';
-import { useState} from 'react';
+import { useState, useContext} from 'react';
 import Rating from './Rating';
+import { ShoppingCartContext } from '../Context'
 
 function Card({ product }) {
+    const { cart, updateCart } = useContext(ShoppingCartContext);
 
     const [configuratedProduct, setConfiguratedProduct] = useState({
+        id: product.id,
+        image: product.image,
         title: product.title,
+        priceFactor: 1,
         price: product.price,
         size: product.sizes[0],
         color: 'gold',
-        amount: 1
+        variant: 'single'
     });
     const [selectedVariant, setSelectedVariant] = useState('single');
     const [goldSelected, setGoldSelected] = useState(true);
@@ -22,14 +27,19 @@ function Card({ product }) {
     }
     function handleVariantSelection(newVariant){
         setSelectedVariant(newVariant);
+
         setConfiguratedProduct({
             ...configuratedProduct,
-            amount: newVariant ==='single'? 1 : 2
+            variant: newVariant,
+            priceFactor: newVariant ==='single'? 1 : 2
         });
     }
     
     function addProductToCart() {
-        console.log(configuratedProduct);
+        updateCart([
+            ...cart,
+            configuratedProduct
+          ])
     }
 
     function handleGoldClicked(){
@@ -53,8 +63,8 @@ function Card({ product }) {
         )
     })
 
+    const priceSum = configuratedProduct.price * configuratedProduct.priceFactor;
     const ratingCleanedUp = Math.floor(product.rating);
-    const currentPrice = configuratedProduct.price * configuratedProduct.amount; 
     return (
         <article className="flex flex-col items-center justify-around text-sm bg-white border border-black rounded-3xl w-44">
             <section className="w-full">
@@ -63,7 +73,7 @@ function Card({ product }) {
             <section className="w-full h-32 p-3">
                 <Rating rating={ratingCleanedUp} />
                 <h3 className="font-semibold line-clamp-2 ">{product.title}</h3>
-                <p className="pt-1">{currentPrice.toFixed(2)}€</p>
+                <p className="pt-1">{priceSum.toFixed(2)}€</p>
             </section>
 
             <section className="w-full h-40 pl-3 pr-3 mb-2">
