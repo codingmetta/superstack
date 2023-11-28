@@ -12,6 +12,7 @@ function Header() {
         console.log('clicked')
         setIsMenuOpen(prev => !prev);
     }
+  
     return (
         <>
             <nav className="fixed z-10 w-full pl-4 pr-4 border-b border-black shadow backdrop-blur-xl ">

@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Jumbotron() {
     return (
         <div className="flex flex-col items-center justify-between min-h-screen p-2 banner">

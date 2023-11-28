@@ -1,9 +1,7 @@
 'use client';
-
 import ImageMapper from 'react-img-mapper';
 import { Fragment, useState } from 'react';
 
-//TODO: transparent machen und radius vergrößern mit gpt 
 const mapJSON = `[
   {
     "id": "flat-helix",
@@ -136,7 +134,6 @@ const mapJSON = `[
     "title": "13"
   }
 ]
-
 `
 
 const getCenterCoords = (areas) =>
