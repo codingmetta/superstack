@@ -61,13 +61,16 @@ function CartItem({ item }) {
                 </div>
                 <div className="flex flex-col justify-between w-3/6 gap-2 text-start " >
                     <h3 className="font-bold text-md">{item.title}</h3>
-                    <div>
-                        <p className="text-sm text-gray-400 capitalize font-extralight">Stil: {item.variant}</p>
-                        <p className="text-sm text-gray-400 capitalize font-extralight">Farbe: {item.color}</p>
-                        <p className="text-sm text-gray-400 capitalize font-extralight">Größe: {item.size}</p>
-                    </div>
+                    <>
+                        <p className="text-sm leading-none text-gray-400 capitalize font-extralight">
+                            Variante: {item.variant}</p>
+                        <p className="text-sm leading-none text-gray-400 capitalize font-extralight">
+                            Farbe: {item.color}</p>
+                        <p className="text-sm leading-none text-gray-400 capitalize font-extralight">
+                            Größe: {item.size}</p>
+                    </>
 
-                    <div className='flex flex-row items-center text-center'>
+                    <div className='flex flex-row items-center mt-3 text-center'>
                         <button onClick={handleDecreaseAmount} className='flex items-center justify-center w-8 text-xl text-gray-500 border font-extralight '>-</button>
                         <span className='w-12 p-0.5 border text-md'>{item.amount}</span>
                         <button onClick={handleIncreaseAmount} className='flex justify-center w-8 text-xl text-gray-500 border font-extralight '>+</button>
@@ -90,7 +93,6 @@ function CartItem({ item }) {
                     </button>
                     <p className="font-bold ">{item.variantPrice.toFixed(2)}€</p>
                 </div>
-
             </article>
         </>
     )

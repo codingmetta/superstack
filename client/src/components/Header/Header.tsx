@@ -5,6 +5,7 @@ import Logo from './Logo';
 import SearchBtn from './SearchBtn';
 import CartBtn from './CartBtn';
 
+
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -22,6 +23,7 @@ function Header() {
                     <span className="flex flex-row gap-1">
                         <SearchBtn />
                         <CartBtn />
+
                     </span>
                 </div>
             </nav>

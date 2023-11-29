@@ -1,4 +1,5 @@
 'use client';
+import { nanoid } from 'nanoid';
 import { useState, useContext } from 'react';
 import Rating from './Rating';
 import { ShoppingCartContext } from '../Context'
@@ -7,7 +8,7 @@ function Card({ product }) {
     const { cart, updateCart, setShowCart } = useContext(ShoppingCartContext);
 
     const [configuratedProduct, setConfiguratedProduct] = useState({
-        id: product.id,
+        id: nanoid(),
         image: product.image,
         title: product.title,
         price: product.price,
