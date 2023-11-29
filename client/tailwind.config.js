@@ -11,7 +11,8 @@ export default {
       'limone': '#E6FF1E',
       'mint': '#aafac8',
       'beige': '#f7f7f7',
-      'lila': '#7800d7'
+      'lila': '#7800d7',
+      'lavendel': "#cca5f8"
     },
     fontFamily:{
       'logo': ['Kodaro'],

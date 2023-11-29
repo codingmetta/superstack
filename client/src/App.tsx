@@ -11,6 +11,7 @@ import Banner from './components/Banner';
 import TabStrip from './components/TabStrip/TabStrip';
 import SkeletonLoader from './components/SkeletonLoader';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
+import Menu from './components/Menu';
 
 import { ShoppingCartContext } from './Context';
 
@@ -22,6 +23,8 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [cart, updateCart] = useState([]);
   const [showCart, setShowCart] = useState(false);
+  const [showMenu, setMenu] = useState(true);
+
 
 
   useEffect(() => {
@@ -52,15 +55,22 @@ function App() {
             :
             <>
               <Header />
-              <Jumbotron />
-              <Banner />
-
-              {isLoading ?
-                <SkeletonLoader />
+              {showMenu ?
+                <Menu />
                 :
-                <ProductGallery  products={products} />
+                <>
+                  <Jumbotron />
+                  <Banner />
+
+                  {isLoading ?
+                    <SkeletonLoader />
+                    :
+                    <ProductGallery products={products} />
+                  }
+                  <TabStrip />
+                </>
               }
-              <TabStrip />
+
             </>
         }
       </ShoppingCartContext.Provider>
