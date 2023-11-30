@@ -11,7 +11,7 @@ import Banner from './components/Banner';
 import TabStrip from './components/TabStrip/TabStrip';
 import SkeletonLoader from './components/SkeletonLoader';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
-import Menu from './components/Menu';
+import Menu from './components/Menu/Menu';
 
 import { ShoppingCartContext } from './Context';
 
