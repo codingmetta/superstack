@@ -7,7 +7,6 @@ import GuidesTab from './GuidesTab';
 // TODO: Store Tab
 
 function NavTitle({ onClick, viewState, view, children }) {
-
     return (
         <li>
             <button
@@ -39,14 +38,14 @@ function Menu() {
     return (
         <div className='flex flex-col min-h-screen bg-anti-flash'>
             <Nav>
-                    <NavTitle onClick={handleClick} viewState={viewState} view={'SHOP'}>
-                        Shop</NavTitle>
-                    <NavTitle onClick={handleClick} viewState={viewState} view={'GUIDES'} >
-                        Guides</NavTitle>
-                    <NavTitle onClick={handleClick} viewState={viewState} view={'ABOUT'} >
-                        About</NavTitle>
-                    <NavTitle onClick={handleClick} viewState={viewState} view={'STORE'} >
-                        Store</NavTitle>
+                <NavTitle onClick={handleClick} viewState={viewState} view={'SHOP'}>
+                    Shop</NavTitle>
+                <NavTitle onClick={handleClick} viewState={viewState} view={'GUIDES'} >
+                    Guides</NavTitle>
+                <NavTitle onClick={handleClick} viewState={viewState} view={'ABOUT'} >
+                    About</NavTitle>
+                <NavTitle onClick={handleClick} viewState={viewState} view={'STORE'} >
+                    Store</NavTitle>
             </Nav>
             {
                 viewState === 'SHOP' && <ShopTab />

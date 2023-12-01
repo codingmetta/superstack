@@ -1,9 +1,8 @@
 'use client';
 
-function StarIcon({ key, value }) {
+function StarIcon({  value }) {
     return (
         <svg
-            key={key}
             className={`w-4 h-4 mr-1 ${value}`}
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"

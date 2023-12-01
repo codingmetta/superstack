@@ -4,6 +4,38 @@ import { useState, useContext } from 'react';
 import Rating from './Rating';
 import { ShoppingCartContext } from '../../Context'
 
+function ProductCardWrapper({ children }) {
+    return (
+        <article className="flex flex-col items-center justify-around text-sm bg-white border border-black rounded-3xl w-44">
+            {children}
+        </article>
+    );
+}
+
+function ProductCardHead({ children }) {
+    return (
+        <section className="w-full">
+            {children}
+        </section>
+    );
+}
+
+function ProductCardBody({ children }) {
+    return (
+        <>
+            {children}
+        </>
+    );
+}
+
+function ProductCardFooter({ children }) {
+    return (
+        <section className="flex flex-col w-full h-40 gap-2 pl-3 pr-3 mb-2">
+            {children}
+        </section>
+    );
+}
+
 function Card({ product }) {
     const { cart, updateCart, setShowCart } = useContext(ShoppingCartContext);
 
@@ -29,7 +61,7 @@ function Card({ product }) {
     }
     function handleVariantSelection(newVariant) {
 
-        const newVariantPrice =  calcVariantPrice(newVariant)
+        const newVariantPrice = calcVariantPrice(newVariant)
 
         setSelectedVariant(newVariant);
         setConfiguratedProduct({
@@ -62,7 +94,7 @@ function Card({ product }) {
         });
     }
 
-    function calcVariantPrice(variant){
+    function calcVariantPrice(variant) {
         let variantPrice = 0;
         if (variant === 'single') {
             variantPrice = configuratedProduct.price;
@@ -71,29 +103,33 @@ function Card({ product }) {
         }
         return variantPrice;
     }
-    
+
     const optionElements = product.sizes.map((size, index) => {
         return (
             <option key={index} value={size}>{size}</option>
         )
     })
 
-    const ratingLabelCleanedUp = Math.floor(product.rating);
-    const priceLabelCleanedUp = configuratedProduct.variantPrice.toFixed(2);
-    
-    return (
-        <article className="flex flex-col items-center justify-around text-sm bg-white border border-black rounded-3xl w-44">
-            <section className="w-full">
-                <img src={product.image} alt="" className="object-contain w-full h-full border border-transparent cursor-pointer rounded-3xl " />
-            </section>
-            <section className="w-full h-32 p-3">
-                <Rating rating={ratingLabelCleanedUp} />
-                <h3 className="font-semibold line-clamp-2 ">{product.title}</h3>
-                <p className="pt-1">{priceLabelCleanedUp}€</p>
-            </section>
+    const ratingClean = Math.floor(product.rating);
+    const priceClean= configuratedProduct.variantPrice.toFixed(2);
 
-            <section className="w-full h-40 pl-3 pr-3 mb-2">
-                <div className="flex flex-col w-full h-full gap-2 ">
+    return (
+        <ProductCardWrapper>
+            <ProductCardHead>
+                <img
+                    src={configuratedProduct.image}
+                    alt={configuratedProduct.title}
+                    className="object-contain w-full h-full border border-transparent cursor-pointer rounded-3xl " />
+            </ProductCardHead>
+            <ProductCardBody>
+                <section className="w-full h-32 p-3">
+                    <Rating rating={ratingClean} />
+                    <h3 className="font-semibold line-clamp-2 ">{product.title}</h3>
+                    <p className="pt-1">{priceClean}€</p>
+                </section>
+            </ProductCardBody>
+
+            <ProductCardFooter>
                     <div className='flex gap-2 mb-1'>
                         <span
                             onClick={handleGoldClicked}
@@ -125,11 +161,9 @@ function Card({ product }) {
                         className="h-10 text-sm border border-black rounded-md cursor-pointer bg-limone">
                         Add to cart
                     </button>
-                </div>
-            </section>
-
-        </article>
-    )
+            </ProductCardFooter>
+        </ProductCardWrapper>
+    );
 }
 
 export default Card

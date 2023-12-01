@@ -11,9 +11,21 @@ body {
   box-sizing: border-box;
   background-color: beige;
 }
-
-.banner {
+.banner-1 {
   background-image: url("./public/images/banner.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-2{
+  background-image: url("https://www.superstack.me/cdn/shop/files/Header_IMG_2.jpg?v=1679323649");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner-3 {
+  background-image: url('https://www.superstack.me/cdn/shop/files/Stackers_take_care_Bild_rechts_cuttet.jpg?v=1658849047');
   background-color: #cccccc;
   background-repeat: no-repeat;
   background-size: cover;

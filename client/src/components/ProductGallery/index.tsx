@@ -4,13 +4,13 @@ import ProductList from './ProductList';
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 import { FaceFrownIcon } from '@heroicons/react/24/outline';
 
-
 function SearchInputWrapper({ children }) {
     return (
         <div className='flex flex-row items-center justify-center w-full pt-6 pb-4'>
             <div className="relative">
                 {children}
-            </div></div>
+            </div>
+            </div>
     );
 }
 
@@ -40,6 +40,7 @@ function Input({ handleSearchInput, placeholder }) {
             onChange={(e) => handleSearchInput(e)}
         />);
 }
+
 function NothingFound() {
     return (
         <p className="flex flex-row items-center w-full h-20 gap-6 px-8 py-12 mx-5 mb-8 bg-anti-flash rounded-xl">
@@ -50,17 +51,15 @@ function NothingFound() {
 }
 
 
-
-
-function ProductGallery({ products }) {
+function ProductGallery({products}) {
     const [searchInput, setSearchInput] = useState("");
 
     function handleSearchInput(e) {
         setSearchInput(e.target.value);
     }
 
-    function filterData(productList) {
-        const data = productList.filter((product) => {
+    function filterData(products) {
+        const data = products.filter((product) => {
             return (
                 Object.values(product)
                     .join("")
