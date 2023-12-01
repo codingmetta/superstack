@@ -118,6 +118,7 @@ function LocationBtn({ title, imgURL, alt }) {
         </article>
     );
 }
+
 function LocationsWrapper({ children }) {
     return (
         <section className='flex flex-row flex-wrap items-center justify-start w-full h-full gap-1.5 p-0 m-0 bg-anti-flash'>

@@ -2,7 +2,7 @@
 import { nanoid } from 'nanoid';
 import { useState, useContext } from 'react';
 import Rating from './Rating';
-import { ShoppingCartContext } from '../Context'
+import { ShoppingCartContext } from '../../Context'
 
 function Card({ product }) {
     const { cart, updateCart, setShowCart } = useContext(ShoppingCartContext);
