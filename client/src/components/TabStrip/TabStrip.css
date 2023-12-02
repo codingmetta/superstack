@@ -1,0 +1,61 @@
+.active {
+    @apply
+    h-16  -translate-y-4  border-r-2 border-l-2 border-t-2 rounded-t-2xl leading-[3rem]
+  }
+  
+  
+  .inactive {
+    @apply
+    h-12 border-2 rounded-t-2xl leading-[3rem]
+  }
+  
+  .info-box .active-panel {
+    z-index: 1;
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .tooltip {
+    position: absolute;
+    color: black;
+    background: #fff;
+    border-radius: 100%;
+    width: 24px;
+    transform: translate3d(-10%, -20%, -10%);
+    border: 1px solid black;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    pointer-events: none;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  #map-container{
+    position: relative;
+  }
+  #map-container span {
+    position: absolute;
+    left: 0;
+    width: 60px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .selected {
+    @apply
+    border-black border-2
+  }
+  .isFocused {
+    @apply
+    border border-black rounded-lg 
+  }   
+  
+  .box{
+    @apply
+    transition-transform translate-x-full
+  
+  }
+  
+  

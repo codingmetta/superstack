@@ -11,25 +11,6 @@ body {
   box-sizing: border-box;
   background-color: beige;
 }
-.banner-1 {
-  background-image: url("./public/images/banner.jpg");
-  background-color: #cccccc;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.banner-2{
-  background-image: url("https://www.superstack.me/cdn/shop/files/Header_IMG_2.jpg?v=1679323649");
-  background-color: #cccccc;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner-3 {
-  background-image: url('https://www.superstack.me/cdn/shop/files/Stackers_take_care_Bild_rechts_cuttet.jpg?v=1658849047');
-  background-color: #cccccc;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .shadow {
   -webkit-box-shadow: 0px 12px 17px -14px rgba(0,0,0,0.53); 
@@ -44,77 +25,6 @@ body {
   @apply
   text-gray-400
 }
-
-
-/*TabStrip Component*/
-
-/* info-box setup */
-
- .active {
-  @apply
-  h-16 -translate-y-4  border-r-2 border-l-2 border-t-2 rounded-t-2xl leading-[4rem]
-}
-
-/*.inactive {
-  @apply
-   border-2 rounded-t-2xl 
-}*/
-.inactive {
-  @apply
-  border-2 rounded-t-2xl 
-}
-
-.info-box .active-panel {
-  z-index: 1;
-}
-
-
-
-.container {
-  position: relative;
-}
-
-.tooltip {
-  position: absolute;
-  color: black;
-  background: #fff;
-  border-radius: 100%;
-  width: 24px;
-  transform: translate3d(-10%, -20%, -10%);
-  border: 1px solid black;
-  height: 24px;
-  text-align: center;
-  line-height: 24px;
-  pointer-events: none;
-  z-index: 1000;
-  cursor: pointer;
-}
-#map-container{
-  position: relative;
-}
-#map-container span {
-  position: absolute;
-  left: 0;
-  width: 60px;
-  color: #fff;
-  text-align: center;
-}
-
-.selected {
-  @apply
-  border-black border-2
-}
-.isFocused {
-  @apply
-  border border-black rounded-lg 
-}   
-
-.box{
-  @apply
-  transition-transform translate-x-full
-
-}
-
 
 .fancy {
   background-color: #ffffff;

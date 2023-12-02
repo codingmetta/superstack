@@ -3,6 +3,7 @@ import ImageMapper from 'react-img-mapper';
 import { Fragment, useState } from 'react';
 import areasJSON from '../../assets/data/areas.json';
 
+
 const getCenterCoords = (areas) =>
   areas.map((area) => {
     const n = area.coords.length / 2;
@@ -19,7 +20,7 @@ const ImageMap = props => {
   const [selectedArea, setSelectedArea] = useState("1");
   const [selectedPiercingTitle, setSelectedPiercingTitle] = useState("Tragus");
 
-  const URL = "/images/piercings-map-removebg-preview.png";
+  const URL = "/images/piercings-map-bg-removed.png";
   const MAP = {
     name: 'img-mapper-img',
     areas: areasJSON

@@ -23,7 +23,7 @@ function InputIcon({ children }) {
 }
 function ProductListWrapper({ children }) {
     return (
-        <section className="flex flex-row flex-wrap w-full h-full gap-2 p-1.5">
+        <section className="flex flex-row flex-wrap justify-between w-full h-full gap-2 p-1.5">
             {children}
         </section>
     );

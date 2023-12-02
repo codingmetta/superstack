@@ -9,7 +9,7 @@ function TabTitle(props) {
   
     return (
       <li className="w-full h-full p-0 m-0 focus:font-bold hover:font-bold" onClick={handleOnClick}>
-        <span className={` bg-lila inline-block leading-10 text-center w-full h-full text-white border-white ${isActive ? "active " : " inactive"}`}>
+        <span className={` bg-lila inline-block text-center w-full  text-white border-white ${isActive ? " active" : " inactive"}`}>
           {title}
         </span>
       </li>

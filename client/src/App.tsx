@@ -1,12 +1,6 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios';
-
 import './App.css'
-import './fonts/KODARO.ttf';
-
 import Header from './components/Header';
 import ProductGallery from './components/ProductGallery';
-import Jumbotron from './components/Jumbotron';
 import Banner from './components/Banner';
 import TabStrip from './components/TabStrip';
 import SkeletonLoader from './components/ProductGallery/SkeletonLoader';
@@ -15,6 +9,7 @@ import Menu from './components/Menu';
 import CostumCarousel from './components/Carousel';
 import productData from './assets/data/products.json'
 
+import { useState } from 'react'
 import { ShoppingCartContext} from './Context';
 
 //TODO: use React Router

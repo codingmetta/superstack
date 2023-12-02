@@ -8,14 +8,16 @@ import CartBtn from './CartBtn';
 function Header() {
 
     return (
-        <nav className="fixed z-10 flex flex-wrap items-center justify-between w-full max-w-screen-xl pl-4 pr-4 mx-auto border-b border-black shadow backdrop-blur-xl ">
-            <MenuBtn />
-            <Logo />
-            <span className="flex flex-row gap-2">
-                <SearchBtn />
-                <CartBtn />
-            </span>
-        </nav>
+        <header className="">
+            <nav className="fixed z-10 flex flex-wrap items-center justify-between w-full py-2 pl-3 pr-6 mx-auto border-b border-black shadow backdrop-blur-xl ">
+                <MenuBtn />
+                <Logo />
+                <span className="flex flex-row gap-2">
+                    <SearchBtn />
+                    <CartBtn />
+                </span>
+            </nav>
+        </header>
     )
 }
 

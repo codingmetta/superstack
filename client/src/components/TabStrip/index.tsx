@@ -2,6 +2,7 @@
 import Tabs from './Tabs'
 import TabPane from './TabPane'
 import ImageMap from './ImageMap'
+import './TabStrip.css'
 
 function TabStrip() {
     return (

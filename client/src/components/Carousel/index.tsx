@@ -1,20 +1,72 @@
 'use client';
 import { Carousel } from 'flowbite-react';
+import './Carousel.css'
+
+import type { CustomFlowbiteTheme } from 'flowbite-react';
 
 
-function CarouselBanner({ children }) {
+const customIndicatorTheme: CustomFlowbiteTheme = {
+    indicators: {
+        active: {
+            off: "bg-white/90 border-0 hover:bg-white dark:bg-gray-800/50 dark:hover:bg-gray-800",
+            on: "bg-mint border border-black  dark:bg-gray-800"
+        },
+        base: "h-2.5 w-2.5 rounded-full",
+        wrapper: "absolute bottom-5 left-1/2 flex -translate-x-1/2 space-x-3"
+    },
+    scrollContainer: {
+        base: "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth",
+        snap: "snap-x"
+    }
+};
+
+function CarouselBottom({ children }) {
     return (
-        <div className='flex flex-row items-center justify-center p-2 mt-20 text-xl font-extrabold text-center text-white uppercase border border-white w-86 text-align rounded-3xl backdrop-blur-xl font-unbounded'>
+        <div className='flex flex-col justify-center gap-4 pb-4'>
             {children}
-            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12 overflow-hidden -translate-y-16">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-            </svg>
+        </div>
+    );
+}
+
+function CarouselBtn({ color, height, width, children }) {
+    return (
+        <button className={`${width} ${height} ${color} text-xl tracking-wide border border-black cursor-pointer rounded-xl`}>
+            {children}
+        </button>
+    );
+}
+
+
+function CarouselCardWhite({ children }) {
+    return (
+        <div className='relative flex flex-col items-center justify-center w-full p-2 text-xl border border-white rounded-3xl backdrop-blur-xl ' id='sparkle-card'>
+            <p className='py-5 text-xl font-black text-center text-white uppercase font-unbounded'>
+                {children}
+            </p>
+            <img className=' w-7 h-7' src="//www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-White.svg?v=104040978342407960781682329630" />
+            <img className=' w-7 h-7' src="//www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-White.svg?v=104040978342407960781682329630" />
+            <img className=' w-7 h-7' src="//www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-White.svg?v=104040978342407960781682329630" />
+            <img className=' w-7 h-7' src="//www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-White.svg?v=104040978342407960781682329630" />
         </div>
     )
 }
-function CarouselBody({ children, pos }) {
+function CarouselCardBlack({ children }) {
     return (
-        <div className={`flex flex-col min-h-screen p-8 items-center justify-between bg-gray-400 dark:bg-gray-700 dark:text-white banner-${pos}`}>
+        <div className='relative flex flex-col items-center justify-center w-full p-2 text-xl border border-black rounded-3xl backdrop-blur-xl ' id='sparkle-card'>
+            <p className='py-5 text-xl font-black text-center text-black uppercase font-unbounded'>
+                {children}
+            </p>
+            <img className=' w-7 h-7' src="https://www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-Black.svg?v=154082635854720999921682322560" />
+            <img className=' w-7 h-7' src="https://www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-Black.svg?v=154082635854720999921682322560" />
+            <img className=' w-7 h-7' src="https://www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-Black.svg?v=154082635854720999921682322560" />
+            <img className=' w-7 h-7' src="https://www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-Black.svg?v=154082635854720999921682322560" />
+        </div>
+    )
+}
+
+function CarouselPanel({ children, pos }) {
+    return (
+        <div className={`flex flex-col min-h-[88vh]  pt-28 pb-12 px-3 items-center justify-between bg-gray-400 dark:bg-gray-700 dark:text-white banner-${pos}`}>
             {children}
         </div>
     );
@@ -22,44 +74,63 @@ function CarouselBody({ children, pos }) {
 
 function CarouselWrapper({ children }) {
     return (
-        <div className="h-full sm:h-64 xl:h-80 2xl:h-96">
+        <div className="w-full min-h-[88vh] sm:h-64 xl:h-80 2xl:h-96">
             {children}
         </div>
     );
 }
 
-
 function CostumCarousel() {
     return (
-        <Carousel slide={false} leftControl=" " rightControl=" ">
-            <CarouselBody pos={'1'} >
-                <CarouselBanner>
-                    Say Hello to your future ear piercings
-                </CarouselBanner>
-                <div className='flex flex-col justify-center w-56 gap-4 pb-4'>
-                    <button className='text-xl tracking-wide border border-black cursor-pointer rounded-xl h-14 bg-mint'>Termin buchen</button>
-                    <button className='text-xl tracking-wide bg-white border border-black cursor-pointer rounded-xl h-14'>Shop Jewelry</button>
-                </div>
-            </CarouselBody>
-            <CarouselBody pos={'2'} >
-                <CarouselBanner>
-                    Hypoallergene Piercings speziell für sensible Ohren
-                </CarouselBanner>
-                <div className='flex flex-col justify-center w-56 gap-4 pb-4'>
-                    <button className='text-xl tracking-wide border border-black cursor-pointer rounded-xl h-14 bg-mint'>Termin buchen</button>
-                    <button className='text-xl tracking-wide bg-white border border-black cursor-pointer rounded-xl h-14'>Shop Jewelry</button>
-                </div>
-            </CarouselBody>
-            <CarouselBody pos={'3'} >
-                <CarouselBanner>
-                    Hypoallergene Piercings für sensible Ohren
-                </CarouselBanner>
-                <div className='flex flex-col justify-center w-56 gap-4 pb-4'>
-                    <button className='text-xl tracking-wide border border-black cursor-pointer rounded-xl h-14 bg-mint'>Termin buchen</button>
-                    <button className='text-xl tracking-wide bg-white border border-black cursor-pointer rounded-xl h-14'>Shop Jewelry</button>
-                </div>
-            </CarouselBody>
-        </Carousel >
+        <CarouselWrapper>
+            <Carousel theme={customIndicatorTheme} slide={false} leftControl=" " rightControl=" ">
+
+                <CarouselPanel pos={'1'} >
+                    <CarouselCardWhite>
+                        Say Hello to your future ear piercings
+                    </CarouselCardWhite>
+                    <CarouselBottom>
+                        <CarouselBtn color='bg-mint' width='w-56' height='h-14'>
+                            Termin Buchen
+                        </CarouselBtn>
+                        <CarouselBtn color='bg-white' width='w-56' height='h-14'>
+                            Shop Jewelry
+                        </CarouselBtn>
+                    </CarouselBottom>
+                </CarouselPanel>
+
+                <CarouselPanel pos={'2'} >
+                    <CarouselCardBlack>
+                        Hypoallergene Piercings
+                        <p className="pt-2 text-xs font-light tracking-wide">speziell für sensible Ohren</p>
+                    </CarouselCardBlack>
+                    <CarouselBottom>
+                        <CarouselBtn color='bg-mint' width='w-56' height='h-14'>
+                            Termin Buchen
+                        </CarouselBtn>
+                        <CarouselBtn color='bg-white' width='w-56' height='h-14'>
+                            Shop Jewelry
+                        </CarouselBtn>
+                    </CarouselBottom>
+                </CarouselPanel>
+
+                <CarouselPanel pos={'3'} >
+                    <CarouselCardBlack>
+                        Hypoallergene Piercings
+                        <p className="pt-2 text-xs font-light tracking-wide">für sensible Ohren</p>
+                    </CarouselCardBlack>
+                    <CarouselBottom>
+                        <CarouselBtn color='bg-mint' width='w-56' height='h-14'>
+                            Termin Buchen
+                        </CarouselBtn>
+                        <CarouselBtn color='bg-white' width='w-56' height='h-14'>
+                            Shop Jewelry
+                        </CarouselBtn>
+                    </CarouselBottom>
+                </CarouselPanel>
+
+            </Carousel >
+        </CarouselWrapper>
     );
 }
 

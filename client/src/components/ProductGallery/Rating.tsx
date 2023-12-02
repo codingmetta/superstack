@@ -16,7 +16,6 @@ function StarIcon({  value }) {
 
 function Rating({ rating }) {
 
-
     function computeStars(rating) {
         const stars = [];
         const starsFilled = rating;
