@@ -1,21 +1,35 @@
+/* eslint-disable */
 'use client';
 import { Carousel } from 'flowbite-react';
-import './Carousel.css'
+import './Carousel.css';
 
-import type { CustomFlowbiteTheme } from 'flowbite-react';
+import type { FlowbiteCarouselTheme } from 'flowbite-react';
 
-
-const customIndicatorTheme: CustomFlowbiteTheme = {
+const customIndicatorTheme: FlowbiteCarouselTheme = { /* eslint-disable-line */
+    root: {
+        base: "relative h-full w-full",
+        leftControl: "absolute top-0 left-0 flex h-full items-center justify-center px-4 focus:outline-none",
+        rightControl: "absolute top-0 right-0 flex h-full items-center justify-center px-4 focus:outline-none"
+    },
     indicators: {
         active: {
             off: "bg-white/90 border-0 hover:bg-white dark:bg-gray-800/50 dark:hover:bg-gray-800",
             on: "bg-mint border border-black  dark:bg-gray-800"
         },
         base: "h-2.5 w-2.5 rounded-full",
-        wrapper: "absolute bottom-5 left-1/2 flex -translate-x-1/2 space-x-3"
+        wrapper: "absolute bottom-5 left-1/2 -translate-x-1/2 space-x-3"
+    },
+    item: {
+        base: "absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2",
+        wrapper: "w-full flex-shrink-0 transform cursor-default snap-center"
+    }
+    ,
+    control: {
+        base: "inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 sm:h-10 sm:w-10",
+        icon: " "
     },
     scrollContainer: {
-        base: "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth",
+        base: "flex h-full  snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth",
         snap: "snap-x"
     }
 };
@@ -66,7 +80,7 @@ function CarouselCardBlack({ children }) {
 
 function CarouselPanel({ children, pos }) {
     return (
-        <div className={`flex flex-col min-h-[88vh]  pt-28 pb-12 px-3 items-center justify-between bg-gray-400 dark:bg-gray-700 dark:text-white banner-${pos}`}>
+        <div className={`flex min-w-screen flex-col min-h-[88vh] pt-28 pb-12 px-3 items-center justify-between bg-gray-400 dark:bg-gray-700 dark:text-white banner-${pos}`}>
             {children}
         </div>
     );
@@ -74,7 +88,7 @@ function CarouselPanel({ children, pos }) {
 
 function CarouselWrapper({ children }) {
     return (
-        <div className="w-full min-h-[88vh] sm:h-64 xl:h-80 2xl:h-96">
+        <div className="w-full min-w-screen min-h-[88vh] ">
             {children}
         </div>
     );

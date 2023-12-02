@@ -19,8 +19,8 @@ function NavTitle({ onClick, viewState, view, children }) {
 }
 function Nav({ children }) {
     return (
-        <nav className="w-full h-auto pt-14 " id="navbar-hamburger">
-            <ul className="flex flex-row justify-around py-3 mt-4 text-gray-900 bg-lavendel ">
+        <nav className="w-full h-auto pt-16 " id="navbar-hamburger">
+            <ul className="flex flex-row justify-around py-3 text-gray-900 bg-lavendel ">
                 {children}
             </ul>
         </nav>

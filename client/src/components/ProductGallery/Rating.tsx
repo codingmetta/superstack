@@ -1,4 +1,5 @@
 'use client';
+import './Rating.css';
 
 function StarIcon({  value }) {
     return (

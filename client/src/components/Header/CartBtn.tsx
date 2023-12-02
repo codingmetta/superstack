@@ -13,18 +13,18 @@ function CartBtn() {
   const itemsInCart = cart.length;
 
   return (
-      <button
-        className='relative h-full'
-        type="button"
-        onClick={handleOnClick}>
-        <span className="sr-only">Open Shopping Cart</span>
-        <ShoppingBagIcon className="text-black w-7 hover:text-mint" viewBox="0 1 23 22" />
-        {
+    <button
+      className='relative h-full'
+      type="button"
+      onClick={handleOnClick}>
+      <span className="sr-only">Open Shopping Cart</span>
+      <ShoppingBagIcon className="text-black w-7 hover:text-mint" viewBox="0 1 23 22" />
+      {
         itemsInCart !== 0 &&
-        <span className='absolute px-2 m-auto text-sm font-black translate-x-1 rounded-full -translate-y-9 bg-limone '>{itemsInCart}</span> 
+        <span className='absolute px-2 m-auto text-sm font-black translate-x-1 border border-black rounded-full -translate-y-9 bg-limone '>{itemsInCart}</span>
       }
-      </button>
-    );
+    </button>
+  );
 }
 
 

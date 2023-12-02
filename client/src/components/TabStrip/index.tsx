@@ -44,8 +44,8 @@ function TabStrip() {
                     </button>
                     <img
                         className="self-center object-cover mt-20 mb-16 border border-white rounded-full w-72 h-72"
-                        src="/images/pierced-woman-with-blonde-hair.jpg"
-                        alt="" />
+                        src="/images/tabstrip-2.webp"
+                        alt="Pierced Woman with blonde hair" />
                 </TabPane>
                 <TabPane title="Stacking">
                     <h3 className=" text-2xl leading-[1.5rem] tracking-widest uppercase font-climate">
@@ -62,7 +62,7 @@ function TabStrip() {
                     <button className="p-2 pl-6 pr-6 ml-4 text-sm font-bold text-black uppercase border border-black rounded-full w-44 bg-limone">
                         Stacking Guide
                     </button>
-                    <img className="translate-y-6" src="/images/woman-standing-removebg-preview.png" alt="" />
+                    <img className="translate-y-6" src="/images/woman-standing-removebg-preview.png" alt="Brown haired white woman standig bend forward with a light smile" />
                 </TabPane>
             </Tabs>
         </div>

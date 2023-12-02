@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Lobe",
+        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/Lobe.png?v=92931771102810076421667923267",
+        "alt": "Lobe Piercings"
+    },
+    {
+        "id": 2,
+        "title": "Helix",
+        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/Helix.png?v=171212225011594618931667923256",
+        "alt": "Helix Piercings"
+    },
+    {
+        "id": 3,
+        "title": "Flat Helix",
+        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/Flat-Helix.png?v=120051629521107686461667923230",
+        "alt": "Flat Helix Piercings"
+    },
+    {
+        "id": 4,
+        "title": "Forward Helix",
+        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/Forward-Helix.png?v=56883980139936842531667923245",
+        "alt": "Forward Helix Piercings"
+    },
+    {
+        "id": 5,
+        "title": "Tragus",
+        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/Tragus.png?v=64990133857709978371667923297",
+        "alt": ""
+    },
+    {
+        "id": 6,
+        "title": "Daith",
+        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/Daith.png?v=128430746254473807331667923217",
+        "alt": "Daith Piercings"
+    },
+    {
+        "id": 7,
+        "title": "Rook",
+        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/Rook.png?v=81067691402742700111667923285",
+        "alt": "Rook Piercings"
+    },
+    {
+        "id": 8,
+        "title": "Conch",
+        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/Conch.png?v=36896981841527356751667923205",
+        "alt": "Conch Piercings"
+    }
+]

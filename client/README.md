@@ -1,3 +1,39 @@
+# Builden
+ yarn run build
+
+# firebase connecten
+firebase init
+
+# Site deployen
+firebase deploy --only hosting:superstacked
+
+# Website
+ https://superstacked.web.app
+
+
+# firebase.json bearbeiten 
+{
+  "hosting": {
+    "site": "superstacked",
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
+
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

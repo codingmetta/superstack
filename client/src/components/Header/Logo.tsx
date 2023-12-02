@@ -12,9 +12,9 @@ function Logo() {
     }
 
     return (
-        <a onClick={handleClick} href="#" className="flex flex-col m-0 space-x-6">
-            <p className="p-0 m-0 text-[1.65rem] leading-[1.4rem] tracking-widest text-black uppercase font-bagel">Super</p>
-            <p className="p-0 m-0 text-[1.65rem] leading-[1.4rem] tracking-widest text-black uppercase font-bagel">Stack</p>
+        <a onClick={handleClick} href="#" className="flex flex-col m-0 space-x-6 translate-x-3 translate-y-0.5 ">
+            <p className="p-0 m-0 text-[1.65rem] leading-[1.3rem] tracking-widest text-black uppercase font-bagel">Super</p>
+            <p className="p-0 m-0 text-[1.65rem] leading-[1.3rem] tracking-widest text-black uppercase font-bagel">Stack</p>
         </a>
     );
 }
