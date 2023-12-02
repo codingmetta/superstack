@@ -3,36 +3,36 @@
         "id": 1,
         "title": "Piercings",
         "alt": "Golden Piercing with Diamond",
-        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/mobile-nav_piercing.png?v=171809007932569534791667923160"
+        "imgURL": "/images/mobile-nav_piercing.webp"
     },
     {
         "id": 2,
         "title": "Clickers",
         "alt": "Silver and round Clicker Piercing",
-        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/mobile-nav_clickers.png?v=1344296430380045031667923111"
+        "imgURL": "/images/mobile-nav_clickers.webp"
     },
     {
         "id": 3,
         "title": "Earrings",
         "alt": "Small golden mushroom Earring",
-        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/mobile-nav_earring.png?v=107850597547783271361667923130"
+        "imgURL": "/images/mobile-nav_earring.webp"
     },
     {
         "id": 4,
         "title": "Hoops & Huggies",
-        "alt": "Small golden mushroom Earring",
-        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/mobile-nav_hoop.png?v=47750557093477745841667923148"
+        "alt": "Hoops and Huggie Piercing",
+        "imgURL": "/images/mobile-nav_hoop.webp"
     },
     {
         "id": 5,
         "title": "Chains & Dangles",
         "alt": "Small golden mushroom Earring",
-        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/mobile-nav_chain.png?v=115078131143746112711667923098"
+        "imgURL": "/images/mobile-nav_chain.webp"
     },
     {
         "id": 6,
         "title": "Alle Produkte",
         "alt": "Small golden mushroom Earring",
-        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/mobile-nav_alle-produkte.png?v=87592387984037700931667923086"
+        "imgURL": "/images/mobile-nav_alle-produkte.webp"
     }
 ]

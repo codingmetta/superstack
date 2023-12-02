@@ -10,7 +10,7 @@ function SearchInputWrapper({ children }) {
             <div className="relative">
                 {children}
             </div>
-            </div>
+        </div>
     );
 }
 
@@ -51,7 +51,7 @@ function NothingFound() {
 }
 
 
-function ProductGallery({products}) {
+function ProductGalleryWithSearch({ products }) {
     const [searchInput, setSearchInput] = useState("");
 
     function handleSearchInput(e) {
@@ -98,4 +98,4 @@ function ProductGallery({products}) {
 
 
 
-export default ProductGallery
+export default ProductGalleryWithSearch

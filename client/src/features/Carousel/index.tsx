@@ -1,4 +1,3 @@
-/* eslint-disable */
 'use client';
 import { Carousel } from 'flowbite-react';
 import './Carousel.css';

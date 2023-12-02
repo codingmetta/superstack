@@ -1,15 +1,10 @@
-import Header from './components/Header';
-import ProductGallery from './components/ProductGallery';
-import Banner from './components/Banner';
-import TabStrip from './components/TabStrip';
-import SkeletonLoader from './components/ProductGallery/SkeletonLoader';
-import Cart from './components/Cart';
+import Header from './pages/Landing/Header';
+import Cart from './features/Cart';
 import Menu from './components/Menu';
-import CostumCarousel from './components/Carousel';
 import productData from './assets/data/products.json'
-
+import Main from './pages/Landing/Main';
 import { useState } from 'react'
-import { ShoppingCartContext} from './Context';
+import { ShoppingCartContext } from './Context';
 
 //TODO: use React Router
 
@@ -54,19 +49,9 @@ function App() {
               {showMenu ?
                 <Menu />
                 :
-                <>
-                  <CostumCarousel />
-                  <Banner />
-
-                  {isLoading ?
-                    <SkeletonLoader />
-                    :
-
-                      <ProductGallery products={productCollection} />
-
-                  }
-                  <TabStrip />
-                </>
+                <Main 
+                  isLoading={isLoading} 
+                  productCollection={productCollection} />
               }
 
             </>

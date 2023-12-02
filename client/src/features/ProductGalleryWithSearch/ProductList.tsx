@@ -1,10 +1,10 @@
 'use client';
-import Card from "./Card";
+import ProductCardSmall from "../../components/ProductCardSmall";
 
 function ProductList({ productList }) {
     return (
         productList.map((product) => (
-            <Card key={product.id} product={product} />
+            <ProductCardSmall key={product.id} product={product} />
         ))
     );
 }

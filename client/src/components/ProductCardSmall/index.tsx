@@ -1,7 +1,7 @@
 'use client';
 import { nanoid } from 'nanoid';
 import { useState, useContext } from 'react';
-import Rating from './Rating';
+import Rating from '../Rating';
 import { ShoppingCartContext } from '../../Context'
 
 function ProductCardWrapper({ children }) {
@@ -36,7 +36,7 @@ function ProductCardFooter({ children }) {
     );
 }
 
-function Card({ product }) {
+function ProductCardSmall({ product }) {
     const { cart, updateCart, setShowCart } = useContext(ShoppingCartContext);
 
     const [configuratedProduct, setConfiguratedProduct] = useState({
@@ -166,4 +166,4 @@ function Card({ product }) {
     );
 }
 
-export default Card
+export default ProductCardSmall
