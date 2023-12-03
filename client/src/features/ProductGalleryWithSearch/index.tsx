@@ -3,6 +3,7 @@ import { useState } from 'react';
 import ProductList from './ProductList';
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 import { FaceFrownIcon } from '@heroicons/react/24/outline';
+import BannerText from '../../components/BannerText';
 
 function SearchInputWrapper({ children }) {
     return (
@@ -73,7 +74,8 @@ function ProductGalleryWithSearch({ products }) {
     const filteredProducts = filterData(products);
 
     return (
-        <>
+        <section className='flex flex-col'>
+            <BannerText />
             <SearchInputWrapper>
                 <InputIcon>
                     <MagnifyingGlassIcon className="w-6 h-6 text-gray-600" />
@@ -92,7 +94,7 @@ function ProductGalleryWithSearch({ products }) {
                     <ProductList productList={products} />
                 }
             </ProductListWrapper>
-        </>
+        </section>
     );
 }
 

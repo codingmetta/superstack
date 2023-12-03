@@ -1,26 +1,28 @@
 import CostumCarousel from '../../features/Carousel'
-import Banner from '../../components/Banner'
 import SkeletonLoader from '../../features/ProductGalleryWithSearch/SkeletonLoader'
 import ProductGalleryWithSearch from '../../features/ProductGalleryWithSearch'
 import TabStrip from '../../features/TabStrip'
 import BenefitSection from '../../components/BenefitSection'
-import SuperVisionSection from '../../components/SupervisionSection'
-function Main({isLoading, productCollection}) {
+import StoreInfoSection from '../../components/StoreInfoSection'
+import NewEarsSection from '../../components/NewEarsSection'
+
+function Main({ isLoading, productCollection }) {
     return (
         <main>
             <CostumCarousel />
-            <Banner />
 
             {isLoading ?
                 <SkeletonLoader />
                 :
 
-                <ProductGalleryWithSearch 
+                <ProductGalleryWithSearch
                     products={productCollection} />
 
             }
+            <StoreInfoSection />
+            <NewEarsSection />
             <TabStrip />
-            <BenefitSection />            
+            <BenefitSection />
         </main>
     )
 }
