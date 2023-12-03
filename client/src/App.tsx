@@ -16,20 +16,9 @@ function App() {
   const [showCart, setShowCart] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
-  // useEffect(() => {
-  //   axios.get('http://localhost:5000/api/products')
-  //     .then(
-  //       response => {
-  //         setProducts(response.data);
-  //         setIsLoading(false);
-  //       }
-  //     ).catch(error => {
-  //       console.error(error);
-  //     })
-  // }, []);
 
   return (
-    <div className="flex flex-col w-full h-full font-brico fancy">
+    <div className="page-container">
       <ShoppingCartContext.Provider
         value={{
           cart,

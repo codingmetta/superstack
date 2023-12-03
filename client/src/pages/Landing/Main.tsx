@@ -4,7 +4,7 @@ import SkeletonLoader from '../../features/ProductGalleryWithSearch/SkeletonLoad
 import ProductGalleryWithSearch from '../../features/ProductGalleryWithSearch'
 import TabStrip from '../../features/TabStrip'
 import BenefitSection from '../../components/BenefitSection'
-
+import SuperVisionSection from '../../components/SupervisionSection'
 function Main({isLoading, productCollection}) {
     return (
         <main>
@@ -20,7 +20,7 @@ function Main({isLoading, productCollection}) {
 
             }
             <TabStrip />
-            <BenefitSection />
+            <BenefitSection />            
         </main>
     )
 }

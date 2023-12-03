@@ -17,7 +17,6 @@ export default {
       'mauve': '#d4b3fe'
     },
     fontFamily:{
-      'logo': ['Kodaro'],
       'brico': ['Bricolage Grotesque'],
       'unbounded':['Unbounded'],
       'bagel':['Bagel Fat One'],
