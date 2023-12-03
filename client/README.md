@@ -1,17 +1,18 @@
-# Builden
+# Deploy App with Google Firebase
+## Builden
  yarn run build
 
-# firebase connecten
+## firebase connecten
 firebase init
 
-# Site deployen
+## Site deployen
 firebase deploy --only hosting:superstacked
 
-# Website
+## Website
  https://superstacked.web.app
 
 
-# firebase.json bearbeiten 
+## firebase.json bearbeiten 
 {
   "hosting": {
     "site": "superstacked",
@@ -29,8 +30,6 @@ firebase deploy --only hosting:superstacked
     ]
   }
 }
-
-
 
 
 

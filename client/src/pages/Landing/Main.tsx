@@ -6,6 +6,7 @@ import BenefitSection from '../../components/BenefitSection'
 import StoreInfoSection from '../../components/StoreInfoSection'
 import NewEarsSection from '../../components/NewEarsSection'
 import HugEarsSection from '../../components/HugEarsSection'
+import SuperStackAboutSection from '../../components/SuperStackAboutSection'
 
 function Main({ isLoading, productCollection }) {
     return (
@@ -25,6 +26,7 @@ function Main({ isLoading, productCollection }) {
             <BenefitSection />
             <HugEarsSection />
             <TabStrip />
+            <SuperStackAboutSection/>
         </main>
     )
 }
