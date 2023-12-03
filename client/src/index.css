@@ -10,7 +10,6 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: beige;
-  overflow-x: hidden;
 }
 
 
@@ -22,7 +21,7 @@ body {
 
 .page-container{
   @apply
-  flex flex-col  h-full font-brico fancy mx-0 p-0 scroll-m-0	
+  relative flex flex-col overflow-x-hidden h-full font-brico fancy mx-0 p-0 scroll-m-0	
 }
 
 .fancy {

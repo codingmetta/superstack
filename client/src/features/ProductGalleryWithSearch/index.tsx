@@ -74,7 +74,7 @@ function ProductGalleryWithSearch({ products }) {
     const filteredProducts = filterData(products);
 
     return (
-        <section className='flex flex-col'>
+        <section className='flex flex-col items-center'>
             <BannerText />
             <SearchInputWrapper>
                 <InputIcon>
