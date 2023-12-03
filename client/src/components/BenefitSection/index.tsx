@@ -30,7 +30,7 @@ function BenefitSection() {
                     Vertrauenswürdige Partner, die auf faire Bedingungen achten.
                 </BenefitCard>
             </div>
-            <button className='w-40 h-10 text-sm font-bold tracking-wider uppercase border border-black rounded-3xl bg-mauve'>View more</button>
+            <button className='w-40 h-10 text-sm font-extrabold tracking-widest uppercase border border-black rounded-3xl bg-mauve'>View more</button>
         </section>
     )
 }

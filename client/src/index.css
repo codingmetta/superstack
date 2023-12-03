@@ -10,7 +10,10 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: beige;
+  overflow-x: hidden;
 }
+
+
 
 .shadow {
   -webkit-box-shadow: 0px 12px 17px -14px rgba(0,0,0,0.53); 
@@ -19,7 +22,7 @@ body {
 
 .page-container{
   @apply
-  flex flex-col w-full h-full font-brico fancy
+  flex flex-col  h-full font-brico fancy mx-0 p-0 scroll-m-0	
 }
 
 .fancy {
