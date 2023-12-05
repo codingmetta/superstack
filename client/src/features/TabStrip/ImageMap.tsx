@@ -55,11 +55,12 @@ const ImageMap = props => {
             parentWidth={props.parentWidth}
             lineWidth={1}
             onClick={(area) => handleSelectedArea(area)}
+            onTouchStart={(area) => handleSelectedArea(area)}
           />
           {extendedAreas.map((area) => (
             <span
               key={area.id}
-              className="tooltip"
+              className="tooltip hover:bg-limone"
               style={{
                 position: "absolute",
                 top: area.center.y,

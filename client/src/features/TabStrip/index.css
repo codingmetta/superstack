@@ -15,9 +15,26 @@
 }
 
 .tooltip {
-    @apply
-    absolute text-black cursor-pointer border border-black rounded-full w-6 h-6 flex items-center justify-center bg-white hover:bg-limone
+    transform: translate3d(-10%, -20%, -10%);
+    pointer-events: none;
+    @apply absolute text-black cursor-pointer border border-black rounded-full w-6 h-6 flex items-center justify-center bg-white hover:bg-limone z-40
 }
+
+/* .tooltip {
+    position: absolute;
+    color: black;
+    background: #fff;
+    border-radius: 100%;
+    width: 24px;
+    transform: translate3d(-10%, -20%, -10%);
+    border: 1px solid black;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    pointer-events: none;
+    z-index: 1000;
+    cursor: pointer;
+} */
 
 #map-container {
     position: relative;
