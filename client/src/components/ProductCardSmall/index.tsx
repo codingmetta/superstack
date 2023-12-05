@@ -6,7 +6,7 @@ import { ShoppingCartContext } from '../../Context'
 
 function ProductCardWrapper({ children }) {
     return (
-        <article className="flex flex-col items-center justify-around text-sm bg-white border border-black rounded-3xl w-44">
+        <article className="flex flex-col items-center justify-around text-sm bg-white border border-black rounded-3xl w-44 lg:w-56 ">
             {children}
         </article>
     );
@@ -124,7 +124,7 @@ function ProductCardSmall({ product }) {
             <ProductCardBody>
                 <section className="w-full h-32 p-3">
                     <Rating rating={ratingClean} />
-                    <h3 className="font-semibold line-clamp-2 ">{product.title}</h3>
+                    <h3 className="font-semibold line-clamp-2 lg:text-lg ">{product.title}</h3>
                     <p className="pt-1">{priceClean}€</p>
                 </section>
             </ProductCardBody>

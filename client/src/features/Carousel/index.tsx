@@ -35,7 +35,7 @@ const customIndicatorTheme: FlowbiteCarouselTheme = { /* eslint-disable-line */
 
 function CarouselBottom({ children }) {
     return (
-        <div className='flex flex-col justify-center gap-4 pb-4'>
+        <div className='flex flex-col justify-center gap-4 pb-4 lg:w-1/2 lg:flex-row'>
             {children}
         </div>
     );
@@ -43,21 +43,21 @@ function CarouselBottom({ children }) {
 
 function CarouselBtn({ color, height, width, children }) {
     return (
-        <button className={`${width} ${height} ${color} text-xl tracking-wide border border-black cursor-pointer rounded-xl`}>
+        <button className={`${width} ${height} ${color} text-xl lg:h-16 tracking-wide border border-black cursor-pointer rounded-xl`}>
             {children}
         </button>
     );
 }
 function CarouselCardHeading({ children }) {
     return (
-        <p className='text-xl font-black uppercase'>
+        <p className='text-xl font-black uppercase lg:text-3xl lg:text-start'>
             {children}
         </p>
     );
 }
 function CarouselCardSubHeading({ children }) {
     return (
-        <p className="pt-2 text-xs font-light tracking-wide uppercase ">
+        <p className="pt-2 text-xs font-light tracking-wide uppercase lg:text-start lg:text-base ">
             {children}
         </p>
     );
@@ -67,9 +67,9 @@ function CarouselCardSubHeading({ children }) {
 function CarouselCard({ children, color }) {
     return (
         <div
-            className={`relative flex flex-col items-center justify-center w-full p-2 font-black text-center text-${color} border border-${color} font-unbounded rounded-3xl backdrop-blur-xl`}
+            className={`relative flex flex-col lg:p-10 items-center justify-center w-full p-2 lg:w-6/12 lg:h-72 font-black text-center text-${color} border border-${color} font-unbounded rounded-3xl backdrop-blur-xl`}
             id='sparkle-card'>
-            <span className="py-5"> {children}</span>
+            <span className="py-5">{children}</span>
             <CardBorderDecoration color={color} />
         </div>
     )
@@ -89,14 +89,14 @@ function CardBorderDecoration({ color }) {
 }
 function Sparkle({ url }) {
     return (
-        <img className='w-7 h-7' src={url} />
+        <img className='w-7 h-7 lg:w-12 lg:h-12' src={url} />
     );
 
 }
 
 function CarouselPanel({ children, pos }) {
     return (
-        <div className={`flex min-w-screen flex-col min-h-[88vh] pt-28 pb-12 px-3 items-center justify-between bg-gray-400 dark:bg-gray-700 dark:text-white banner-${pos}`}>
+        <div className={`flex min-w-screen flex-col min-h-[88vh] pt-28 pb-12 px-3 items-center lg:items-start lg:justify-center lg:gap-12 lg:px-14 justify-between bg-gray-400 dark:bg-gray-700 dark:text-white banner-${pos}`}>
             {children}
         </div>
     );

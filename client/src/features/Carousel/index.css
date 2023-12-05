@@ -9,7 +9,7 @@
     background-image: url("https://www.superstack.me/cdn/shop/files/Header_IMG_2.jpg?v=1679323649");
     background-color: #cccccc;
     background-repeat: no-repeat;
-    background-size: cover ;
+    background-size: cover;
     background-position: center;
 }
 
@@ -28,19 +28,23 @@
 #sparkle-card img:first-of-type {
     top: -14px;
     right: 9%;
+    @apply translate-x-4 -translate-y-2.5
 }
 
 #sparkle-card img:nth-of-type(2) {
     top: -14px;
     right: 20%;
+    @apply -translate-y-2.5
 }
 
 #sparkle-card img:nth-of-type(3) {
     bottom: -14px;
     left: 9%;
+    @apply translate-y-2.5
 }
 
 #sparkle-card img:nth-of-type(4) {
     bottom: -14px;
     left: 20%;
+    @apply translate-x-4 translate-y-2.5
 }

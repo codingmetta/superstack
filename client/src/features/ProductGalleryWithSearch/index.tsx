@@ -7,8 +7,8 @@ import BannerText from '../../components/BannerText';
 
 function SearchInputWrapper({ children }) {
     return (
-        <div className='flex flex-row items-center justify-center w-full pt-6 pb-4'>
-            <div className="relative">
+        <div className='flex flex-row items-center justify-start w-full pt-6 pb-4 lg:pb-8'>
+            <div className="relative w-11/12">
                 {children}
             </div>
         </div>
@@ -24,7 +24,7 @@ function InputIcon({ children }) {
 }
 function ProductListWrapper({ children }) {
     return (
-        <section className="flex flex-row flex-wrap justify-between w-full h-full gap-2 p-1.5">
+        <section className="flex flex-row flex-wrap justify-between w-full h-full gap-2 lg:py-10 lg:gap-4 lg:p-0 lg:justify-start p-1.5">
             {children}
         </section>
     );
@@ -74,7 +74,7 @@ function ProductGalleryWithSearch({ products }) {
     const filteredProducts = filterData(products);
 
     return (
-        <section className='flex flex-col items-center'>
+        <section className='flex flex-col items-center lg:p-10'>
             <BannerText />
             <SearchInputWrapper>
                 <InputIcon>
