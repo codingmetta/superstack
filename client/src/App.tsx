@@ -5,7 +5,7 @@ import productData from './assets/data/products.json'
 import Main from './pages/Landing/Main';
 import { useState } from 'react'
 import { ShoppingCartContext } from './Context';
-
+import Footer from './pages/Landing/Footer';
 //TODO: use React Router
 
 
@@ -38,9 +38,12 @@ function App() {
               {showMenu ?
                 <Menu />
                 :
+                <>
                 <Main 
                   isLoading={isLoading} 
                   productCollection={productCollection} />
+                <Footer />
+                </>
               }
 
             </>

@@ -1,6 +1,6 @@
 'use client';
 import { Carousel } from 'flowbite-react';
-import './Carousel.css';
+import './index.css';
 
 import type { FlowbiteCarouselTheme } from 'flowbite-react';
 
@@ -48,33 +48,50 @@ function CarouselBtn({ color, height, width, children }) {
         </button>
     );
 }
-
-
-function CarouselCardWhite({ children }) {
+function CarouselCardHeading({ children }) {
     return (
-        <div className='relative flex flex-col items-center justify-center w-full p-2 text-xl border border-white rounded-3xl backdrop-blur-xl ' id='sparkle-card'>
-            <p className='py-5 text-xl font-black text-center text-white uppercase font-unbounded'>
-                {children}
-            </p>
-            <img className=' w-7 h-7' src="//www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-White.svg?v=104040978342407960781682329630" />
-            <img className=' w-7 h-7' src="//www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-White.svg?v=104040978342407960781682329630" />
-            <img className=' w-7 h-7' src="//www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-White.svg?v=104040978342407960781682329630" />
-            <img className=' w-7 h-7' src="//www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-White.svg?v=104040978342407960781682329630" />
+        <p className='text-xl font-black uppercase'>
+            {children}
+        </p>
+    );
+}
+function CarouselCardSubHeading({ children }) {
+    return (
+        <p className="pt-2 text-xs font-light tracking-wide uppercase ">
+            {children}
+        </p>
+    );
+}
+
+
+function CarouselCard({ children, color }) {
+    return (
+        <div
+            className={`relative flex flex-col items-center justify-center w-full p-2 font-black text-center text-${color} border border-${color} font-unbounded rounded-3xl backdrop-blur-xl`}
+            id='sparkle-card'>
+            <span className="py-5"> {children}</span>
+            <CardBorderDecoration color={color} />
         </div>
     )
 }
-function CarouselCardBlack({ children }) {
+
+function CardBorderDecoration({ color }) {
+    const sparkleBlackURL = 'https://www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-Black.svg?v=154082635854720999921682322560';
+    const sparkleWhiteURL = 'https://www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-White.svg?v=104040978342407960781682329630'
     return (
-        <div className='relative flex flex-col items-center justify-center w-full p-2 text-xl border border-black rounded-3xl backdrop-blur-xl ' id='sparkle-card'>
-            <p className='py-5 text-xl font-black text-center text-black uppercase font-unbounded'>
-                {children}
-            </p>
-            <img className=' w-7 h-7' src="https://www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-Black.svg?v=154082635854720999921682322560" />
-            <img className=' w-7 h-7' src="https://www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-Black.svg?v=154082635854720999921682322560" />
-            <img className=' w-7 h-7' src="https://www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-Black.svg?v=154082635854720999921682322560" />
-            <img className=' w-7 h-7' src="https://www.superstack.me/cdn/shop/t/1/assets/Superstack-Star-Black.svg?v=154082635854720999921682322560" />
-        </div>
-    )
+        <>
+            <Sparkle url={`${color === 'black' ? sparkleBlackURL : sparkleWhiteURL}`} />
+            <Sparkle url={`${color === 'black' ? sparkleBlackURL : sparkleWhiteURL}`} />
+            <Sparkle url={`${color === 'black' ? sparkleBlackURL : sparkleWhiteURL}`} />
+            <Sparkle url={`${color === 'black' ? sparkleBlackURL : sparkleWhiteURL}`} />
+        </>
+    );
+}
+function Sparkle({ url }) {
+    return (
+        <img className='w-7 h-7' src={url} />
+    );
+
 }
 
 function CarouselPanel({ children, pos }) {
@@ -99,9 +116,9 @@ function CostumCarousel() {
             <Carousel theme={customIndicatorTheme} slide={false} leftControl=" " rightControl=" ">
 
                 <CarouselPanel pos={'1'} >
-                    <CarouselCardWhite>
-                        Say Hello to your future ear piercings
-                    </CarouselCardWhite>
+                    <CarouselCard color='white'>
+                        <CarouselCardHeading> Say Hello to your future ear piercings</CarouselCardHeading>
+                    </CarouselCard>
                     <CarouselBottom>
                         <CarouselBtn color='bg-mint' width='w-56' height='h-14'>
                             Termin Buchen
@@ -113,10 +130,11 @@ function CostumCarousel() {
                 </CarouselPanel>
 
                 <CarouselPanel pos={'2'} >
-                    <CarouselCardBlack>
-                        Hypoallergene Piercings
-                        <p className="pt-2 text-xs font-light tracking-wide">speziell für sensible Ohren</p>
-                    </CarouselCardBlack>
+                    <CarouselCard color='black' >
+                        <CarouselCardHeading>Hypoallergene Piercings</CarouselCardHeading>
+                        <CarouselCardSubHeading>speziell für sensible Ohren</CarouselCardSubHeading>
+                    </CarouselCard>
+
                     <CarouselBottom>
                         <CarouselBtn color='bg-mint' width='w-56' height='h-14'>
                             Termin Buchen
@@ -128,10 +146,11 @@ function CostumCarousel() {
                 </CarouselPanel>
 
                 <CarouselPanel pos={'3'} >
-                    <CarouselCardBlack>
-                        Hypoallergene Piercings
-                        <p className="pt-2 text-xs font-light tracking-wide">für sensible Ohren</p>
-                    </CarouselCardBlack>
+                    <CarouselCard color='black' >
+
+                        <CarouselCardHeading>Hypoallergene Piercings</CarouselCardHeading>
+                        <CarouselCardSubHeading> für sensible Ohren</CarouselCardSubHeading>
+                    </CarouselCard>
                     <CarouselBottom>
                         <CarouselBtn color='bg-mint' width='w-56' height='h-14'>
                             Termin Buchen

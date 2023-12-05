@@ -13,7 +13,8 @@ export default {
       'beige': '#f7f7f7',
       'anti-flash' : '#f6f1f1',
       'lila': '#7800d7',
-      'lavendel': "#cca5f8",
+      'lavendel': "#cca5f8", 
+      'footer-mauve': '#d2aaff',
       'mauve': '#d4b3fe'
     },
     fontFamily:{

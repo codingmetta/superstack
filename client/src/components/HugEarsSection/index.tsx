@@ -2,7 +2,7 @@
 
 export default function HugEarsSection() {
     return (
-        <section className="relative flex flex-col w-full h-full gap-64 px-10 py-20 bg-white">
+        <section className="relative flex flex-col items-center w-full h-full gap-64 px-10 py-20 bg-white">
             <h3 className="z-30 text-3xl font-light tracking-wider w-52 font-climate">Can't wait to hug your ears</h3>
             <img
                 className='absolute z-20 object-cover translate-x-28 translate-y-4 max-h-[27rem] '

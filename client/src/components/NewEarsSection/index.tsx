@@ -3,11 +3,12 @@
 function NewEarsSection() {
     return (
         <section className='flex flex-col justify-center w-full gap-4 px-6 py-14 bg-mint'>
-            <div className='mb-16 relative w-full h-[98px] overflow-visible bg-white border border-black rounded-full'>
+            <div className='mb-16 flex flex-col items-center relative w-full h-[98px] overflow-visible bg-white border border-black rounded-full'>
                 <img
-                    className='absolute object-contain translate-x-9 -translate-y-28 max-h-52'
+                    className='absolute object-contain -translate-y-28 max-h-52'
                     src="/images/white-brunette-woman-laying-on-stomach-bg-removed.webp"
-                    alt="White brunette Woman laying on stomach looking dreamy" />
+                    alt="White brunette woman laying on stomach looking dreamy" 
+                />
             </div>
 
             <h3 className='uppercase font-climate '>Need some new ears?</h3>

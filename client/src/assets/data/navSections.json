@@ -1,0 +1,88 @@
+{
+    "Shop": {
+      "title": "Shop",
+      "links": [
+        {
+          "id": 1,
+          "title": "Piercings & Earrings",
+          "url": "pages/collections-all"
+        },
+        {
+          "id": 2,
+          "title": "Ear Location",
+          "url": "pages/collections-all"
+        }
+      ]
+    },
+    "Company": {
+      "title": "Company",
+      "links": [
+        {
+          "id": 1,
+          "title": "About us",
+          "url": "pages/about"
+        },
+        {
+          "id": 2,
+          "title": "Piercing Guide",
+          "url": "pages/piercing-guide"
+        },
+        {
+          "id": 3,
+          "title": "Pflege Guide",
+          "url": "pages/care-guide"
+        },
+        {
+          "id": 4,
+          "title": "Stacking Guide",
+          "url": "pages/stacking-guide"
+        },
+        {
+          "id": 5,
+          "title": "DSGVO",
+          "url": "#"
+        },
+        {
+          "id": 6,
+          "title": "Widerrufsbelehrung",
+          "url": "#"
+        },
+        {
+          "id": 7,
+          "title": "Impressum",
+          "url": "#"
+        },
+        {
+          "id": 8,
+          "title": "AGBs",
+          "url": "#"
+        }
+      ]
+    },
+    "Support": {
+      "title": "Support",
+      "links": [
+        {
+          "id": 1,
+          "title": "Kontakt",
+          "url": "#"
+        },
+        {
+          "id": 2,
+          "title": "Versandbedingungen",
+          "url": "#"
+        },
+        {
+          "id": 3,
+          "title": "Retoure",
+          "url": "#"
+        },
+        {
+          "id": 4,
+          "title": "FAQ",
+          "url": "#"
+        }
+      ]
+    }
+  }
+  

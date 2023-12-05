@@ -1,10 +1,11 @@
 import React from 'react'
+import FooterComponent from '../../components/Footer'
 
 function Footer() {
   return (
-    <footer>
-        
-    </footer>
+    <>
+    <FooterComponent />
+    </>
   )
 }
 
