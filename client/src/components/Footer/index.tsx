@@ -7,12 +7,12 @@ import PaymentContainer from "./FooterPayment";
 
 function FooterLogo() {
     return (
-        <span className="flex flex-col w-full m-0 space-x-16 ">
-            <p className="p-0 m-0 text-[5rem] leading-[3.9rem] tracking-widest text-black uppercase font-bagel">
+        <div className="flex flex-col m-0 space-x-16 lg:w-1/2">
+            <p className="p-0 m-0 text-[4.8rem] leading-[3.9rem] tracking-widest text-black uppercase font-bagel">
                 Super</p>
-            <p className="p-0 m-0 text-[5rem] leading-[3.9rem] tracking-widest text-black uppercase font-bagel">
+            <p className="p-0 m-0 text-[4.8rem] leading-[3.9rem] tracking-widest text-black uppercase font-bagel">
                 Stack</p>
-        </span>
+        </div>
     );
 }
 
@@ -23,7 +23,7 @@ function backToTop() {
 function ScrollTopBtn() {
     return (
         <button
-            className='absolute z-10 flex items-center justify-center w-8 h-8 font-bold translate-x-[17rem] -translate-y-24 border border-black rounded-full bg-mint '
+            className='absolute z-10 flex items-center justify-center w-8 h-8 font-bold -translate-y-24 border border-black rounded-full translate-x-28 lg:translate-x-96 bg-mint '
             onClick={backToTop}
             id="footer-to-top-button"
             title="Go To Top">
@@ -64,7 +64,7 @@ function NavSection({ section }) {
 
     return (
         <nav
-            className="w-1/2 font-semibold tracking-wide"
+            className="self-start w-1/2 font-semibold tracking-wide lg:w-1/3"
             aria-label="footer-navigation-shop"
             role='footer-navigation-shop'>
             <h3 className="py-2 mb-3 text-xl border-b border-black">
@@ -103,10 +103,19 @@ function FooterPolicy() {
 
 function FooterCredits() {
     return (
-        <p className="px-16 py-6 text-[0.6rem] font-bold text-center text-black bg-white ">
+        <p className="px-16 pt-6 pb-2 text-[0.6rem] font-bold text-center text-black bg-white ">
             © 2023 SUPERSTACK. Alle Preise inkl. Mwst. zzgl. Versand.
         </p>
     );
+}
+
+function NavSectionWrapper({ children }) {
+    return (
+        <div className="flex flex-col self-start w-full gap-10 lg:flex-nowrap lg:gap-8 lg:flex-row lg:px-8 ">
+            {children}
+        </div>
+    );
+
 }
 
 
@@ -115,12 +124,14 @@ function Footer() {
         <>
             <footer
                 role='contentinfo'
-                className="relative flex flex-col w-full gap-10 px-4 py-20 border-t border-black bg-footer-mauve">
-                <FooterLogo />
+                className="relative flex flex-col items-center w-full gap-10 px-4 py-20 border-t border-black bg-footer-mauve">
                 <ScrollTopBtn />
-                <NavSection section={NavSections.Shop} />
-                <NavSection section={NavSections.Company} />
-                <NavSection section={NavSections.Support} />
+                <NavSectionWrapper>
+                    <FooterLogo />
+                    <NavSection section={NavSections.Shop} />
+                    <NavSection section={NavSections.Company} />
+                    <NavSection section={NavSections.Support} />
+                </NavSectionWrapper>
                 <ExtRessourcesWrapper>
                     <PaymentContainer />
                     <SocialMediaContainer />

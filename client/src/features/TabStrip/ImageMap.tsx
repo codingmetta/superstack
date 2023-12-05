@@ -32,19 +32,19 @@ const ImageMap = props => {
     setSelectedPiercingTitle(piercingTitle);
   }
 
-  function transformString(str){
+  function transformString(str) {
     const arr = str.split("-");
     return arr.join(' ');
   }
 
 
   return (
-    <div className="flex flex-col items-center justify-around w-full h-full mb-4" >
-      <div className="flex flex-row justify-start h-20 gap-4 mt-6 mb-4 translate-x-14 w-96">
-        <span className="w-8 h-8 text-xl leading-8 text-center text-black border-black rounded-full bg-limone">
+    <div className="flex flex-col items-center justify-around w-full h-full mb-4 lg:justify-between lg:pb-4" >
+      <div className="flex flex-row justify-start h-20 gap-4 mt-6 mb-4 lg:gap-8 lg:items-center translate-x-14 w-96">
+        <span className="flex items-center justify-center w-8 h-8 text-xl leading-8 text-black border-black rounded-full lg:font-semibold lg:text-2xl lg:w-10 lg:h-10 bg-limone">
           {selectedArea}
         </span>
-        <h3 className="text-lg tracking-widest uppercase font-climate ">{selectedPiercingTitle}</h3>
+        <h3 className="text-lg tracking-widest uppercase lg:text-2xl font-climate ">{selectedPiercingTitle}</h3>
       </div>
       <div className="relative -translate-x-16 ">
         <Fragment>
@@ -54,7 +54,7 @@ const ImageMap = props => {
             responsive={props.responsive}
             parentWidth={props.parentWidth}
             lineWidth={1}
-            onClick={(area)=>handleSelectedArea(area)}
+            onClick={(area) => handleSelectedArea(area)}
           />
           {extendedAreas.map((area) => (
             <span
@@ -70,7 +70,7 @@ const ImageMap = props => {
               {area.title}
             </span>
           ))}
-          </Fragment>
+        </Fragment>
       </div>
     </div>
   );
