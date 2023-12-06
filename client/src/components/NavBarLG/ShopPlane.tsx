@@ -54,8 +54,8 @@ function ShopPlane() {
                         Supersets
                     </h3>
                     <ul className="flex flex-col gap-1 ">
-                        <li >
-                            <a href='#'>Coming soon</a>
+                        <li className="text-gray-500" >
+                            Coming soon
                         </li>
 
                     </ul>

@@ -35,7 +35,7 @@ const customIndicatorTheme: FlowbiteCarouselTheme = { /* eslint-disable-line */
 
 function CarouselBottom({ children }) {
     return (
-        <div className='flex flex-col justify-center gap-4 pb-4 lg:w-1/2 lg:flex-row'>
+        <div className='flex flex-col justify-center xl:w-[27%] gap-4 pb-4 lg:w-1/2 lg:flex-row xl:justify-start  xl:pb-10'>
             {children}
         </div>
     );
@@ -67,7 +67,7 @@ function CarouselCardSubHeading({ children }) {
 function CarouselCard({ children, color }) {
     return (
         <div
-            className={`relative flex flex-col lg:p-10 items-center justify-center w-full p-2 lg:w-6/12 lg:h-72 font-black text-center text-${color} border border-${color} font-unbounded rounded-3xl backdrop-blur-xl`}
+            className={`relative flex flex-col lg:p-10 items-center justify-center xl:tracking-wider xl:text-6xl w-full p-2 lg:w-6/12 lg:h-72 xl:w-[27%] font-black text-center text-${color} border border-${color} font-unbounded rounded-3xl backdrop-blur-xl`}
             id='sparkle-card'>
             <span className="py-5">{children}</span>
             <CardBorderDecoration color={color} />
@@ -96,7 +96,7 @@ function Sparkle({ url }) {
 
 function CarouselPanel({ children, pos }) {
     return (
-        <div className={`flex min-w-screen flex-col min-h-[88vh] lg:h-[98vh] pt-28 pb-12 px-3 items-center lg:items-start lg:justify-center lg:gap-12 lg:px-14 justify-between bg-gray-400 dark:bg-gray-700 dark:text-white banner-${pos}`}>
+        <div className={`flex min-w-screen flex-col min-h-[88vh] lg:h-[98vh] pt-28 pb-12 px-3 items-center lg:items-start lg:justify-center lg:gap-12 lg:px-14 xl:justify-end xl:px-32 justify-between bg-gray-400 dark:bg-gray-700 dark:text-white banner-${pos}`}>
             {children}
         </div>
     );
@@ -104,7 +104,7 @@ function CarouselPanel({ children, pos }) {
 
 function CarouselWrapper({ children }) {
     return (
-        <div className="w-full min-w-screen min-h-[88vh] lg:h-[98vh] ">
+        <div className="w-full min-w-screen min-h-[88vh] lg:h-[98vh] xl:min-h-screen">
             {children}
         </div>
     );
