@@ -1,20 +1,5 @@
 'use client';
-
-
-const about = [
-    {
-        id: 1,
-        title: 'Our DNA',
-        imgURL: 'https://www.superstack.me/cdn/shop/t/1/assets/SUPERSTACK_Logo_CHROME-05.png?v=145962990958481027161658483593',
-        alt: 'Metallic Artistic Shape'
-    },
-    {
-        id: 2,
-        title: 'Hygiene Concept',
-        imgURL: 'https://www.superstack.me/cdn/shop/t/1/assets/SUPERSTACK_Logo_CHROME-03.png?v=62985282536212170071658483604',
-        alt: 'Metallic Hair Comb'
-    }
-]
+import about from '../../assets/data/about.json';
 
 function GuideBtn({ title, imgURL, alt }) {
     return (

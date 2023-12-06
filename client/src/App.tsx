@@ -15,6 +15,8 @@ function App() {
   const [cart, updateCart] = useState([]);
   const [showCart, setShowCart] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [menuViewState, setMenuViewState] = useState('');
+
 
 
   return (
@@ -26,7 +28,9 @@ function App() {
           showCart,
           setShowCart,
           showMenu,
-          setShowMenu
+          setShowMenu,
+          menuViewState, 
+          setMenuViewState
         }}
       >
         {
@@ -45,7 +49,6 @@ function App() {
                 <Footer />
                 </>
               }
-
             </>
         }
       </ShoppingCartContext.Provider>

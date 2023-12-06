@@ -96,7 +96,7 @@ function Sparkle({ url }) {
 
 function CarouselPanel({ children, pos }) {
     return (
-        <div className={`flex min-w-screen flex-col min-h-[88vh] pt-28 pb-12 px-3 items-center lg:items-start lg:justify-center lg:gap-12 lg:px-14 justify-between bg-gray-400 dark:bg-gray-700 dark:text-white banner-${pos}`}>
+        <div className={`flex min-w-screen flex-col min-h-[88vh] lg:h-[98vh] pt-28 pb-12 px-3 items-center lg:items-start lg:justify-center lg:gap-12 lg:px-14 justify-between bg-gray-400 dark:bg-gray-700 dark:text-white banner-${pos}`}>
             {children}
         </div>
     );
@@ -104,7 +104,7 @@ function CarouselPanel({ children, pos }) {
 
 function CarouselWrapper({ children }) {
     return (
-        <div className="w-full min-w-screen min-h-[88vh] ">
+        <div className="w-full min-w-screen min-h-[88vh] lg:h-[98vh] ">
             {children}
         </div>
     );

@@ -31,7 +31,7 @@ function ScrollTopBtn() {
         </button>);
 }
 
-function LogoBtn({ children }) {
+function SocialMediaBtn({ children }) {
     return (
         <button>
             {children}
@@ -42,18 +42,18 @@ function LogoBtn({ children }) {
 function SocialMediaContainer() {
     return (
         <div className="flex flex-row items-center self-center gap-6">
-            <LogoBtn>
+            <SocialMediaBtn>
                 <FaPinterest className="w-5 h-5" />
-            </LogoBtn>
-            <LogoBtn>
+            </SocialMediaBtn>
+            <SocialMediaBtn>
                 <FaInstagram className="w-5 h-5" />
-            </LogoBtn>
-            <LogoBtn>
+            </SocialMediaBtn>
+            <SocialMediaBtn>
                 <FaTiktok className="w-5 h-5" />
-            </LogoBtn>
-            <LogoBtn>
+            </SocialMediaBtn>
+            <SocialMediaBtn>
                 <FaSnapchat className="w-5 h-5" />
-            </LogoBtn>
+            </SocialMediaBtn>
         </div>
     );
 }
@@ -104,7 +104,7 @@ function FooterPolicy() {
 function FooterCredits() {
     return (
         <p className="px-16 pt-6 pb-2 text-[0.6rem] font-bold text-center text-black bg-white ">
-            © 2023 SUPERSTACK. Alle Preise inkl. Mwst. zzgl. Versand.
+            © 2023 codingmetta. Alles for free, wenn keine*r guckt.
         </p>
     );
 }
@@ -115,7 +115,6 @@ function NavSectionWrapper({ children }) {
             {children}
         </div>
     );
-
 }
 
 
