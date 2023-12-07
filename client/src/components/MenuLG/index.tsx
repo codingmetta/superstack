@@ -8,7 +8,7 @@ function NavTitle({ onClick, viewState, view, children }) {
         <li>
             <button
                 onMouseEnter={() => onClick(view)}
-                className={` ${viewState === view ? 'isFocused' : ''}  block text-xl uppercase px-4 py-0.5 tracking-wider font-light focus:border focus:border-black rounded-lg `}>
+                className={` ${viewState === view ? 'isFocused' : ''} bg-transparent block text-xl uppercase px-4 py-0.5 tracking-wider font-light focus:border focus:border-black rounded-lg `}>
                 {children}
             </button>
         </li>
@@ -16,7 +16,7 @@ function NavTitle({ onClick, viewState, view, children }) {
 }
 function Nav({ children }) {
     return (
-        <ul className="flex flex-row justify-around gap-12 py-3 text-gray-900 bg-transparent">
+        <ul className="flex flex-row justify-around gap-12 py-2 text-gray-900 ">
             {children}
         </ul>
     );
@@ -40,6 +40,9 @@ function MenuLG() {
                 About</NavTitle>
             <NavTitle onClick={handleClick} viewState={menuViewState} view={'STORE'} >
                 Store</NavTitle>
+            <li>
+                <button className="w-52 py-0.5 text-xl tracking-wider uppercase border border-black rounded-lg bg-mint" >Termin buchen</button>
+            </li>
         </Nav>
     );
 
