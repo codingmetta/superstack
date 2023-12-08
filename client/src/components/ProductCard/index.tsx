@@ -7,8 +7,8 @@ import { ShoppingCartContext } from '../../Context'
 function ProductCardWrapper({ children, size }) {
     return (
         <article className={`flex flex-col items-center justify-around  bg-white border  rounded-3xl 
-        ${size === 'medium' ? 'w-44 border-black text-sm lg:w-56' : ''}
-        ${size === 'large' ? 'w-72 border-transparent' : ''}
+        ${size === 'medium' ? 'w-44 border-black text-sm lg:w-56 xl:w-72' : ''}
+        ${size === 'large' ? 'w-72 2xl:w-96 border-transparent' : ''}
         `}>
             {children}
         </article>
@@ -19,7 +19,7 @@ function ProductCardHead({ children, size}) {
     return (
         <section className={`" "
         ${size==='medium'? 'w-full' :''}
-        ${size==='large'? 'w-72 h-72' :''}
+        ${size==='large'? 'w-72 h-72 2xl:w-96 2xl:h-96' :''}
         `}>
             {children}
         </section>

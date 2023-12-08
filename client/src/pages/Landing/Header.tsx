@@ -1,17 +1,21 @@
 'use client';
 import { useState, useEffect } from 'react';
 import NavBar from '../../components/NavBar'
-import NavBarLG from '../../components/NavBarLG';
+import NavBarXl from '../../components/NavBarXl';
 
-/*TODO: make 2xl repsonsive */
-/*TODO: add isLg, isXl State */
+/*
+  Breakpoint:
+  xl: 1280px
+  2xl: 1536px
+ */
+
 
 function Header() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1536);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1536);
+      setIsMobile(window.innerWidth < 1280);
     };
 
     window.addEventListener('resize', handleResize);
@@ -24,7 +28,7 @@ function Header() {
 
   return (
     <>
-          {isMobile?  <NavBar /> : <NavBarLG />}
+          {isMobile?  <NavBar /> : <NavBarXl />}
     </>
 
   )

@@ -13,7 +13,7 @@ function PlaneWrapper({ children }) {
     return (
         <nav
             onMouseLeave={handleMouseLeave}
-            className="flex items-center justify-center gap-40 w-full px-12 bg-white border border-black rounded-3xl h-[40vh]">
+            className="flex items-center justify-center gap-40 w-full px-12 bg-white border border-black rounded-3xl xl:h-[50vh] 2xl:h-[50vh]">
             {children}
         </nav>
     )

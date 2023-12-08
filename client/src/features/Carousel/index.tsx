@@ -35,7 +35,7 @@ const customIndicatorTheme: FlowbiteCarouselTheme = { /* eslint-disable-line */
 
 function CarouselBottom({ children }) {
     return (
-        <div className='flex flex-col justify-center xl:w-[27%] gap-4 pb-4 lg:w-1/2 lg:flex-row xl:justify-start  xl:pb-10'>
+        <div className='flex flex-col justify-center gap-4 pb-4 xl:w-5/12 2xl:w-4/12 lg:w-1/2 lg:flex-row xl:justify-between xl:pb-10'>
             {children}
         </div>
     );
@@ -43,7 +43,7 @@ function CarouselBottom({ children }) {
 
 function CarouselBtn({ color, height, width, children }) {
     return (
-        <button className={`${width} ${height} ${color} text-xl lg:h-16 tracking-wide border border-black cursor-pointer rounded-xl`}>
+        <button className={`${width} ${height} ${color} text-xl xl:px-6 lg:h-16 tracking-wide border whitespace-nowrap border-black cursor-pointer rounded-xl`}>
             {children}
         </button>
     );
@@ -67,7 +67,7 @@ function CarouselCardSubHeading({ children }) {
 function CarouselCard({ children, color }) {
     return (
         <div
-            className={`relative flex flex-col lg:p-10 items-center justify-center xl:tracking-wider xl:text-6xl w-full p-2 lg:w-6/12 lg:h-72 xl:w-[27%] font-black text-center text-${color} border border-${color} font-unbounded rounded-3xl backdrop-blur-xl`}
+            className={`relative flex flex-col lg:p-10 items-center justify-center xl:tracking-wider xl:text-6xl w-full p-2 lg:w-6/12 xl:w-5/12 xl:min-h-96 lg:h-72 2xl:w-4/12 font-black text-center text-${color} border border-${color} font-unbounded rounded-3xl backdrop-blur-xl`}
             id='sparkle-card'>
             <span className="py-5">{children}</span>
             <CardBorderDecoration color={color} />
@@ -96,7 +96,7 @@ function Sparkle({ url }) {
 
 function CarouselPanel({ children, pos }) {
     return (
-        <div className={`flex min-w-screen flex-col min-h-[88vh] lg:h-[98vh] pt-28 pb-12 px-3 items-center lg:items-start lg:justify-center lg:gap-12 lg:px-14 xl:justify-end xl:px-32 justify-between bg-gray-400 dark:bg-gray-700 dark:text-white banner-${pos}`}>
+        <div className={`flex min-w-screen flex-col min-h-[89vh] lg:min-h-[72vh] xl:min-h-[86vh] 2xl:min-h-[100vh] pt-28 pb-12 px-3 items-center lg:items-start lg:justify-center lg:gap-12 lg:px-14  xl:px-16  justify-between bg-gray-400 dark:bg-gray-700 dark:text-white banner-${pos}`}>
             {children}
         </div>
     );
@@ -104,7 +104,7 @@ function CarouselPanel({ children, pos }) {
 
 function CarouselWrapper({ children }) {
     return (
-        <div className="w-full min-w-screen min-h-[88vh] lg:h-[98vh] xl:min-h-screen">
+        <div className="w-full min-w-screen min-h-[89vh] lg:min-h-[72vh] xl:min-h-[86vh] 2xl:min-h-[100vh] ">
             {children}
         </div>
     );
@@ -120,10 +120,10 @@ function CostumCarousel() {
                         <CarouselCardHeading> Say Hello to your future ear piercings</CarouselCardHeading>
                     </CarouselCard>
                     <CarouselBottom>
-                        <CarouselBtn color='bg-mint' width='w-56' height='h-14'>
+                        <CarouselBtn color='bg-mint' width='w-52 lg:w-1/2' height='h-14'>
                             Termin Buchen
                         </CarouselBtn>
-                        <CarouselBtn color='bg-white' width='w-56' height='h-14'>
+                        <CarouselBtn color='bg-white' width='w-52 lg:w-1/2' height='h-14'>
                             Shop Jewelry
                         </CarouselBtn>
                     </CarouselBottom>

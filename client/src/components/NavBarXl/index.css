@@ -15,6 +15,10 @@
     filter: unset;
     border-top-left-radius: 0;
 }
+.isFocused {
+    @apply border border-black rounded-lg
+}
+
 
 .custom-header-folder-2 {
     display: flex !important;
