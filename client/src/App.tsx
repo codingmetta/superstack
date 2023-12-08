@@ -1,11 +1,7 @@
-import Header from './pages/Landing/Header';
-import Cart from './features/Cart';
-import Menu from './components/Menu';
 import productData from './assets/data/products.json'
-import Main from './pages/Landing/Main';
 import { useState } from 'react'
 import { ShoppingCartContext } from './Context';
-import Footer from './pages/Landing/Footer';
+import LandingPage from './pages/Landing';
 //TODO: use React Router
 
 
@@ -30,28 +26,13 @@ function App() {
           setShowCart,
           showMenu,
           setShowMenu,
-          menuViewState, 
-          setMenuViewState
+          menuViewState,
+          setMenuViewState,
+          isLoading
         }}
       >
-        {
-          showCart ?
-            <Cart />
-            :
-            <>
-              <Header />
-              {showMenu ?
-                <Menu />
-                :
-                <>
-                <Main 
-                  isLoading={isLoading} 
-                  productCollection={productCollection} />
-                <Footer />
-                </>
-              }
-            </>
-        }
+        <LandingPage />
+        
       </ShoppingCartContext.Provider>
 
     </div>

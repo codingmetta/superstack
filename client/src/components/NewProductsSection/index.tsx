@@ -8,12 +8,12 @@ export default function NewProductsSection() {
     const { productCollection } = useContext(ShoppingCartContext)
     const newProducts = productCollection.slice(10, 12);
     return (
-        <section className="flex flex-col items-center gap-16 pt-12 pb-8 bg-white lg:pt-28 lg:pb-28 lg:gap-0 2xl:gap-16">
+        <section className="flex flex-col items-center gap-16 pt-12 pb-8 bg-white lg:pt-28 lg:pb-28 lg:gap-0 xl:gap-12 2xl:gap-16">
             <div className='flex flex-col gap-2 text-center '>
                 <span className='text-lg font-black uppercase lg:text-xl whitespace-nowrap font-unbounded '>New new new new new</span>
                 <p className='tracking-wide lg:text-lg'>Oh yeah! Unsere Neuzugänge sind da.</p>
             </div>
-            <div className="flex flex-col items-center lg:items-end justify-center lg:justify-between bg-white lg:px-10 lg:flex-row lg:min-h-[40rem]">
+            <div className="flex flex-col items-center lg:items-end justify-center lg:justify-between xl:justify-around bg-white lg:px-10 lg:flex-row lg:min-h-[40rem]">
                 <div className='flex flex-col items-center gap-8 bg-white lg:gap-4 xl:gap-8 lg:flex-row'>
                     {
                         newProducts.map((product) => (

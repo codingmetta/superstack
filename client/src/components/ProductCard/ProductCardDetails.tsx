@@ -1,6 +1,6 @@
 'use client';
 
-function CardDetails({ product }) {
+function ProductCardDetails({ product }) {
     return (
         <article>
             <section>
@@ -17,8 +17,7 @@ function CardDetails({ product }) {
                 <input id="default-radio-silver" type="radio" value="silver" name="default-radio" className="w-6 h-6 text-gray-400 bg-gray-400 border-none cursor-pointer focus:ring-black active:ring-2 focus:ring-2 " aria-label="Silver" />
             </fieldset>
         </article>
-
     )
 }
 
-export default CardDetails
+export default ProductCardDetails

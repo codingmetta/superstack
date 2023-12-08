@@ -4,7 +4,7 @@ import FooterComponent from '../../components/Footer'
 function Footer() {
   return (
     <>
-    <FooterComponent />
+      <FooterComponent />
     </>
   )
 }
