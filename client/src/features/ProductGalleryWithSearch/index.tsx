@@ -7,8 +7,8 @@ import BannerText from '../../components/BannerText';
 
 function SearchInputWrapper({ children }) {
     return (
-        <div className='flex flex-row items-center justify-start w-full pt-6 pb-4 lg:pb-8'>
-            <div className="relative w-11/12">
+        <div className='flex flex-row items-center justify-center w-full px-2.5 pt-6 pb-4 lg:pb-8'>
+            <div className="relative w-full">
                 {children}
             </div>
         </div>
@@ -24,18 +24,18 @@ function InputIcon({ children }) {
 }
 function ProductListWrapper({ children }) {
     return (
-        <section className="flex flex-row flex-wrap justify-between w-full h-full gap-2 lg:py-10 lg:gap-4 lg:p-0 lg:justify-start p-1.5">
+        <section className="flex flex-row flex-wrap items-center justify-around w-full h-full p-1 lg:justify-between gap-y-5 lg:py-10 lg:p-0 ">
             {children}
         </section>
     );
 }
 
-function Input({ handleSearchInput, placeholder }) {
+function SearchInput({ handleSearchInput, placeholder }) {
     return (
         <input
             type="search"
             name="search"
-            className='block w-full text-xl border rounded-lg ps-10'
+            className='block w-full text-xl border rounded-lg ps-10 focus:ring-lavendel '
             placeholder={placeholder}
             id="default-search"
             onChange={(e) => handleSearchInput(e)}
@@ -74,13 +74,13 @@ function ProductGalleryWithSearch({ products }) {
     const filteredProducts = filterData(products);
 
     return (
-        <section className='flex flex-col items-center lg:p-10'>
+        <section className='flex flex-col items-center pt-4 pb-40 lg:px-10 lg:py-20'>
             <BannerText />
             <SearchInputWrapper>
                 <InputIcon>
                     <MagnifyingGlassIcon className="w-6 h-6 text-gray-600" />
                 </InputIcon>
-                <Input placeholder='Clicker silber...' handleSearchInput={handleSearchInput} />
+                <SearchInput placeholder='Clicker silber...' handleSearchInput={handleSearchInput} />
             </SearchInputWrapper>
 
             <ProductListWrapper>

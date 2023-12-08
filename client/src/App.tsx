@@ -23,6 +23,7 @@ function App() {
     <div className="page-container">
       <ShoppingCartContext.Provider
         value={{
+          productCollection,
           cart,
           updateCart,
           showCart,

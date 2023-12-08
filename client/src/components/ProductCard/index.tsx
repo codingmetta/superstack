@@ -4,9 +4,12 @@ import { useState, useContext } from 'react';
 import Rating from '../Rating';
 import { ShoppingCartContext } from '../../Context'
 
-function ProductCardWrapper({ children }) {
+function ProductCardWrapper({ children, size }) {
     return (
-        <article className="flex flex-col items-center justify-around text-sm bg-white border border-black rounded-3xl w-44 lg:w-56 ">
+        <article className={`flex flex-col items-center justify-around  bg-white border  rounded-3xl 
+        ${size === 'medium' ? 'w-44 border-black text-sm lg:w-56' : ''}
+        ${size === 'large' ? 'w-72 border-transparent' : ''}
+        `}>
             {children}
         </article>
     );
@@ -20,23 +23,29 @@ function ProductCardHead({ children }) {
     );
 }
 
-function ProductCardBody({ children }) {
+function ProductCardBody({ children, size }) {
     return (
-        <>
-            {children}
-        </>
-    );
-}
-
-function ProductCardFooter({ children }) {
-    return (
-        <section className="flex flex-col w-full h-40 gap-2 pl-3 pr-3 mb-2">
+        <section className={`w-full 
+        ${size === 'medium'? 'h-32 p-3  ': ''}
+        ${size === 'large'? 'h-full py-1.5': ''}
+        `}>
             {children}
         </section>
     );
 }
 
-function ProductCardSmall({ product }) {
+function ProductCardFooter({ children, size }) {
+    return (
+        <section className={`flex flex-col w-full h-40 gap-2  mb-2
+        ${size === 'medium'? 'px-3  ': ''}
+        ${size === 'large'? '': ''}
+        `}>
+            {children}
+        </section>
+    );
+}
+
+function ProductCard({ product, size }) {
     const { cart, updateCart, setShowCart } = useContext(ShoppingCartContext);
 
     const [configuratedProduct, setConfiguratedProduct] = useState({
@@ -111,34 +120,35 @@ function ProductCardSmall({ product }) {
     })
 
     const ratingClean = Math.floor(product.rating);
-    const priceClean= configuratedProduct.variantPrice.toFixed(2);
+    const priceClean = configuratedProduct.variantPrice.toFixed(2);
 
     return (
-        <ProductCardWrapper>
+        <ProductCardWrapper size={size}>
             <ProductCardHead>
                 <img
                     src={configuratedProduct.image}
                     alt={configuratedProduct.title}
                     className="object-contain w-full h-full border border-transparent cursor-pointer rounded-3xl " />
             </ProductCardHead>
-            <ProductCardBody>
-                <section className="w-full h-32 p-3">
-                    <Rating rating={ratingClean} />
-                    <h3 className="font-semibold line-clamp-2 lg:text-lg ">{product.title}</h3>
-                    <p className="pt-1">{priceClean}€</p>
-                </section>
+
+            <ProductCardBody size={size} >
+                <Rating rating={ratingClean} />
+                <h3 className="font-semibold line-clamp-2 lg:text-lg ">{product.title}</h3>
+                <p className="pt-1">{priceClean}€</p>
             </ProductCardBody>
 
-            <ProductCardFooter>
-                    <div className='flex gap-2 mb-1'>
-                        <span
-                            onClick={handleGoldClicked}
-                            className={`w-6 h-6 bg-yellow-300 rounded-full cursor-pointer ${goldSelected ? "selected" : " "}`}></span>
-                        <span
-                            onClick={handleSilverClicked}
-                            className={`w-6 h-6 bg-gray-400 rounded-full cursor-pointer ${goldSelected ? " " : "selected"}`}></span>
-                    </div>
+            <ProductCardFooter size={size}>
+                <div className='flex gap-2 mb-1'>
+                    <span
+                        onClick={handleGoldClicked}
+                        className={`w-6 h-6 bg-yellow-300 rounded-full cursor-pointer ${goldSelected ? "selected" : " "}`}></span>
+                    <span
+                        onClick={handleSilverClicked}
+                        className={`w-6 h-6 bg-gray-400 rounded-full cursor-pointer ${goldSelected ? " " : "selected"}`}></span>
+                </div>
 
+                {
+                    configuratedProduct.size !== 'onesize' &&
                     <select
                         value={configuratedProduct.size}
                         onChange={e => handleSizeSelection(e.target.value)}
@@ -147,23 +157,24 @@ function ProductCardSmall({ product }) {
                         id="jewelry-size-select">
                         {optionElements}
                     </select>
-                    <select
-                        value={selectedVariant}
-                        onChange={e => handleVariantSelection(e.target.value)}
-                        className="p-1 text-sm text-center bg-transparent border border-black rounded-md cursor-pointer "
-                        name="jewelry-variant"
-                        id="jewelry-variant-select">
-                        <option value="single">Single</option>
-                        <option value="pair">Pair</option>
-                    </select>
-                    <button
-                        onClick={handleAddProductToCart}
-                        className="h-10 text-sm border border-black rounded-md cursor-pointer bg-limone">
-                        Add to cart
-                    </button>
+                }
+                <select
+                    value={selectedVariant}
+                    onChange={e => handleVariantSelection(e.target.value)}
+                    className="p-1 text-sm text-center bg-transparent border border-black rounded-md cursor-pointer "
+                    name="jewelry-variant"
+                    id="jewelry-variant-select">
+                    <option value="single">Single</option>
+                    <option value="pair">Pair</option>
+                </select>
+                <button
+                    onClick={handleAddProductToCart}
+                    className="h-10 text-sm border border-black rounded-md cursor-pointer bg-limone">
+                    Add to cart
+                </button>
             </ProductCardFooter>
         </ProductCardWrapper>
     );
 }
 
-export default ProductCardSmall
+export default ProductCard

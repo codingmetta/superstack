@@ -98,7 +98,7 @@
             "coating": "24K Gold PVD"
         },
         "sizes": ["8mm"]
-    },
+    },  
     {
         "id": 9,
         "title": "Super Big Heart",
@@ -118,6 +118,32 @@
         "description": "We have a little secret: our Piercing Super Tiny Butterfly is so tiny it won't break your heart. ",
         "image": "https://www.superstack.me/cdn/shop/products/105_450x450_crop_center.png?v=1665073763",
         "price": 17.90,
+        "rating": 5.0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "sizes": ["4mm", "6mm", "8mm", "10mm"]
+     },
+    {
+        "id": 11,
+        "title": "Super Cuff",
+        "description": "Such a Heart-Breaker!",
+        "image": "https://www.superstack.me/cdn/shop/files/cuff_gold_3cbfb00f-1c46-4b01-9220-ba99d5b6995f_700x.jpg?v=1673881339",
+        "price": 19.90,
+        "rating": 0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "sizes": ["onesize"]
+    },
+    {
+        "id": 12,
+        "title": "Super Trio Sparkle",
+        "description": "We have a little secret: our Piercing Super Trio Sparkle is so tiny it won't break your heart. ",
+        "image": "https://www.superstack.me/cdn/shop/files/trio_sparkle_silber_e356bad4-32d1-4967-b9f8-031775205df5_700x.jpg?v=1673881503",
+        "price": 29.90,
         "rating": 5.0,
         "materials": {
             "base": "Titan ASTM F-136",

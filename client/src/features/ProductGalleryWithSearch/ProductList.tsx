@@ -1,10 +1,10 @@
 'use client';
-import ProductCardSmall from "../../components/ProductCardSmall";
+import ProductCard from "../../components/ProductCard";
 
 function ProductList({ productList }) {
     return (
         productList.map((product) => (
-            <ProductCardSmall key={product.id} product={product} />
+            <ProductCard key={product.id} product={product} size='medium' />
         ))
     );
 }

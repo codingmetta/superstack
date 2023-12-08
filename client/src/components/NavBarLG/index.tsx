@@ -38,7 +38,7 @@ function NavBarLG() {
             className="absolute z-50 flex flex-col w-11/12 translate-x-16 translate-y-16 opacity-95 ">
             <nav
                 className="relative z-50 flex flex-wrap items-center justify-between w-full pl-3 pr-6 bg-white border border-black shadow rounded-b-3xl rounded-r-2xl ">
-                <div className="custom-header-folder-2"></div>
+                <div className="custom-header-folder-2 "></div>
                 <LogoLG />
                 <MenuLG />
                 <span className="flex flex-row gap-5">

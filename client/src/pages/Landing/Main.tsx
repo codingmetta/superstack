@@ -5,8 +5,9 @@ import TabStrip from '../../features/TabStrip'
 import BenefitSection from '../../components/BenefitSection'
 import StoreInfoSection from '../../components/StoreInfoSection'
 import NewEarsSection from '../../components/NewEarsSection'
-import HugEarsSection from '../../components/HugEarsSection'
+import NewProductsSection from '../../components/NewProductsSection'
 import SuperStackAboutSection from '../../components/SuperStackAboutSection'
+import BasicProductsSection from '../../components/BasicProductsSection'
 
 function Main({ isLoading, productCollection }) {
     return (
@@ -18,14 +19,15 @@ function Main({ isLoading, productCollection }) {
                 :
 
                 <ProductGalleryWithSearch
-                    products={productCollection} />
+                    products={productCollection.slice(0,8)} />
 
             }
             <StoreInfoSection />
             <NewEarsSection />
             <BenefitSection />
-            <HugEarsSection />
+            <NewProductsSection />
             <TabStrip />
+            <BasicProductsSection />
             <SuperStackAboutSection/>
         </main>
     )
