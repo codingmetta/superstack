@@ -3,15 +3,25 @@ import { nanoid } from 'nanoid';
 import { useState, useContext } from 'react';
 import Rating from '../Rating';
 import { ShoppingCartContext } from '../../Context'
+import { motion } from 'framer-motion';
+
 
 function ProductCardWrapper({ children, size }) {
     return (
-        <article className={`flex flex-col items-center justify-around  bg-white border  rounded-3xl 
+        <motion.article 
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}
+        className={`flex flex-col items-center justify-around  bg-white border  rounded-3xl 
         ${size === 'medium' ? 'w-44 border-black text-sm lg:w-56 xl:w-72' : ''}
         ${size === 'large' ? 'w-72 2xl:w-96 border-transparent' : ''}
         `}>
             {children}
-        </article>
+        </motion.article>
     );
 }
 

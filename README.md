@@ -8,7 +8,7 @@ Visit https://superstacked.web.app/ to see the current demo.
 
 ## Tech Stack
 
-`react18`, `vite` , `tailwind-css`, `flowbite-react`, `yarn`
+`react18`, `vite` , `tailwind-css`, `flowbite-react`, `framer-motion`
 
 # Installation Instructions
 

@@ -6,6 +6,7 @@ function ProductList({ productList }) {
         productList.map((product) => (
             <ProductCard key={product.id} product={product} size='medium' />
         ))
+
     );
 }
 

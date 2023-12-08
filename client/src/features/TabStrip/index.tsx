@@ -2,14 +2,22 @@
 import Tabs from './Tabs'
 import ImageMap from './ImageMap'
 import './index.css'
-
+import { motion } from 'framer-motion'
 
 
 function TabPane({ children, ...rest }) {
     return (
-        <article className="relative flex flex-col justify-around gap-6 p-6 mt-8 overflow-hidden lg:pb-12 lg:min-h-96 lg:px-16 lg:flex-row lg:justify-start active-panel">
+        <motion.article
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01]
+            }}
+            className="relative flex flex-col justify-around gap-6 p-6 mt-8 overflow-hidden lg:pb-12 lg:min-h-96 lg:px-16 lg:flex-row lg:justify-start active-panel">
             {children}
-        </article>
+        </motion.article>
     )
 }
 

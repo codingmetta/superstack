@@ -31,7 +31,7 @@ function NavBarXl() {
     return (
 
         <header
-            onMouseLeave={handleMouseLeave}
+            onMouseLeave={(e) =>handleMouseLeave(e)}
             className="absolute z-50 flex flex-col w-11/12 xl:translate-y-20 2xl:translate-y-16 xl:translate-x-12 2xl:translate-x-16 opacity-95 ">
             <nav className="relative z-50 flex items-center justify-between w-full pl-3 pr-6 bg-white border border-black shadow flex-nowrap rounded-b-3xl rounded-r-2xl ">
                 <div className="custom-header-folder-2"></div>

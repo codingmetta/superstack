@@ -3,7 +3,6 @@ import ImageMapper from 'react-img-mapper';
 import { Fragment, useState } from 'react';
 import areasJSON from '../../assets/data/areas.json';
 
-
 const getCenterCoords = (areas) =>
   areas.map((area) => {
     const n = area.coords.length / 2;
@@ -26,7 +25,7 @@ const ImageMap = props => {
     areas: areasJSON
   }
 
-  function handleSelectedArea(area) {
+  function handleSelectedLabel(area) {
     setSelectedArea(area.name);
     const piercingTitle = transformString(area.id);
     setSelectedPiercingTitle(piercingTitle);
@@ -54,15 +53,14 @@ const ImageMap = props => {
             responsive={props.responsive}
             parentWidth={props.parentWidth}
             lineWidth={1}
-            onClick={(area) => handleSelectedArea(area)}
-            onTouchStart={(area) => handleSelectedArea(area)}
           />
           {extendedAreas.map((area) => (
             <span
+              onClick={() => handleSelectedLabel(area)}
+              onTouchStart={() => handleSelectedLabel(area)}
               key={area.id}
-              className="tooltip hover:bg-limone"
+              className="tooltip"
               style={{
-                position: "absolute",
                 top: area.center.y,
                 left: area.center.x,
                 zIndex: 1000
