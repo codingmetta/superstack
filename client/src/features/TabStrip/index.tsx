@@ -15,7 +15,7 @@ function TabPane({ children, ...rest }) {
                 delay: 0.5,
                 ease: [0, 0.71, 0.2, 1.01]
             }}
-            className="relative flex flex-col justify-around gap-6 p-6 mt-8 overflow-hidden lg:pb-12 lg:min-h-96 lg:px-16 lg:flex-row lg:justify-start active-panel">
+            className="relative flex flex-col justify-around gap-6 p-6 mt-8 overflow-hidden lg:pb-12 lg:min-h-96 lg:px-16 lg:flex-row 2xl:flex-col lg:justify-start active-panel">
             {children}
         </motion.article>
     )
@@ -23,7 +23,7 @@ function TabPane({ children, ...rest }) {
 
 function TabStrip() {
     return (
-        <div className='w-full min-w-[370px] lg:p-20 h-full px-4 py-14 bg-lila'>
+        <div className='w-full min-w-[370px] h-full px-4 py-14 2xl:min-w-1/2 lg:p-20 2xl:px-[3vw] 2xl:h-full 2xl:mb-4 bg-lila'>
             <Tabs>
                 <TabPane title="Piercing">
                     <div className='flex flex-col justify-between gap-6 lg:justify-start lg:gap-8 lg:mt-8 lg:items-start'>

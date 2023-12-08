@@ -19,17 +19,20 @@ function Main({ isLoading, productCollection }) {
                 :
 
                 <ProductGalleryWithSearch
-                    products={productCollection.slice(0,8)} />
+                    products={productCollection.slice(0, 8)} />
 
             }
-            
+
             <StoreInfoSection />
             <NewEarsSection />
             <BenefitSection />
             <NewProductsSection />
-            <TabStrip />
-            <BasicProductsSection />
-            <SuperStackAboutSection/>
+            <div className='flex flex-col items-center justify-center w-full h-full bg-white 2xl:flex-row'>
+                <TabStrip />
+                <BasicProductsSection />
+            </div>
+
+            <SuperStackAboutSection />
         </main>
     )
 }
