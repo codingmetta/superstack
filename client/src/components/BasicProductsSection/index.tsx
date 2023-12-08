@@ -4,18 +4,16 @@ import ProductCard from '../ProductCard/index';
 import { ShoppingCartContext } from '../../Context';
 
 
-export default function NewProductsSection() {
+export default function BasicProductsSection() {
     const { productCollection } = useContext(ShoppingCartContext)
-    const newProducts = productCollection.slice(8, 10);
+    const newProducts = productCollection.slice(12, 14);
     return (
-            <section className="flex flex-col items-center lg:items-end justify-center lg:justify-between bg-white  lg:px-10 lg:flex-row lg:min-h-[40rem]">
-                <div className='flex flex-col items-center gap-8 bg-white lg:gap-4 xl:gap-8 lg:flex-row'>
-                    {
-                        newProducts.map((product) => (
-                            <ProductCard key={product.id} product={product} size='large' />
-                        ))
-                    }
-                </div>
-            </section>
+        <section className='flex flex-col items-center justify-around gap-8 px-4 py-12 bg-white lg:py-20 lg:gap-4 xl:gap-8 lg:flex-row'>
+            {
+                newProducts.map((product) => (
+                    <ProductCard key={product.id} product={product} size='large' />
+                ))
+            }
+        </section>
     )
 }

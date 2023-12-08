@@ -15,9 +15,12 @@ function ProductCardWrapper({ children, size }) {
     );
 }
 
-function ProductCardHead({ children }) {
+function ProductCardHead({ children, size}) {
     return (
-        <section className="w-full">
+        <section className={`" "
+        ${size==='medium'? 'w-full' :''}
+        ${size==='large'? 'w-72 h-72' :''}
+        `}>
             {children}
         </section>
     );
@@ -124,11 +127,11 @@ function ProductCard({ product, size }) {
 
     return (
         <ProductCardWrapper size={size}>
-            <ProductCardHead>
+            <ProductCardHead size={size}>
                 <img
                     src={configuratedProduct.image}
                     alt={configuratedProduct.title}
-                    className="object-contain w-full h-full border border-transparent cursor-pointer rounded-3xl " />
+                    className="object-cover w-full h-full border border-transparent cursor-pointer rounded-3xl " />
             </ProductCardHead>
 
             <ProductCardBody size={size} >

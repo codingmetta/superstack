@@ -150,5 +150,31 @@
             "coating": "24K Gold PVD"
         },
         "sizes": ["4mm", "6mm", "8mm", "10mm"]
+     },
+     {
+        "id": 13,
+        "title": "Super Basic Gems",
+        "description": "Such Delights!",
+        "image": "https://www.superstack.me/cdn/shop/files/stein_gross_silber_700x.jpg?v=1666351488",
+        "price": 16.90,
+        "rating": 4,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "sizes": ["2mm", "3mm", "5mm"]
+    },
+    {
+        "id": 14,
+        "title": "Super Basic Clicker",
+        "description": "We have a little secret: our Piercing Super Basic Clicker is so tiny it won't break your heart. ",
+        "image": "https://www.superstack.me/cdn/shop/files/hoop_mittel_gold_700x.jpg?v=1666351810",
+        "price": 16.90,
+        "rating": 5.0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "sizes": ["12mm"]
      }
 ]

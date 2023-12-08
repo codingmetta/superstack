@@ -15,7 +15,7 @@ function TabPane({ children, ...rest }) {
 
 function TabStrip() {
     return (
-        <div className='w-full min-w-[370px] lg:p-20 h-full p-4 pt-12 pb-12 bg-lila'>
+        <div className='w-full min-w-[370px] lg:p-20 h-full px-4 py-14 bg-lila'>
             <Tabs>
                 <TabPane title="Piercing">
                     <div className='flex flex-col justify-between gap-6 lg:justify-start lg:gap-8 lg:mt-8 lg:items-start'>

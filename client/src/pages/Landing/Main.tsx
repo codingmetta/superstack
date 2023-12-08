@@ -22,6 +22,7 @@ function Main({ isLoading, productCollection }) {
                     products={productCollection.slice(0,8)} />
 
             }
+            
             <StoreInfoSection />
             <NewEarsSection />
             <BenefitSection />
