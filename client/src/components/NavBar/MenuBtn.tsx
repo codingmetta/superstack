@@ -1,11 +1,11 @@
 'use client';
 import { useContext } from 'react';
-import { ShoppingCartContext } from '../../Context'
+import { StoreContext } from '../../Context'
 import Bars3Icon from '@heroicons/react/20/solid/esm/Bars3Icon';
 import XMarkIcon from '@heroicons/react/24/outline/esm/XMarkIcon';
 function MenuBtn() {
 
-    const {  showMenu, setShowMenu } = useContext(ShoppingCartContext);
+    const {  showMenu, setShowMenu } = useContext(StoreContext);
 
     function handleClick() {
         setShowMenu(prev => !prev);

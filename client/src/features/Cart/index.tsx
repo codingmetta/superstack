@@ -2,12 +2,12 @@
 
 import { useContext } from 'react';
 import CartItem from './CartItem';
-import { ShoppingCartContext } from '../../Context';
+import { StoreContext} from '../../Context';
 
 
 function ShoppingCart() {
 
-    const { cart, setShowCart } = useContext(ShoppingCartContext);
+    const { cart, setShowCart } = useContext(StoreContext);
 
     const cartItems = cart.map((cartItem) => {
         return (

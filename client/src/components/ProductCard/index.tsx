@@ -2,7 +2,7 @@
 import { nanoid } from 'nanoid';
 import { useState, useContext } from 'react';
 import Rating from '../ui/Rating';
-import { ShoppingCartContext } from '../../Context'
+import { StoreContext } from '../../Context'
 import { calculateProductVariantPrice } from '../../utils/helper.js'
 import { formatRatingToRoundedValue, formatPrice } from '../../utils/format.js'
 import Card from './Card'
@@ -10,7 +10,7 @@ import Card from './Card'
 
 function ProductCard({ product, size }) {
 
-    const { cart, updateCart, setShowCart } = useContext(ShoppingCartContext);
+    const { cart, updateCart, setShowCart } = useContext(StoreContext);
     const [goldSelected, setGoldSelected] = useState(true);
     const [configuratedProduct, setConfiguratedProduct] = useState({
         id: nanoid(),

@@ -1,11 +1,11 @@
 'use client';
 import { useContext } from 'react';
-import { ShoppingCartContext } from '../../Context'
+import { StoreContext } from '../../Context'
 
 
 function CartItem({ item }) {
 
-    const { cart, updateCart } = useContext(ShoppingCartContext);
+    const { cart, updateCart } = useContext(StoreContext);
 
 
     function handleDecreaseAmount() {

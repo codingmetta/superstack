@@ -1,6 +1,6 @@
 import productData from './assets/data/products.json'
 import { useState } from 'react'
-import { ShoppingCartContext } from './Context';
+import { StoreContext } from './Context';
 import LandingPage from './pages/Landing';
 //TODO: use React Router
 
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="page-container">
-      <ShoppingCartContext.Provider
+      <StoreContext.Provider
         value={{
           productCollection,
           cart,
@@ -33,7 +33,7 @@ function App() {
       >
         <LandingPage />
         
-      </ShoppingCartContext.Provider>
+      </StoreContext.Provider>
 
     </div>
   );

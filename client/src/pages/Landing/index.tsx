@@ -1,5 +1,5 @@
 import { useContext} from 'react'
-import { ShoppingCartContext } from '../../Context'
+import { StoreContext } from '../../Context'
 import Cart from '../../features/Cart'
 import Header from './Header'
 import Menu from '../../components/Menu'
@@ -8,7 +8,7 @@ import Footer from './Footer'
 
 function LandingPage() {
 
-    const {showCart, showMenu, isLoading, productCollection} = useContext(ShoppingCartContext)
+    const {showCart, showMenu, isLoading, productCollection} = useContext(StoreContext)
     return (
         <>
             {

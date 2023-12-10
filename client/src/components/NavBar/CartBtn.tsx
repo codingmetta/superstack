@@ -1,10 +1,10 @@
 'use client';
 import { useContext } from 'react';
-import { ShoppingCartContext } from '../../Context'
+import { StoreContext } from '../../Context'
 import ShoppingBagIcon from '@heroicons/react/24/outline/esm/ShoppingBagIcon';
 
 function CartBtn() {
-  const { cart, setShowCart } = useContext(ShoppingCartContext);
+  const { cart, setShowCart } = useContext(StoreContext);
 
   function handleOnClick() {
     setShowCart(true);

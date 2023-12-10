@@ -1,11 +1,11 @@
 'use client';
 import { useContext } from 'react';
-import { ShoppingCartContext } from '../../Context'
+import { StoreContext } from '../../Context'
 
 
 function Logo() {
 
-    const { setShowMenu } = useContext(ShoppingCartContext);
+    const { setShowMenu } = useContext(StoreContext);
 
     function handleClick() {
         setShowMenu(false);

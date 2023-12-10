@@ -1,11 +1,11 @@
 'use client';
 import { useContext } from 'react';
 import ProductCard from '../ProductCard/index';
-import { ShoppingCartContext } from '../../Context';
+import { StoreContext } from '../../Context';
 
 
 export default function NewProductsSection() {
-    const { productCollection } = useContext(ShoppingCartContext)
+    const { productCollection } = useContext(StoreContext)
     const newProducts = productCollection.slice(10, 12);
     return (
         <section className="flex flex-col items-center gap-16 pt-12 pb-8 bg-white lg:pt-28 lg:pb-28 lg:gap-0 xl:gap-12 2xl:gap-16">

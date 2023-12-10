@@ -3,7 +3,7 @@ import { useContext } from "react";
 import SearchBtn from "../NavBar/SearchBtn";
 import CartBtn from "../NavBar/CartBtn";
 import MenuXL from "./MenuXL";
-import { ShoppingCartContext } from "../../Context";
+import { StoreContext } from "../../Context";
 import ShopPlane from "./ShopPlane";
 import AboutPlane from "./AboutPlane";
 import GuidesPlane from "./GuidesPlane";
@@ -12,7 +12,7 @@ import LogoXl from "./LogoXl";
 
 function NavBarXl() {
 
-    const { menuViewState, setMenuViewState } = useContext(ShoppingCartContext)
+    const { menuViewState, setMenuViewState } = useContext(StoreContext)
 
     function handleMouseLeave(e) {
         e.stopPropagation();

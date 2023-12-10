@@ -1,10 +1,10 @@
 'use client';
 import { useContext } from 'react';
-import { ShoppingCartContext } from '../../Context';
+import { StoreContext } from '../../Context';
 import { motion } from 'framer-motion';
 
 function PlaneWrapper({ children }) {
-    const { setMenuViewState } = useContext(ShoppingCartContext)
+    const { setMenuViewState } = useContext(StoreContext)
 
     function handleMouseLeave(e) {
         e.stopPropagation();

@@ -1,6 +1,6 @@
 'use client';
 import { useContext } from 'react';
-import { ShoppingCartContext } from '../../Context';
+import { StoreContext } from '../../Context';
 
 
 function NavTitle({ onClick, viewState, view, children }) {
@@ -24,7 +24,7 @@ function Nav({ children }) {
 
 function MenuXL() {
 
-    const { menuViewState, setMenuViewState } = useContext(ShoppingCartContext);
+    const { menuViewState, setMenuViewState } = useContext(StoreContext);
 
     function handleClick(view) {
         setMenuViewState(view)

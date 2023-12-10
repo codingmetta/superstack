@@ -26,7 +26,7 @@ function Card({ children, size }) {
 
 function CardHeader({ children }) {
     const { size } = useContext(CardContext)
-    
+
     return (
         <section className={`" "
         ${size === 'medium' ? 'w-full' : ''}
