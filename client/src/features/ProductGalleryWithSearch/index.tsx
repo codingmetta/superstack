@@ -1,10 +1,10 @@
 'use client';
 import { useState } from 'react';
-import ProductList from './ProductList';
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
-import BannerText from '../../pages/Landing/components/BannerText';
 import { filterData } from '../../utils/filterData.js'
 import NothingFoundPlaceHolder from './NothingFoundPlaceHolder.js';
+import ProductList from './ProductList';
+import BannerText from '../../pages/Landing/components/BannerText';
 
 function SearchInputWrapper({ children }) {
     return (
@@ -61,13 +61,14 @@ function ProductGalleryWithSearch({ products }) {
                 <InputIcon>
                     <MagnifyingGlassIcon className="w-6 h-6 text-gray-600" />
                 </InputIcon>
-                <SearchInput 
-                    placeholder='Clicker silber...' 
-                    handleSearchInput={handleSearchInput} />
+                <SearchInput
+                    placeholder='Clicker silber...'
+                    handleSearchInput={handleSearchInput}
+                />
             </SearchInputWrapper>
 
             <ProductListWrapper>
-                { isUserTyping ?
+                {isUserTyping ?
                     doMatchingProductsForQueryExist ?
                         <ProductList productList={filteredProducts} />
                         :

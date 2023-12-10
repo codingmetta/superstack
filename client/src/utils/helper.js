@@ -1,3 +1,11 @@
+const calculateTotalPrice = (cart) => {
+    let total = 0;
+    for (let i = 0; i < cart.length; i++) {
+        total += cart[i].variantPrice * cart[i].amount;
+    }
+    return total;
+}
+
 const calculateProductVariantPrice = (productVariant, basePrice) => {
     if (productVariant === 'single') {
         return basePrice;
@@ -16,4 +24,4 @@ const determineExpression = (dir) => {
     return null;
 }
 
-export { calculateProductVariantPrice, determineExpression } 
+export { calculateTotalPrice, calculateProductVariantPrice, determineExpression } 

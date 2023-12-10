@@ -1,5 +1,5 @@
 'use client';
-import FolderTemplate from '../../../../components/FolderTemplate'
+import FolderTemplate from "../../../../components/ui/FolderTemplate";
 
 function SuperVisionSection() {
     return (
@@ -16,28 +16,24 @@ function SuperVisionSection() {
                     <p className='text-md font-climate'>
                         We want to create hygenic feel-good piercing places.
                     </p>
-
                 </FolderTemplate>
 
                 <FolderTemplate>
                     <p className='text-md font-climate'>
                         We use sanitary packaging.
                     </p>
-
                 </FolderTemplate>
 
                 <FolderTemplate>
                     <p className='text-md font-climate'>
                         We only work with re-sponsible production partners.
                     </p>
-
                 </FolderTemplate>
 
                 <FolderTemplate>
                     <p className='text-md font-climate'>
                         Our piercings are comfy to wear 24/7.
                     </p>
-
                 </FolderTemplate>
             </div>
             <img
