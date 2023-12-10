@@ -12,7 +12,7 @@ function App() {
   const [showCart, setShowCart] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [menuViewState, setMenuViewState] = useState('');
-
+  const [currentTab, setCurrentTab] = useState('SHOP');
 
 
   return (
@@ -28,7 +28,9 @@ function App() {
           setShowMenu,
           menuViewState,
           setMenuViewState,
-          isLoading
+          isLoading,
+          currentTab, 
+          setCurrentTab
         }}
       >
         <LandingPage />
