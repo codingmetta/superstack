@@ -1,6 +1,6 @@
 'use client';
 import MenuBtn from './MenuBtn';
-import Logo from './Logo';
+import Logo from '../ui/Logo';
 import SearchBtn from '../ui/SearchBtn';
 import CartBtn from '../ui/CartBtn';
 
