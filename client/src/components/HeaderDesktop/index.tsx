@@ -1,8 +1,8 @@
 'use client';
 import { useContext } from "react";
-import SearchBtn from "../NavBar/SearchBtn";
-import CartBtn from "../NavBar/CartBtn";
-import MenuXL from "./MenuXL";
+import SearchBtn from "../ui/SearchBtn";
+import CartBtn from "../ui/CartBtn";
+import SubNavXL from "./SubNavXL";
 import { StoreContext } from "../../Context";
 import ShopPlane from "./ShopPlane";
 import AboutPlane from "./AboutPlane";
@@ -10,13 +10,13 @@ import GuidesPlane from "./GuidesPlane";
 import LogoXl from "./LogoXl";
 
 
-function NavBarXl() {
+function HeaderDesktop() {
 
-    const { menuViewState, setMenuViewState } = useContext(StoreContext)
+    const { currentPlane, setCurrentPlane } = useContext(StoreContext);
 
     function handleMouseLeave(e) {
         e.stopPropagation();
-        setMenuViewState('');
+        setCurrentPlane('');
     }
     return (
 
@@ -26,29 +26,29 @@ function NavBarXl() {
             <nav className="relative z-50 flex items-center justify-between w-full pl-3 pr-6 bg-white border border-black shadow flex-nowrap rounded-b-3xl rounded-r-2xl ">
                 <div className="custom-header-folder"></div>
                 <LogoXl />
-                <MenuXL />
+                <SubNavXL />
                 <span className="flex flex-row xl:gap-4 2xl:gap-5">
                     <SearchBtn />
                     <CartBtn />
                 </span>
             </nav>
             {
-                menuViewState === 'SHOP' && <ShopPlane />
+                currentPlane === 'SHOP' && <ShopPlane />
             }
             {
-                menuViewState === 'GUIDES' && <GuidesPlane />
+                currentPlane === 'GUIDES' && <GuidesPlane />
             }
             {
-                menuViewState === 'ABOUT' && <AboutPlane />
+                currentPlane === 'ABOUT' && <AboutPlane />
             }
             {
-                menuViewState === 'STORE' && <></>
+                currentPlane=== 'STORE' && <></>
             }
             {
-                menuViewState === 'BOOKING' && <></>
+                currentPlane === 'BOOKING' && <></>
             }
         </header>
     );
 }
 
-export default NavBarXl
+export default HeaderDesktop

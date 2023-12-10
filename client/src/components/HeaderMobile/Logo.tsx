@@ -5,11 +5,12 @@ import { StoreContext } from '../../Context'
 
 function Logo() {
 
-    const { setShowMenu } = useContext(StoreContext);
+    const { setShowMenu, isMobile } = useContext(StoreContext);
 
     function handleClick() {
         setShowMenu(false);
     }
+
 
     return (
         <h1 aria-label="Superstack">

@@ -2,7 +2,7 @@ import { useContext} from 'react'
 import { StoreContext } from '../../Context'
 import Cart from '../../features/Cart'
 import Header from './Header'
-import Menu from '../../components/Menu'
+import Menu from '../../components/HeaderMobile/Menu'
 import Main from './Main'
 import Footer from './Footer'
 

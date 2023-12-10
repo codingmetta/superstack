@@ -1,24 +1,24 @@
 'use client';
-import about from '../../assets/data/about.json';
+import guides from '../../../assets/data/guides.json';
 
 function GuideBtn({ title, imgURL, alt }) {
     return (
         <button className='flex flex-col gap-2 '>
-            <span className="w-full bg-white rounded-lg">
-                <img className="object-contain w-40 h-32" src={imgURL} alt={alt} />
+            <span className="w-40 p-2 bg-white rounded-lg">   
+                <img className="" src={imgURL} alt={alt} />
             </span>
             <h3 className="text-start">{title}</h3>
         </button>
     );
 }
 
-function AboutTab() {
+function GuidesTab() {
     return (
         <section className="flex flex-col gap-3 p-4 bg-anti-flash">
-            <h2 className="font-extrabold tracking-wider">All about us</h2>
+            <h2 className="font-extrabold tracking-wider">We got you</h2>
             <div className="flex flex-row flex-wrap justify-between gap-2 ">
                 {
-                    about.map((cat) => (
+                    guides.map((cat) => (
                         <GuideBtn key={cat.id} title={cat.title} imgURL={cat.imgURL} alt={cat.alt} />
                     ))
                 }
@@ -27,4 +27,4 @@ function AboutTab() {
     )
 }
 
-export default AboutTab
+export default GuidesTab

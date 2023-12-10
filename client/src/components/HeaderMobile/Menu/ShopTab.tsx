@@ -2,8 +2,8 @@
 'use client';
 
 import { Accordion } from 'flowbite-react';
-import categories from '../../assets/data/categories.json'
-import piercingLocations from '../../assets/data/piercing-locations.json'
+import categories from '../../../assets/data/categories.json'
+import piercingLocations from '../../../assets/data/piercing-locations.json'
 
 
 function CategoryBtn({ title, imgURL, alt }) {

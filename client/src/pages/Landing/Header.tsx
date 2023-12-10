@@ -1,17 +1,16 @@
 'use client';
-import { useState, useEffect } from 'react';
-import NavBar from '../../components/NavBar'
-import NavBarXl from '../../components/NavBarXl';
+import { useContext, useEffect } from 'react';
+import HeaderMobile from '../../components/HeaderMobile'
+import HeaderDesktop from '../../components/HeaderDesktop';
+import { StoreContext } from '../../Context';
 
 /*
-  Breakpoint:
-  xl: 1280px
-  2xl: 1536px
+  @media breakpoint:
+  xl ==>  >= 1280px
  */
 
-
 function Header() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
+  const { isMobile, setIsMobile } = useContext(StoreContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,7 +27,7 @@ function Header() {
 
   return (
     <>
-          {isMobile?  <NavBar /> : <NavBarXl />}
+      {isMobile ? <HeaderMobile /> : <HeaderDesktop />}
     </>
 
   )

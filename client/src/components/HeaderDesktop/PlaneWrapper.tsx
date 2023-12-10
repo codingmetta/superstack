@@ -4,11 +4,11 @@ import { StoreContext } from '../../Context';
 import { motion } from 'framer-motion';
 
 function PlaneWrapper({ children }) {
-    const { setMenuViewState } = useContext(StoreContext)
+    const { setCurrentPlane } = useContext(StoreContext)
 
     function handleMouseLeave(e) {
         e.stopPropagation();
-        setMenuViewState('')
+        setCurrentPlane('')
     }
 
     return (

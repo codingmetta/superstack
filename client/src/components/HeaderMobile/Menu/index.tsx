@@ -7,7 +7,7 @@ import AboutTab from './AboutTab';
 import GuidesTab from './GuidesTab';
 // TODO: Store Page
 // TODO: Booking Page
-import { StoreContext } from '../../Context';
+import { StoreContext } from '../../../Context';
 
 function MenuWrapper({ children }) {
     return (

@@ -1,11 +1,11 @@
 'use client';
 import MenuBtn from './MenuBtn';
 import Logo from './Logo';
-import SearchBtn from './SearchBtn';
-import CartBtn from './CartBtn';
+import SearchBtn from '../ui/SearchBtn';
+import CartBtn from '../ui/CartBtn';
 
 
-function NavBar() {
+function HeaderMobile() {
 
     return (
         <header>
@@ -21,4 +21,4 @@ function NavBar() {
     );
 }
 
-export default NavBar
+export default HeaderMobile

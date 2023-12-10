@@ -1,5 +1,5 @@
 'use client';
-import { StoreContext } from '../../Context';
+import { StoreContext } from '../../../Context';
 import { useContext } from 'react'
 
 function SubNavBtn({ onClick, viewState, relatedTab, children }) {

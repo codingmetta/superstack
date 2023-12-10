@@ -11,7 +11,8 @@ function App() {
   const [cart, updateCart] = useState([]);
   const [showCart, setShowCart] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [menuViewState, setMenuViewState] = useState('');
+  const [currentPlane, setCurrentPlane] = useState('');
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
   const [currentTab, setCurrentTab] = useState('SHOP');
 
 
@@ -26,15 +27,17 @@ function App() {
           setShowCart,
           showMenu,
           setShowMenu,
-          menuViewState,
-          setMenuViewState,
           isLoading,
-          currentTab, 
-          setCurrentTab
+          currentTab,
+          setCurrentTab,
+          currentPlane,
+          setCurrentPlane,
+          isMobile,
+          setIsMobile
         }}
       >
         <LandingPage />
-        
+
       </StoreContext.Provider>
 
     </div>
