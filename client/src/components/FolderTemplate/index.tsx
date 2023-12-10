@@ -1,4 +1,4 @@
-import './index.css'
+'use client';
 
 function FolderTemplate({ children }) {
     return (

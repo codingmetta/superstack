@@ -11,7 +11,7 @@ function NavTitle({ onClick, viewState, view, children }) {
         <li>
             <button
                 onClick={() => onClick(view)}
-                className={` ${viewState === view ? 'isFocused' : ''}  block px-4 py-0.5 tracking-wider focus:border focus:border-black rounded-lg `}>
+                className={` ${viewState === view ? 'border border-black rounded-lg' : ''}  block px-4 py-0.5 tracking-wider focus:border focus:border-black rounded-lg `}>
                 {children}
             </button>
         </li>

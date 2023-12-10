@@ -36,7 +36,5 @@
     @apply border-black border-2
 }
 
-.isFocused {
-    @apply border border-black rounded-lg
-}
+
 

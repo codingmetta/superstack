@@ -41,9 +41,9 @@ function CarouselBottom({ children }) {
     );
 }
 
-function CarouselBtn({ color, height, width, children }) {
+function CarouselBtn({ color, children }) {
     return (
-        <button className={`${width} ${height} ${color} text-xl xl:px-6 lg:h-16 tracking-wide border whitespace-nowrap border-black cursor-pointer rounded-xl`}>
+        <button className={`${color} w-52 lg:w-1/2 h-14 text-xl xl:px-6 lg:h-16 tracking-wide border whitespace-nowrap border-black cursor-pointer rounded-xl`}>
             {children}
         </button>
     );
@@ -55,6 +55,7 @@ function CarouselCardHeading({ children }) {
         </p>
     );
 }
+
 function CarouselCardSubHeading({ children }) {
     return (
         <p className="pt-2 text-xs font-light tracking-wide uppercase lg:text-start lg:text-base ">
@@ -62,7 +63,6 @@ function CarouselCardSubHeading({ children }) {
         </p>
     );
 }
-
 
 function CarouselCard({ children, color }) {
     return (
@@ -114,16 +114,15 @@ function CostumCarousel() {
     return (
         <CarouselWrapper>
             <Carousel theme={customIndicatorTheme} slide={false} leftControl=" " rightControl=" ">
-
                 <CarouselPanel pos={'1'} >
                     <CarouselCard color='white'>
                         <CarouselCardHeading> Say Hello to your future ear piercings</CarouselCardHeading>
                     </CarouselCard>
                     <CarouselBottom>
-                        <CarouselBtn color='bg-mint' width='w-52 lg:w-1/2' height='h-14'>
+                        <CarouselBtn color='bg-mint'>
                             Termin Buchen
                         </CarouselBtn>
-                        <CarouselBtn color='bg-white' width='w-52 lg:w-1/2' height='h-14'>
+                        <CarouselBtn color='bg-white'>
                             Shop Jewelry
                         </CarouselBtn>
                     </CarouselBottom>
@@ -134,12 +133,11 @@ function CostumCarousel() {
                         <CarouselCardHeading>Hypoallergene Piercings</CarouselCardHeading>
                         <CarouselCardSubHeading>speziell für sensible Ohren</CarouselCardSubHeading>
                     </CarouselCard>
-
                     <CarouselBottom>
-                        <CarouselBtn color='bg-mint' width='w-56' height='h-14'>
+                        <CarouselBtn color='bg-mint' >
                             Termin Buchen
                         </CarouselBtn>
-                        <CarouselBtn color='bg-white' width='w-56' height='h-14'>
+                        <CarouselBtn color='bg-white' >
                             Shop Jewelry
                         </CarouselBtn>
                     </CarouselBottom>
@@ -147,20 +145,18 @@ function CostumCarousel() {
 
                 <CarouselPanel pos={'3'} >
                     <CarouselCard color='black' >
-
                         <CarouselCardHeading>Hypoallergene Piercings</CarouselCardHeading>
                         <CarouselCardSubHeading> für sensible Ohren</CarouselCardSubHeading>
                     </CarouselCard>
                     <CarouselBottom>
-                        <CarouselBtn color='bg-mint' width='w-56' height='h-14'>
+                        <CarouselBtn color='bg-mint' >
                             Termin Buchen
                         </CarouselBtn>
-                        <CarouselBtn color='bg-white' width='w-56' height='h-14'>
+                        <CarouselBtn color='bg-white' >
                             Shop Jewelry
                         </CarouselBtn>
                     </CarouselBottom>
                 </CarouselPanel>
-
             </Carousel >
         </CarouselWrapper>
     );

@@ -1,7 +1,6 @@
 'use client';
 import { useContext } from 'react';
 import { ShoppingCartContext } from '../../Context';
-import './index.css'
 
 
 function NavTitle({ onClick, viewState, view, children }) {
@@ -9,7 +8,7 @@ function NavTitle({ onClick, viewState, view, children }) {
         <li>
             <button
                 onMouseEnter={() => onClick(view)}
-                className={` ${viewState === view ? 'isFocused' : ''} bg-transparent block xl:px-1.5 xl:text-lg 2xl:text-xl uppercase xl:gap-x-4 2xl:gap-x-4 py-0.5 tracking-wider font-light focus:border focus:border-black rounded-lg `}>
+                className={` ${viewState === view ? 'border border-black rounded-lg ' : ''} bg-transparent block xl:px-1.5 xl:text-lg 2xl:text-xl uppercase xl:gap-x-4 2xl:gap-x-4 py-0.5 tracking-wider font-light focus:border focus:border-black rounded-lg `}>
                 {children}
             </button>
         </li>
