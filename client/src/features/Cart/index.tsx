@@ -19,7 +19,7 @@ function CartItemsWrapper({ children }) {
     )
 }
 
-function ShoppingCart() {
+function Cart() {
     const { cart, setShowCart } = useContext(StoreContext);
 
     function handleClickCloseCart() {
@@ -64,4 +64,4 @@ function ShoppingCart() {
 }
 
 
-export default ShoppingCart
+export default Cart

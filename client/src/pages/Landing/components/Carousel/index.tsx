@@ -35,7 +35,7 @@ function CarouselWrapper({ children }) {
     );
 }
 
-function CostumCarousel() {
+function Carousel() {
     return (
         <CarouselWrapper>
             <CustomFlowBiteCarousel>
@@ -87,4 +87,4 @@ function CostumCarousel() {
     );
 }
 
-export default CostumCarousel
+export default Carousel

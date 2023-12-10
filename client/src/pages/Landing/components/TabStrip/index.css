@@ -19,7 +19,6 @@
     @apply absolute text-black cursor-pointer border border-black rounded-full w-6 h-6 flex items-center justify-center bg-white hover:bg-limone z-40
 }
 
-
 #map-container {
     position: relative;
 }
