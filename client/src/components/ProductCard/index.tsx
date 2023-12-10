@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import { useState, useContext } from 'react';
 import Rating from '../ui/Rating';
 import { StoreContext } from '../../context/StoreContext.js'
-import { calculateProductVariantPrice } from '../../utils/helper.js'
+import { calculateProductVariantPrice } from '../../utils/calculate.js'
 import { formatRatingToRoundedValue, formatPrice } from '../../utils/format.js'
 import Card from './Card'
 

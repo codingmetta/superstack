@@ -1,7 +1,9 @@
 'use client';
+import ShoppingBagIcon from '@heroicons/react/24/outline/esm/ShoppingBagIcon';
 import { useContext } from 'react';
 import { StoreContext } from '../../context/StoreContext'
-import ShoppingBagIcon from '@heroicons/react/24/outline/esm/ShoppingBagIcon';
+import { calculateItemsInCartTotal } from '../../utils/calculate.js'
+
 
 function CartBtn() {
   const { cart, setShowCart } = useContext(StoreContext);
@@ -10,8 +12,7 @@ function CartBtn() {
     setShowCart(true);
   }
 
-  const itemsInCart = cart.length;
-
+  const itemsInCart = calculateItemsInCartTotal(cart);
   return (
     <button
       className='relative h-full'
@@ -21,7 +22,9 @@ function CartBtn() {
       <ShoppingBagIcon className="text-black w-7 hover:text-mint" viewBox="0 1 23 22" />
       {
         itemsInCart !== 0 &&
-        <span className='absolute px-2 m-auto text-sm font-black translate-x-1 border border-black rounded-full -translate-y-9 bg-limone '>{itemsInCart}</span>
+        <span className='absolute px-2 m-auto text-sm font-black translate-x-1 border border-black rounded-full -translate-y-9 bg-limone '>
+          {itemsInCart}
+        </span>
       }
     </button>
   );

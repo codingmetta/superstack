@@ -3,7 +3,7 @@
 import { useContext } from 'react';
 import CartItem from './CartItem';
 import { StoreContext } from '../../context/StoreContext';
-import { calculateTotalPrice } from '../../utils/helper.js'
+import { calculateTotalPrice } from '../../utils/calculate.js'
 import { formatPrice } from '../../utils/format.js'
 import CartIsEmptyPlaceHolder from './CartIsEmptyPlaceHolder.js';
 import XMarkIcon from '@heroicons/react/24/outline/esm/XMarkIcon';
@@ -25,7 +25,7 @@ function ShoppingCart() {
     function handleClickCloseCart() {
         setShowCart(false);
     }
-
+    console.log(cart);
     const totalPrice = formatPrice(calculateTotalPrice(cart));
     const isCartEmpty = cart.length === 0 ? true : false
     return (

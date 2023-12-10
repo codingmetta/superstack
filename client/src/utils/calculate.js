@@ -1,3 +1,11 @@
+const calculateItemsInCartTotal = (cart) => {
+    let total = 0;
+    for (let i = 0; i < cart.length; i++) {
+        total += cart[i].amount;
+    }
+    return total;
+}
+
 const calculateTotalPrice = (cart) => {
     let total = 0;
     for (let i = 0; i < cart.length; i++) {
@@ -24,4 +32,4 @@ const determineExpression = (dir) => {
     return null;
 }
 
-export { calculateTotalPrice, calculateProductVariantPrice, determineExpression } 
+export { calculateItemsInCartTotal, calculateTotalPrice, calculateProductVariantPrice, determineExpression } 
