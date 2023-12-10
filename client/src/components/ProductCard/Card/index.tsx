@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion';
 import { useContext } from 'react';
-import { CardContext } from './Context';
+import { CardContext } from '../../../context/CardContext';
 
 function Card({ children, size }) {
 
     return (
-        <CardContext.Provider value={{ size }}>
+        <CardContext.Provider
+            value={{ size }}
+        >
             <motion.article
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}

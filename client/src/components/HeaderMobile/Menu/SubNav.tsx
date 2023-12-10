@@ -1,5 +1,5 @@
 'use client';
-import { StoreContext } from '../../../Context';
+import { MenuContext } from '../../../context/MenuContext';
 import { useContext } from 'react'
 
 function SubNavBtn({ onClick, viewState, relatedTab, children }) {
@@ -38,7 +38,7 @@ function SubNavWrapper({ children }) {
 
 function SubNav() {
 
-    const {currentTab, setCurrentTab} = useContext(StoreContext);
+    const {currentTab, setCurrentTab} = useContext(MenuContext);
 
     function openTab(newTab) {
         setCurrentTab(newTab)

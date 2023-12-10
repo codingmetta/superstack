@@ -1,6 +1,6 @@
 'use client';
 import { useContext } from 'react';
-import { StoreContext } from '../../Context';
+import { StoreContext } from '../../context/StoreContext';
 import { motion } from 'framer-motion';
 
 function PlaneWrapper({ children }) {

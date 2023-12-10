@@ -1,7 +1,7 @@
 'use client';
 import ImageMapper from 'react-img-mapper';
 import { Fragment, useState } from 'react';
-import areasJSON from '../../assets/data/areas.json';
+import areasJSON from '../../../../assets/data/areas.json';
 
 const getCenterCoords = (areas) =>
   areas.map((area) => {

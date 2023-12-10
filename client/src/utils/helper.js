@@ -1,10 +1,19 @@
-export const calculateProductVariantPrice = (productVariant, basePrice) => {
-    let variantPrice = 0;
-    if (productVariant=== 'single') {
-        variantPrice = basePrice;
+const calculateProductVariantPrice = (productVariant, basePrice) => {
+    if (productVariant === 'single') {
+        return basePrice;
     } else if (productVariant === 'pair') {
-        variantPrice = basePrice * 2;
+        return basePrice * 2;
     }
-    return variantPrice;
+    return null;
 }
 
+const determineExpression = (dir) => {
+    if (dir === 'INC') {
+        return 1;
+    } else if (dir === 'DEC') {
+        return -1;
+    }
+    return null;
+}
+
+export { calculateProductVariantPrice, determineExpression } 

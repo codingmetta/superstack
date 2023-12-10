@@ -2,7 +2,7 @@
 import { useContext, useEffect } from 'react';
 import HeaderMobile from '../../components/HeaderMobile'
 import HeaderDesktop from '../../components/HeaderDesktop';
-import { StoreContext } from '../../Context';
+import { AppContext } from '../../context/AppContext';
 
 /*
   @media breakpoint:
@@ -10,7 +10,7 @@ import { StoreContext } from '../../Context';
  */
 
 function Header() {
-  const { isMobile, setIsMobile } = useContext(StoreContext);
+  const { isMobile, setIsMobile } = useContext(AppContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,7 +27,12 @@ function Header() {
 
   return (
     <>
-      {isMobile ? <HeaderMobile /> : <HeaderDesktop />}
+      {
+        isMobile ?
+          <HeaderMobile />
+          :
+          <HeaderDesktop />
+      }
     </>
 
   )

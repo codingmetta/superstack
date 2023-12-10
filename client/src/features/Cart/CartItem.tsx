@@ -1,7 +1,8 @@
 'use client';
 import { useContext } from 'react';
-import { StoreContext } from '../../Context'
-
+import { StoreContext } from '../../context/StoreContext'
+import { determineExpression } from '../../utils/helper.js'
+import { formatPrice } from '../../utils/format.js'
 
 function CartItem({ item }) {
 
@@ -19,23 +20,17 @@ function CartItem({ item }) {
     function handleIncreaseAmount() {
         updateItemAmount('INC')
     }
-    
+
     function handleDeleteItem() {
         removeItemFromCart(item.id);
     }
 
-    function updateItemAmount(dir){
-        let expression = 0;
-        if(dir === 'INC'){
-            expression = 1;
-        } else if (dir==='DEC') {
-            expression = -1;
-        }
+    function updateItemAmount(dir) {
         const updatedCartItems = cart.map((cartItem) => {
-            if(cartItem.id === item.id){
+            if (cartItem.id === item.id) {
                 return {
                     ...cartItem,
-                    amount:  item.amount + expression
+                    amount: item.amount + determineExpression(dir)
                 }
             } else {
                 return cartItem;
@@ -52,7 +47,7 @@ function CartItem({ item }) {
         updateCart(nextItems);
     }
 
-    
+    const price = formatPrice(item.variantPrice);
     return (
         <>
             <article className="flex flex-row justify-around w-full p-4 border-b">
@@ -91,7 +86,7 @@ function CartItem({ item }) {
                                 d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
-                    <p className="font-bold ">{item.variantPrice.toFixed(2)}€</p>
+                    <p className="font-bold ">{price}€</p>
                 </div>
             </article>
         </>

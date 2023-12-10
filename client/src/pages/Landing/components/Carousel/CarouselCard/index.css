@@ -1,0 +1,27 @@
+@tailwind components;
+
+@layer components {
+    #sparkle-card img:first-of-type {
+        top: -14px;
+        right: 9%;
+        @apply lg:translate-x-4 lg:-translate-y-2.5
+    }
+
+    #sparkle-card img:nth-of-type(2) {
+        top: -14px;
+        right: 20%;
+        @apply lg:-translate-y-2.5
+    }
+
+    #sparkle-card img:nth-of-type(3) {
+        bottom: -14px;
+        left: 9%;
+        @apply lg:translate-y-2.5
+    }
+
+    #sparkle-card img:nth-of-type(4) {
+        bottom: -14px;
+        left: 20%;
+        @apply lg:translate-x-4 lg:translate-y-2.5
+    }
+}

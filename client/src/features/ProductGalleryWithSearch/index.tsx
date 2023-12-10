@@ -2,8 +2,9 @@
 import { useState } from 'react';
 import ProductList from './ProductList';
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
-import { FaceFrownIcon } from '@heroicons/react/24/outline';
-import BannerText from '../../components/BannerText';
+import BannerText from '../../pages/Landing/components/BannerText';
+import { filterData } from '../../utils/filterData.js'
+import NothingFoundPlaceHolder from './NothingFoundPlaceHolder.js';
 
 function SearchInputWrapper({ children }) {
     return (
@@ -42,16 +43,6 @@ function SearchInput({ handleSearchInput, placeholder }) {
         />);
 }
 
-function NothingFound() {
-    return (
-        <p className="flex flex-row items-center w-full h-20 gap-6 px-8 py-12 mx-5 mb-8 bg-anti-flash rounded-xl">
-            <FaceFrownIcon className="w-16 h-16 text-black" />
-            Das Produkt was du suchst haben wir leider nicht
-        </p>
-    );
-}
-
-
 function ProductGalleryWithSearch({ products }) {
     const [searchInput, setSearchInput] = useState("");
 
@@ -59,20 +50,10 @@ function ProductGalleryWithSearch({ products }) {
         setSearchInput(e.target.value);
     }
 
-    function filterData(products) {
-        const data = products.filter((product) => {
-            return (
-                Object.values(product)
-                    .join("")
-                    .toLowerCase()
-                    .includes(searchInput.toLowerCase())
-            )
-        });
-        return data;
-    }
+    const filteredProducts = filterData(products, searchInput);
 
-    const filteredProducts = filterData(products);
-
+    const isUserTyping = searchInput ? true : false;
+    const doMatchingProductsForQueryExist = filteredProducts.length > 0 ? true : false;
     return (
         <section className='flex flex-col items-center justify-center pt-4 pb-40 lg:px-10 lg:py-20'>
             <BannerText />
@@ -80,16 +61,17 @@ function ProductGalleryWithSearch({ products }) {
                 <InputIcon>
                     <MagnifyingGlassIcon className="w-6 h-6 text-gray-600" />
                 </InputIcon>
-                <SearchInput placeholder='Clicker silber...' handleSearchInput={handleSearchInput} />
+                <SearchInput 
+                    placeholder='Clicker silber...' 
+                    handleSearchInput={handleSearchInput} />
             </SearchInputWrapper>
 
             <ProductListWrapper>
-                {searchInput ?
-
-                    filteredProducts.length === 0 ?
-                        <NothingFound />
-                        :
+                { isUserTyping ?
+                    doMatchingProductsForQueryExist ?
                         <ProductList productList={filteredProducts} />
+                        :
+                        <NothingFoundPlaceHolder />
                     :
                     <ProductList productList={products} />
                 }

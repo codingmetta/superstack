@@ -4,7 +4,6 @@ import Logo from '../ui/Logo';
 import SearchBtn from '../ui/SearchBtn';
 import CartBtn from '../ui/CartBtn';
 
-
 function HeaderMobile() {
 
     return (

@@ -1,5 +1,5 @@
 'use client';
-import SuperVisionSection from '../../components/SupervisionSection'
+import SuperVisionSection from './components/SupervisionSection'
 
 function Main() {
   return (

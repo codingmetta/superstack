@@ -7,11 +7,11 @@ import AboutTab from './AboutTab';
 import GuidesTab from './GuidesTab';
 // TODO: Store Page
 // TODO: Booking Page
-import { StoreContext } from '../../../Context';
+import { MenuContext } from '../../../context/MenuContext';
 
 function MenuWrapper({ children }) {
     return (
-        <div className='flex flex-col min-h-screen bg-anti-flash'>
+        <div className='z-20 flex flex-col min-h-screen bg-anti-flash'>
             {children}
         </div>
     );
@@ -19,7 +19,7 @@ function MenuWrapper({ children }) {
 
 function Menu() {
 
-    const { currentTab } = useContext(StoreContext);
+    const { currentTab } = useContext(MenuContext);
     return (
         <MenuWrapper>
             <SubNav />

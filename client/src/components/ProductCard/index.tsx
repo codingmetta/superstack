@@ -2,7 +2,7 @@
 import { nanoid } from 'nanoid';
 import { useState, useContext } from 'react';
 import Rating from '../ui/Rating';
-import { StoreContext } from '../../Context'
+import { StoreContext } from '../../context/StoreContext.js'
 import { calculateProductVariantPrice } from '../../utils/helper.js'
 import { formatRatingToRoundedValue, formatPrice } from '../../utils/format.js'
 import Card from './Card'
@@ -23,7 +23,7 @@ function ProductCard({ product, size }) {
         variant: 'single',
         amount: 1
     });
-    
+
     function handleColorSelection(newColor) {
         setGoldSelected(newColor === 'gold' ? true : false);
         setConfiguratedProduct({
@@ -38,7 +38,7 @@ function ProductCard({ product, size }) {
             size: newSize
         });
     }
-    
+
     function handleVariantSelection(newVariant) {
         setConfiguratedProduct({
             ...configuratedProduct,
@@ -70,7 +70,9 @@ function ProductCard({ product, size }) {
 
             <Card.Body>
                 <Rating rating={ratingClean} />
-                <h3 className="font-semibold line-clamp-2 lg:text-lg ">{configuratedProduct.title}</h3>
+                <h3 className="font-semibold line-clamp-2 lg:text-lg ">
+                    {configuratedProduct.title}
+                </h3>
                 <p className="pt-1">{priceClean}€</p>
             </Card.Body>
 

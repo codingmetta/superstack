@@ -1,6 +1,6 @@
 'use client';
 import { useContext } from 'react';
-import { StoreContext } from '../../Context'
+import { StoreContext } from '../../context/StoreContext'
 import Bars3Icon from '@heroicons/react/20/solid/esm/Bars3Icon';
 import XMarkIcon from '@heroicons/react/24/outline/esm/XMarkIcon';
 function MenuBtn() {

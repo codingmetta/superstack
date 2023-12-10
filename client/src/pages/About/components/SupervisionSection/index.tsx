@@ -1,5 +1,5 @@
 'use client';
-import FolderTemplate from '../FolderTemplate'
+import FolderTemplate from '../../../../components/FolderTemplate'
 
 function SuperVisionSection() {
     return (

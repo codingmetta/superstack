@@ -1,18 +1,25 @@
-import CostumCarousel from '../../features/Carousel'
+import Carousel from './components/Carousel'
 import SkeletonLoader from '../../features/ProductGalleryWithSearch/SkeletonLoader'
 import ProductGalleryWithSearch from '../../features/ProductGalleryWithSearch'
-import TabStrip from '../../features/TabStrip'
-import BenefitSection from '../../components/BenefitSection'
+import TabStrip from './components/TabStrip'
+import BenefitSection from './components/BenefitSection'
 import StoreInfoSection from './components/StoreInfoSection'
 import NewEarsSection from './components/NewEarsSection'
 import NewProductsSection from './components/NewProductsSection'
 import SuperStackAboutSection from './components/SuperStackAboutSection'
-import BasicProductsSection from '../../components/BasicProductsSection'
+import BasicProductsSection from './components/BasicProductsSection'
+import { useContext } from 'react'
+import { AppContext } from '../../context/AppContext'
+import { StoreContext } from '../../context/StoreContext'
 
-function Main({ isLoading, productCollection }) {
+
+function Main() {
+    const { productCollection } = useContext(StoreContext)
+    const { isLoading } = useContext(AppContext)
+    
     return (
         <main>
-            <CostumCarousel />
+            <Carousel />
 
             {isLoading ?
                 <SkeletonLoader />

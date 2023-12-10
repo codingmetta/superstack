@@ -1,7 +1,7 @@
 'use client';
 import { useContext } from 'react';
 import ProductCard from '../../../../components/ProductCard/index';
-import { StoreContext } from '../../../../Context';
+import { StoreContext } from '../../../../context/StoreContext';
 
 
 export default function NewProductsSection() {

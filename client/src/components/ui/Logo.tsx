@@ -1,11 +1,12 @@
 'use client';
 import { useContext } from 'react';
-import { StoreContext } from '../../Context'
+import { StoreContext } from '../../context/StoreContext'
+import { AppContext } from '../../context/AppContext'
 
 
 function Logo() {
-
-    const { setShowMenu, isMobile } = useContext(StoreContext);
+    const { isMobile } = useContext(AppContext);
+    const { setShowMenu } = useContext(StoreContext);
 
     function handleClick() {
         setShowMenu(false);
@@ -19,7 +20,7 @@ function Logo() {
                     <p className="p-0 m-0  text-[1.65rem] leading-[1.3rem] tracking-widest text-black uppercase font-bagel">Stack</p>
                 </a>
             </h1>
-        );
+        )
     } else {
         return (
             <h1 aria-label="Superstack" className="relative translate-x-1">
@@ -28,7 +29,7 @@ function Logo() {
                     <p className="p-0 m-0  text-[2.7rem] leading-[2.2rem] tracking-widest text-black uppercase font-bagel">Stack</p>
                 </a>
             </h1>
-        );
+        )
     }
 }
 

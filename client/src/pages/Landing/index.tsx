@@ -1,5 +1,5 @@
-import { useContext} from 'react'
-import { StoreContext } from '../../Context'
+import { useContext } from 'react'
+import { StoreContext } from '../../context/StoreContext'
 import Cart from '../../features/Cart'
 import Header from './Header'
 import Menu from '../../components/HeaderMobile/Menu'
@@ -7,8 +7,7 @@ import Main from './Main'
 import Footer from './Footer'
 
 function LandingPage() {
-
-    const {showCart, showMenu, isLoading, productCollection} = useContext(StoreContext)
+    const { showCart, showMenu } = useContext(StoreContext)
     return (
         <>
             {
@@ -17,13 +16,11 @@ function LandingPage() {
                     :
                     <>
                         <Header />
-                        {showMenu ?
+                        { showMenu ?
                             <Menu />
                             :
                             <>
-                                <Main
-                                    isLoading={isLoading}
-                                    productCollection={productCollection} />
+                                <Main />
                                 <Footer />
                             </>
                         }
