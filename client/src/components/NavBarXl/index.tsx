@@ -44,6 +44,9 @@ function NavBarXl() {
             {
                 menuViewState === 'STORE' && <></>
             }
+            {
+                menuViewState === 'BOOKING' && <></>
+            }
         </header>
     );
 }

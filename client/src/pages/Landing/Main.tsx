@@ -3,10 +3,10 @@ import SkeletonLoader from '../../features/ProductGalleryWithSearch/SkeletonLoad
 import ProductGalleryWithSearch from '../../features/ProductGalleryWithSearch'
 import TabStrip from '../../features/TabStrip'
 import BenefitSection from '../../components/BenefitSection'
-import StoreInfoSection from '../../components/StoreInfoSection'
-import NewEarsSection from '../../components/NewEarsSection'
-import NewProductsSection from '../../components/NewProductsSection'
-import SuperStackAboutSection from '../../components/SuperStackAboutSection'
+import StoreInfoSection from './components/StoreInfoSection'
+import NewEarsSection from './components/NewEarsSection'
+import NewProductsSection from './components/NewProductsSection'
+import SuperStackAboutSection from './components/SuperStackAboutSection'
 import BasicProductsSection from '../../components/BasicProductsSection'
 
 function Main({ isLoading, productCollection }) {
