@@ -1,6 +1,6 @@
 'use client';
 import { useContext } from 'react';
-import { PlaneContext } from '../../context/PlaneContext';
+import { PlaneContext } from 'src/context/PlaneContext';
 
 
 function SubNavXLBtn({ onClick, viewState, relatedPlane, children }) {

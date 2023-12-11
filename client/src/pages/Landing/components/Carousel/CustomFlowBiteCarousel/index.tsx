@@ -1,9 +1,9 @@
 import { Carousel } from 'flowbite-react';
-import { customIndicatorTheme } from './CarouselTheme';
+import { customTheme } from './CustomFlowbiteTheme';
 
 function CustomFlowBiteCarousel({ children }) {
     return (
-        <Carousel theme={customIndicatorTheme} slide={false} leftControl=" " rightControl=" ">
+        <Carousel theme={customTheme} slide={false} leftControl=" " rightControl=" ">
             {children}
         </Carousel>
     )

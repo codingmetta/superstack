@@ -1,8 +1,8 @@
 'use client';
 import { useContext } from 'react';
-import { StoreContext } from '../../context/StoreContext'
-import { determineExpression } from '../../utils/calculate.js'
-import { formatPrice } from '../../utils/format.js'
+import { StoreContext } from 'src/context/StoreContext'
+import { determineExpression } from 'src/utils/calculate.js'
+import { formatPrice } from 'src/utils/format.js'
 
 function CartItem({ item }) {
 

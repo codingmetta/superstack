@@ -1,5 +1,5 @@
 'use client';
-import about from '../../../assets/data/about.json';
+import about from 'src/assets/data/about.json';
 
 function GuideBtn({ title, imgURL, alt }) {
     return (

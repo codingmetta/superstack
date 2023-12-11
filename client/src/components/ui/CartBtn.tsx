@@ -1,8 +1,8 @@
 'use client';
 import ShoppingBagIcon from '@heroicons/react/24/outline/esm/ShoppingBagIcon';
 import { useContext } from 'react';
-import { StoreContext } from '../../context/StoreContext'
-import { calculateItemsInCartTotal } from '../../utils/calculate.js'
+import { StoreContext } from 'src/context/StoreContext'
+import { calculateItemsInCartTotal } from 'src/utils/calculate.js'
 
 
 function CartBtn() {

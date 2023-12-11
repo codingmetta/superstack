@@ -1,13 +1,18 @@
 'use client';
-import SearchBtn from "../ui/SearchBtn";
-import CartBtn from "../ui/CartBtn";
+import { useState } from 'react';
+
+import { PlaneContext } from "src/context/PlaneContext";
+
+import SearchBtn from "src/components/ui/SearchBtn";
+import CartBtn from "src/components/ui/CartBtn";
+import Logo from "src/components/ui/Logo";
+
 import SubNavXL from "./SubNavXL";
-import { PlaneContext } from "../../context/PlaneContext";
 import ShopPlane from "./ShopPlane";
 import AboutPlane from "./AboutPlane";
 import GuidesPlane from "./GuidesPlane";
-import Logo from "../ui/Logo";
-import { useState } from 'react';
+
+
 
 function HeaderDesktop() {
     const [currentPlane, setCurrentPlane] = useState(null)

@@ -1,8 +1,8 @@
 import { useContext } from 'react'
-import { StoreContext } from '../../context/StoreContext'
-import Cart from '../../features/Cart'
+import { StoreContext } from 'src/context/StoreContext'
+import Cart from 'src/features/Cart'
 import Header from './Header'
-import Menu from '../../components/HeaderMobile/Menu'
+import Menu from 'src/components/HeaderMobile/Menu'
 import Main from './Main'
 import Footer from './Footer'
 

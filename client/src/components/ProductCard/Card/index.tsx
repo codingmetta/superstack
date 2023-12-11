@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useContext } from 'react';
-import { CardContext } from '../../../context/CardContext';
+import { CardContext } from 'src/context/CardContext';
 
 function Card({ children, size }) {
 

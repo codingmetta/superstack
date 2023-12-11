@@ -1,10 +1,10 @@
 'use client';
 import { useContext } from 'react';
-import { StoreContext } from '../../context/StoreContext';
 import { motion } from 'framer-motion';
+import { PlaneContext } from 'src/context/PlaneContext';
 
 function PlaneWrapper({ children }) {
-    const { setCurrentPlane } = useContext(StoreContext)
+    const { setCurrentPlane } = useContext(PlaneContext)
 
     function handleMouseLeave(e) {
         e.stopPropagation();

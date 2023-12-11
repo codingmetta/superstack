@@ -1,10 +1,10 @@
 'use client';
 import { useState } from 'react';
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
-import { filterData } from '../../utils/filterData.js'
+import { filterData } from 'src/utils/filterData.js'
 import NothingFoundPlaceHolder from './NothingFoundPlaceHolder.js';
 import ProductList from './ProductList';
-import BannerText from '../../pages/Landing/components/BannerText';
+import BannerText from 'src/pages/Landing/components/BannerText';
 
 function SearchInputWrapper({ children }) {
     return (

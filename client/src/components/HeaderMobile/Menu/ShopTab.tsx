@@ -1,9 +1,8 @@
-
 'use client';
 
 import { Accordion } from 'flowbite-react';
-import categories from '../../../assets/data/categories.json'
-import piercingLocations from '../../../assets/data/piercing-locations.json'
+import categories from 'src/assets/data/categories.json'
+import piercingLocationsData from 'src/assets/data/piercing-locations.json'
 
 
 function CategoryBtn({ title, imgURL, alt }) {
@@ -69,7 +68,7 @@ function ShopTab() {
                         <LocationsWrapper>
 
                             {
-                                piercingLocations.map((cat) => (
+                                piercingLocationsData.map((cat) => (
                                     <LocationBtn key={cat.id} title={cat.title} imgURL={cat.imgURL} alt={cat.alt} />
                                 ))
                             }

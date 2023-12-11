@@ -1,6 +1,6 @@
 'use client';
-import categories from '../../assets/data/categories.json'
-import piercingLocations from '../../assets/data/piercing-locations.json'
+import categories from 'src/assets/data/categories.json'
+import piercingLocations from 'src/assets/data/piercing-locations.json'
 import PlaneWrapper from './PlaneWrapper';
 
 function SubNavigationWrapper({ children }) {
@@ -32,17 +32,20 @@ function SubNavigation({ section, title }) {
 }
 
 
-
 function ShopPlane() {
     return (
         <PlaneWrapper>
             <div className='flex flex-row justify-between w-7/12 gap-28 '>
                 <SubNavigationWrapper>
-                    <SubNavigation section={categories} title="Piercings & Earrings" />
+                    <SubNavigation
+                        section={categories}
+                        title="Piercings & Earrings" />
                 </SubNavigationWrapper>
 
                 <SubNavigationWrapper>
-                    <SubNavigation section={piercingLocations} title="Ear Location" />
+                    <SubNavigation
+                        section={piercingLocations}
+                        title="Ear Location" />
                 </SubNavigationWrapper>
 
                 <SubNavigationWrapper>

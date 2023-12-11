@@ -1,25 +1,21 @@
 'use client';
 import { useContext, useEffect } from 'react';
-import HeaderMobile from '../../components/HeaderMobile'
-import HeaderDesktop from '../../components/HeaderDesktop';
-import { AppContext } from '../../context/AppContext';
-
-/*
-  @media breakpoint:
-  xl ==>  >= 1280px
- */
+import HeaderMobile from 'src/components/HeaderMobile'
+import HeaderDesktop from 'src/components/HeaderDesktop';
+import { AppContext } from 'src/context/AppContext';
+import { MEDIA_BREAKPOINT_DESKTOP } from 'src/utils/constants'
 
 function Header() {
   const { isMobile, setIsMobile } = useContext(AppContext);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1280);
+      setIsMobile(window.innerWidth < MEDIA_BREAKPOINT_DESKTOP);
     };
 
     window.addEventListener('resize', handleResize);
 
-    // Clean up the event listener when the component is unmounted
+    // clean up the event listener when the component is unmounted
     return () => {
       window.removeEventListener('resize', handleResize);
     };

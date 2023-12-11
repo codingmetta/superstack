@@ -17,7 +17,6 @@ function CarouselCardSubHeading({ children }) {
     );
 }
 
-
 function CarouselCard({ children, color }) {
     return (
         <div

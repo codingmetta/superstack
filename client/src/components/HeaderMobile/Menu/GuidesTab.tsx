@@ -1,5 +1,5 @@
 'use client';
-import guides from '../../../assets/data/guides.json';
+import guidesData from 'src/assets/data/guides.json';
 
 function GuideBtn({ title, imgURL, alt }) {
     return (
@@ -18,7 +18,7 @@ function GuidesTab() {
             <h2 className="font-extrabold tracking-wider">We got you</h2>
             <div className="flex flex-row flex-wrap justify-between gap-2 ">
                 {
-                    guides.map((cat) => (
+                    guidesData.map((cat) => (
                         <GuideBtn key={cat.id} title={cat.title} imgURL={cat.imgURL} alt={cat.alt} />
                     ))
                 }

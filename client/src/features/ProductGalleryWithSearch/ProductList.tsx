@@ -1,5 +1,5 @@
 'use client';
-import ProductCard from "../../components/ProductCard";
+import ProductCard from "src/components/ProductCard";
 
 function ProductList({ productList }) {
     return (

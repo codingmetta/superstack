@@ -1,5 +1,4 @@
-
-import FooterComponent from '../../components/Footer'
+import FooterComponent from "src/components/Footer"
 
 function Footer() {
   return (

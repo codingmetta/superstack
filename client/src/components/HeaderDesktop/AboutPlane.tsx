@@ -1,7 +1,6 @@
 'use client';
-
+import about from 'src/assets/data/about.json';
 import PlaneWrapper from "./PlaneWrapper";
-import about from '../../assets/data/about.json';
 
 function AboutBtn({ title, imgURL, alt }) {
     return (

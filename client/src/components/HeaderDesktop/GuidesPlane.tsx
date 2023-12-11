@@ -1,5 +1,5 @@
 'use client';
-import guides from '../../assets/data/guides.json';
+import guidesData from 'src/assets/data/guides.json';
 import PlaneWrapper from './PlaneWrapper';
 
 function GuideBtn({ title, imgURL, alt }) {
@@ -20,7 +20,7 @@ function GuidesPlane() {
         <PlaneWrapper>
             <ul className="flex flex-row flex-wrap items-center justify-center gap-20">
                 {
-                    guides.map((cat) => (
+                    guidesData.map((cat) => (
                         <GuideBtn key={cat.id} title={cat.title} imgURL={cat.imgURL} alt={cat.alt} />
                     ))
                 }

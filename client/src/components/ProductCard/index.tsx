@@ -1,10 +1,10 @@
 'use client';
 import { nanoid } from 'nanoid';
 import { useState, useContext } from 'react';
-import Rating from '../ui/Rating';
-import { StoreContext } from '../../context/StoreContext.js'
-import { calculateProductVariantPrice } from '../../utils/calculate.js'
-import { formatRatingToRoundedValue, formatPrice } from '../../utils/format.js'
+import Rating from 'src/components/ui/Rating';
+import { StoreContext } from 'src/context/StoreContext.js'
+import { calculateProductVariantPrice } from 'src/utils/calculate.js'
+import { formatRatingToRoundedValue, formatPrice } from 'src/utils/format.js'
 import Card from './Card'
 
 

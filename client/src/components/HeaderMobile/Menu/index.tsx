@@ -1,13 +1,14 @@
 'use client';
 
 import { useContext } from 'react'
+import { MenuContext } from 'src/context/MenuContext';
+
 import SubNav from './SubNav';
 import ShopTab from './ShopTab'
 import AboutTab from './AboutTab';
 import GuidesTab from './GuidesTab';
 // TODO: Store Page
 // TODO: Booking Page
-import { MenuContext } from '../../../context/MenuContext';
 
 function MenuWrapper({ children }) {
     return (

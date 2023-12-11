@@ -1,5 +1,5 @@
 'use client';
-import { MenuContext } from '../../../context/MenuContext';
+import { MenuContext } from 'src/context/MenuContext';
 import { useContext } from 'react'
 
 function SubNavBtn({ onClick, viewState, relatedTab, children }) {

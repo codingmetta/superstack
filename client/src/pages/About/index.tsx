@@ -1,6 +1,6 @@
 import Main from "./Main"
 import Header from "./Header"
-import Footer from "../Landing/Footer"
+import Footer from "./Footer"
 
 function AboutPage() {
     return (

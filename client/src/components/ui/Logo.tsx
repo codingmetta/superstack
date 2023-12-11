@@ -1,7 +1,7 @@
 'use client';
 import { useContext } from 'react';
-import { StoreContext } from '../../context/StoreContext'
-import { AppContext } from '../../context/AppContext'
+import { StoreContext } from 'src/context/StoreContext'
+import { AppContext } from 'src/context/AppContext'
 
 
 function Logo() {

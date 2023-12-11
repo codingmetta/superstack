@@ -2,9 +2,9 @@
 
 import { useContext } from 'react';
 import CartItem from './CartItem';
-import { StoreContext } from '../../context/StoreContext';
-import { calculateTotalPrice } from '../../utils/calculate.js'
-import { formatPrice } from '../../utils/format.js'
+import { StoreContext } from 'src/context/StoreContext';
+import { calculateTotalPrice } from 'src/utils/calculate.js'
+import { formatPrice } from 'src/utils/format.js'
 import CartIsEmptyPlaceHolder from './CartIsEmptyPlaceHolder.js';
 import XMarkIcon from '@heroicons/react/24/outline/esm/XMarkIcon';
 import CartCheckout from './CartCheckout.js';
