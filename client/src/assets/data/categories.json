@@ -2,36 +2,42 @@
     {
         "id": 1,
         "title": "Piercings",
+        "url": "piercings",
         "alt": "Golden Piercing with Diamond",
         "imgURL": "/images/mobile-nav_piercing.webp"
     },
     {
         "id": 2,
         "title": "Clickers",
+        "url":"clickers",
         "alt": "Silver and round Clicker Piercing",
         "imgURL": "/images/mobile-nav_clickers.webp"
     },
     {
         "id": 3,
         "title": "Earrings",
+        "url":"earrings",
         "alt": "Small golden mushroom Earring",
         "imgURL": "/images/mobile-nav_earring.webp"
     },
     {
         "id": 4,
         "title": "Hoops & Huggies",
+        "url":"hoops-huggies",
         "alt": "Hoops and Huggie Piercing",
         "imgURL": "/images/mobile-nav_hoop.webp"
     },
     {
         "id": 5,
         "title": "Chains & Dangles",
+        "url":"chains-dangles",
         "alt": "Small golden mushroom Earring",
         "imgURL": "/images/mobile-nav_chain.webp"
     },
     {
         "id": 6,
         "title": "Alle Produkte",
+        "url": ".",
         "alt": "Small golden mushroom Earring",
         "imgURL": "/images/mobile-nav_alle-produkte.webp"
     }

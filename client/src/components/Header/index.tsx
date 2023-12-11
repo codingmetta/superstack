@@ -1,7 +1,7 @@
 'use client';
 import { useContext, useEffect } from 'react';
-import HeaderMobile from 'src/components/HeaderMobile'
-import HeaderDesktop from 'src/components/HeaderDesktop';
+import HeaderMobile from 'src/components/Header/HeaderMobile'
+import HeaderDesktop from 'src/components/Header/HeaderDesktop';
 import { AppContext } from 'src/context/AppContext';
 import { MEDIA_BREAKPOINT_DESKTOP } from 'src/utils/constants'
 

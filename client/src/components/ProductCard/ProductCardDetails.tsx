@@ -1,5 +1,5 @@
 'use client';
-
+//TODO: only a prototype
 function ProductCardDetails({ product }) {
     return (
         <article>

@@ -1,18 +1,29 @@
 'use client';
-
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { Accordion } from 'flowbite-react';
 import categories from 'src/assets/data/categories.json'
 import piercingLocationsData from 'src/assets/data/piercing-locations.json'
+import { StoreContext } from 'src/context/StoreContext';
 
+function CategoryBtn({ title, imgURL, alt, url }) {
 
-function CategoryBtn({ title, imgURL, alt }) {
+    const { setShowMenu } = useContext(StoreContext)
+
     return (
-        <button className='flex flex-col w-40 gap-2'>
-            <img className="rounded-xl" src={imgURL} alt={alt} />
+        <Link
+            onClick={() => setShowMenu(false)}
+            to={`shop/${url}`}
+            className='flex flex-col w-40 gap-2'>
+            <img
+                className="rounded-xl"
+                src={imgURL}
+                alt={alt} />
             <h3>{title}</h3>
-        </button>
+        </Link >
     );
 }
+
 
 function CategoriesWrapper({ children }) {
     return (
@@ -55,7 +66,13 @@ function ShopTab() {
 
                             {
                                 categories.map((cat) => (
-                                    <CategoryBtn key={cat.id} title={cat.title} imgURL={cat.imgURL} alt={cat.alt} />
+                                    <CategoryBtn
+                                        key={cat.id}
+                                        title={cat.title}
+                                        imgURL={cat.imgURL}
+                                        alt={cat.alt}
+                                        url={cat.url}
+                                    />
                                 ))
                             }
 

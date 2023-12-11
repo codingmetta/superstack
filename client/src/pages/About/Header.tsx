@@ -1,5 +1,5 @@
 'use client';
-import NavBar from "src/components/HeaderMobile";
+import NavBar from "src/components/Header/HeaderMobile";
 
 function Header() {
     return (

@@ -13,7 +13,7 @@
 @layer components {
 
   .page-container {
-    @apply relative flex flex-col overflow-x-hidden h-full font-brico fancy mx-0 p-0 scroll-m-0
+    @apply relative flex flex-col overflow-x-hidden h-full font-brico fancy mx-0 p-0 scroll-m-0 min-h-[100vh]
   }
 
   .fancy {
@@ -105,7 +105,8 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
