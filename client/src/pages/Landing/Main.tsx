@@ -42,7 +42,6 @@ function Main() {
                 <TabStrip />
                 <BasicProductsSection />
             </div>
-
             <SuperStackAboutSection />
         </main>
     )

@@ -1,9 +1,11 @@
-import productData from './assets/data/products.json'
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import { StoreContext } from './context/StoreContext'
 import { MenuContext } from './context/MenuContext'
 import { AppContext } from './context/AppContext'
-import LandingPage from './pages/Landing';
+import Landing from './pages/Landing';
+import productData from './assets/data/products.json'
+import Layout from './components/Layout'
 //TODO: use React Router
 
 
@@ -23,33 +25,36 @@ function App() {
   return (
     <AppContext.Provider
       value={{
-        isLoading, 
+        isLoading,
         isMobile, setIsMobile
       }}>
-      <div className="page-container">
-
-        <MenuContext.Provider
+      <MenuContext.Provider
+        value={{
+          currentTab,
+          setCurrentTab
+        }}>
+        <StoreContext.Provider
           value={{
-            currentTab,
-            setCurrentTab
-          }}>
-          <StoreContext.Provider
-            value={{
-              productCollection,
-              cart,
-              updateCart,
-              showCart,
-              setShowCart,
-              showMenu,
-              setShowMenu
-            }}
-          >
-            <LandingPage />
+            productCollection,
+            cart,
+            updateCart,
+            showCart,
+            setShowCart,
+            showMenu,
+            setShowMenu
+          }}
+        >
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Landing/>} />
+              </Route>
 
-          </StoreContext.Provider>
-        </MenuContext.Provider>
+            </Routes>
+          </BrowserRouter>
+        </StoreContext.Provider>
+      </MenuContext.Provider>
 
-      </div>
     </AppContext.Provider>
   );
 }
