@@ -13,7 +13,7 @@ import NewProductsSection from './components/NewProductsSection'
 import SuperStackAboutSection from './components/SuperStackAboutSection'
 import BasicProductsSection from './components/BasicProductsSection'
 import Carousel from './components/Carousel'
-
+//import CartModal from 'src/components/CartModal'
 
 function Main() {
     const { productCollection } = useContext(StoreContext)

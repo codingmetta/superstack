@@ -2,12 +2,12 @@
 
 function CartIsEmptyPlaceHolder() {
     return (
-        <span className='flex flex-col items-center justify-center w-full min-h-screen gap-6 bg-white '>
+        <div className='flex flex-col items-center justify-center w-full gap-6 overflow-auto bg-white min-h-[80vh] overscroll-auto '>
             {CustomCartIcon}
             <p className='text-lg font-light text-gray-400 '>
                 Dein Warenkorb ist leer!
             </p>
-        </span>
+        </div>
     )
 }
 

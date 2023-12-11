@@ -1,7 +1,7 @@
 'use client';
 
 import { useContext } from 'react';
-import CartItem from './CartItem';
+import CartItem from './CartItem.js';
 import { StoreContext } from 'src/context/StoreContext';
 import { calculateTotalPrice } from 'src/utils/calculate.js'
 import { formatPrice } from 'src/utils/format.js'
@@ -13,7 +13,7 @@ function CartItemsWrapper({ children }) {
     return (
         <section
             id="items-in-shopping-cart"
-            className='flex flex-row flex-wrap justify-center w-full overflow-auto text-center bg-white max-h-[35rem]'>
+            className='flex flex-row flex-wrap justify-center w-full overflow-auto text-center bg-white max-h-[33rem] overscroll-auto'>
             {children}
         </section>
     )
@@ -25,11 +25,11 @@ function Cart() {
     function handleClickCloseCart() {
         setShowCart(false);
     }
-    console.log(cart);
+    
     const totalPrice = formatPrice(calculateTotalPrice(cart));
     const isCartEmpty = cart.length === 0 ? true : false
     return (
-        <section className='flex flex-col justify-between w-full min-h-screen bg-white'>
+        <section className='flex flex-col justify-between w-full min-h-screen bg-white '>
             <div>
                 <span className="flex flex-row items-center justify-between p-6 border border-grey-200">
                     <h2 className='text-xl font-semibold '>

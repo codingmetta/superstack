@@ -4,7 +4,7 @@ function CartCheckout({ totalPrice }) {
     return (
         <section
             id="checkout-shopping-cart"
-            className="flex flex-col p-4 bg-gray-100 ">
+            className="z-50 flex flex-col p-4 overflow-hidden bg-gray-100 ">
             <div className="flex flex-row items-center justify-between w-full h-full pt-1 pb-3 border-b">
                 <h3>Versand</h3>
                 <p className='text-sm tracking-wide text-gray-400 uppercase'>

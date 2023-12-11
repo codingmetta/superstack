@@ -1,35 +1,28 @@
 import { Outlet } from "react-router-dom"
 import Header from "./Header"
 import Footer from "./Footer"
-import Cart from 'src/features/Cart'
 import { useContext } from 'react'
 import { StoreContext } from 'src/context/StoreContext'
 import Menu from "./HeaderMobile/Menu"
+import CartModal from 'src/features/CartModal'
+
 
 export default function Layout() {
-    const { showCart, showMenu } = useContext(StoreContext)
+    const {  showMenu } = useContext(StoreContext)
 
     return (
         <div className="page-container">
+            <CartModal />
+            <Header />
             {
-                showCart ?
-                    <Cart />
+                showMenu ?
+                    <Menu />
                     :
                     <>
-                        <Header />
-                        {
-                            showMenu ?
-                                <Menu />
-                                :
-                                <>
-                                    <Outlet />
-                                    <Footer />
-                                </>
-                        }
-
+                        <Outlet />
+                        <Footer />
                     </>
             }
-
         </div>
     )
 }
