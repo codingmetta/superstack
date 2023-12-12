@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion';
 import { useContext } from 'react';
 import { CardContext } from 'src/context/CardContext';
-
 function Card({ children, size }) {
-
     return (
         <CardContext.Provider
             value={{ size }}
@@ -31,7 +29,7 @@ function CardHeader({ children }) {
 
     return (
         <section className={`""
-        ${size === 'medium' ? 'w-full h-44' : ''}
+        ${size === 'medium' ? 'w-full h-44 xl:h-72' : ''}
         ${size === 'large' ? 'w-72 h-72 xl:w-[20rem] xl:h-[20rem] 2xl:w-88 2xl:h-88' : ''}
         `}>
             {children}

@@ -370,7 +370,7 @@ function SkeletonLoader() {
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     )

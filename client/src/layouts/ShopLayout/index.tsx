@@ -35,7 +35,7 @@ function CategoryLinkBtn({ relatedUrl, children }) {
 
 function LayoutWrapper({ children }) {
     return (
-        <nav className="flex flex-row justify-between w-full h-full gap-px px-2 pt-[4.5rem] pb-2 overflow-x-auto text-gray-900 flex-nowrap bg-lavendel">
+        <nav className="flex flex-row justify-between w-full h-full gap-px px-2 xl:px-20 xl:pb-8 pt-[4.5rem] xl:pt-[10rem]  pb-2 overflow-x-auto text-gray-900 flex-nowrap bg-lavendel">
             {children}
         </nav>
     );

@@ -17,7 +17,7 @@ import productData from './assets/data/productCollection.json'
 
 
 function App() {
-  const [isLoading] = useState(false);
+  const [isServerRequestPending] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
 
   const [productCollection] = useState(productData);
@@ -32,7 +32,7 @@ function App() {
   return (
     <AppContext.Provider
       value={{
-        isLoading,
+        isServerRequestPending,
         isMobile, setIsMobile
       }}>
       <MenuContext.Provider

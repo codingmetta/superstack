@@ -4,7 +4,6 @@ import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 import { filterData } from 'src/utils/filterData.js'
 import NothingFoundPlaceHolder from './NothingFoundPlaceHolder.js';
 import ProductList from './ProductList';
-import BannerText from 'src/pages/Landing/components/BannerText';
 import ProductListWrapper from './ProductListWrapper';
 
 function SearchInputWrapper({ children }) {
@@ -50,8 +49,7 @@ function ProductGalleryWithSearch({ products }) {
     const isUserTyping = searchInput ? true : false;
     const doMatchingProductsForQueryExist = filteredProducts.length > 0 ? true : false;
     return (
-        <section className='flex flex-col items-center justify-center pt-4 pb-40 lg:px-10 lg:py-20'>
-            <BannerText />
+        <>
             <SearchInputWrapper>
                 <InputIcon>
                     <MagnifyingGlassIcon className="w-6 h-6 text-gray-600" />
@@ -62,17 +60,20 @@ function ProductGalleryWithSearch({ products }) {
                 />
             </SearchInputWrapper>
 
+
             <ProductListWrapper>
-                {isUserTyping ?
-                    doMatchingProductsForQueryExist ?
-                        <ProductList productList={filteredProducts} />
+                {
+                    isUserTyping ?
+                        doMatchingProductsForQueryExist ?
+                            <ProductList productList={filteredProducts} />
+                            :
+                            <NothingFoundPlaceHolder />
                         :
-                        <NothingFoundPlaceHolder />
-                    :
-                    <ProductList productList={products} />
+                        <ProductList productList={products} />
                 }
             </ProductListWrapper>
-        </section>
+
+        </>
     );
 }
 

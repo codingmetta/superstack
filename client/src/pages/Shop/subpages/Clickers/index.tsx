@@ -9,7 +9,7 @@ import { getByCategory } from 'src/utils/get-piercings.js'
 
 function Clickers() {
     const { productCollection } = useContext(StoreContext)
-    const clickersList = getByCategory(productCollection, 'clicker')
+    const clickersList = getByCategory(productCollection, 'clickers')
 
     return (
         <MainWrapper>
