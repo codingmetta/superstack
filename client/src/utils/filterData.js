@@ -10,4 +10,5 @@ function filterData(products, searchInput) {
     return data;
 }
 
+
 export { filterData }

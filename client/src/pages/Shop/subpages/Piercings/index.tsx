@@ -4,18 +4,20 @@ import ProductListWrapper from "src/features/ProductGalleryWithSearch/ProductLis
 import { StoreContext } from "src/context/StoreContext";
 import { useContext } from "react";
 import FilterAndSortSection from "src/pages/Shop/components/FilterAndSortSection";
-
+import MainWrapper from "src/pages/Shop/components/MainWrapper";
+import { getByCategory } from 'src/utils/get-piercings.js'
 
 function Piercings() {
     const { productCollection } = useContext(StoreContext)
+    const piercingsList = getByCategory(productCollection, 'piercings')
 
     return (
-        <main className="flex flex-col w-full px-1.5 ">
+        <MainWrapper>
             <FilterAndSortSection title="Piercings" />
             <ProductListWrapper>
-                <ProductList productList={productCollection} />
+                <ProductList productList={piercingsList} />
             </ProductListWrapper>
-        </main>
+        </MainWrapper>
     )
 }
 

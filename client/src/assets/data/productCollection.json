@@ -1,0 +1,351 @@
+[     
+    {
+    "id": 17,
+    "cat": ["gutschein"],
+    "title": "Physischer Gutschein",
+    "description": "Ab 20.00 €",
+    "image": "https://www.superstack.me/cdn/shop/files/Gutschein_450x450_crop_center.png?v=1700995450",
+    "price": [20, 45, 55, 80, 150],
+    "rating": 0,
+    "materials": {
+        "base": "Titan ASTM F-136",
+        "coating": "24K Gold PVD"
+    },
+    "variant":[""],
+    "colors": [""], 
+    "sizes": ["onesize"]
+ },   
+  {
+    "id": 18,
+    "cat": ["gutschein"],
+    "title": "E-Gutschein",
+    "description": "Ab 20.00 €",
+    "image": "https://www.superstack.me/cdn/shop/files/E-Gutschein_1c077579-7b32-4daf-8c52-679cd43ef422_450x450_crop_center.png?v=1700911394",
+    "price": [20, 45, 55, 80, 150],
+    "rating": 0,
+    "materials": {
+        "base": "",
+        "coating": ""
+    },
+    "variant":[""],
+    "colors": [""], 
+    "sizes": ["onesize"]
+ },
+    {
+        "id": 1,
+        "cat": ["piercings"],
+        "title": "Super Indian Sparkle Flower",
+        "description": "",
+        "image": "https://www.superstack.me/cdn/shop/files/1_2c883d24-255c-4d57-a868-72699738b67a_700x.png?v=1681230836",
+        "price": [29.90],
+        "rating": 0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        }, 
+        "variant":["single","pair"], 
+        "colors": ["gold", "silver"],  
+        "sizes": ["4mm", "6mm", "8mm", "10mm"]
+    },
+    {
+        "id": 2,
+        "cat": ["piercings"],
+        "title": "Super Big Moon",
+        "description": "Ok, we admit it: our Piercing Super Big Moon is our favorite!",
+        "image": "https://www.superstack.me/cdn/shop/products/6_2c48d895-c82d-4567-b4c4-296fa14ded49_450x450_crop_center.png?v=1681296895",
+        "price": [17.90],
+        "rating": 0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],     
+        "sizes": ["4mm", "6mm", "8mm", "10mm"]
+    },
+    {
+        "id": 3,
+        "cat": ["piercings"],
+        "title": "Super Small Ball",
+        "description": "",
+        "image": "https://www.superstack.me/cdn/shop/files/1_caa80dc1-14c8-4404-9732-051e934d12d4_700x.png?v=1681225812",
+        "price": [17.90],
+        "rating": 5,
+        "materials": {
+            "base": "316L Chirurgischer Stahl",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],      
+        "sizes": ["4mm", "6mm", "8mm", "10mm"]
+    },
+    {
+        "id": 4,
+        "cat": ["piercings"],
+        "title": "Super Sparkle Flower BIG",
+        "description": "",
+        "image": "https://www.superstack.me/cdn/shop/products/15_2ca947e4-0205-4708-abd8-ff956ccea108.png?v=1681294730&width=493",
+        "price": [29.90],
+        "rating": 0,
+        "materials": {
+            "base": "316L Chirurgischer Stahl",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],        
+        "sizes": ["4mm", "6mm", "8mm", "10mm"]
+    },
+    {
+        "id": 5,
+        "cat": ["piercings", "hoops-huggies","clickers"],
+        "title": "Super Twist",
+        "description": "Plot twist mit unserem",
+        "image": "https://www.superstack.me/cdn/shop/products/86_450x450_crop_center.png?v=1665073563",
+        "price": [19.90],
+        "rating": 4.5,
+        "materials": {
+            "base": "316L Chirurgischer Stahl",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["5mm", "6mm", "8mm"]
+    },
+    {
+        "id": 6,
+         "cat": ["piercings","hoops-huggies", "clickers"],
+        "title": "Super Sparkle Clicker",
+        "description": "All the basic stuff you need, mit unserem",
+        "image": "https://www.superstack.me/cdn/shop/products/102_450x450_crop_center.png?v=1665072311",
+        "price": [29.90],
+        "rating": 5.0,
+        "materials": {
+            "base": "316L Chirurgischer Stahl",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["8mm", "10mm"]
+    },
+    {
+        "id": 7,
+        "cat": ["piercings","hoops-huggies","clickers"],
+        "title": "Super Basic Clicker",
+        "description": "All the basic stuff you need, mit unserem",
+        "image": "https://www.superstack.me/cdn/shop/products/5_450x450_crop_center.png?v=1681223611",
+        "price": [12.90],
+        "rating": 3.0,
+        "materials": "Copper",
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["5mm","6mm","8mm","10mm","11mm","12mm"]
+    },
+    {
+        "id": 8,
+        "cat": ["piercings", "hoops-huggies","clickers"],
+        "title": "Super Bamboo",
+        "description": "Say hello to our",
+        "image": "https://www.superstack.me/cdn/shop/products/108_450x450_crop_center.png?v=1665073664",
+        "price": [24.90],
+        "rating": 0,
+        "materials": {
+            "base": "316L Chirurgischer Stahl",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["8mm"]
+    },  
+    {
+        "id": 9,
+        "cat": ["piercings"],
+        "title": "Super Big Heart",
+        "description": "Such a Heart-Breaker!",
+        "image": "https://www.superstack.me/cdn/shop/products/1_aa1fb0b6-8bf3-47fb-8e64-ed0e17ec2d82_450x450_crop_center.png?v=1681308893",
+        "price": [17.90],
+        "rating": 0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["4mm", "6mm", "8mm", "10mm"]
+    },
+    {
+        "id": 10,
+        "cat": ["piercings"],
+        "title": "Super Tiny Butterfly",
+        "description": "We have a little secret: our Piercing Super Tiny Butterfly is so tiny it won't break your heart. ",
+        "image": "https://www.superstack.me/cdn/shop/products/105_450x450_crop_center.png?v=1665073763",
+        "price": [17.90],
+        "rating": 5.0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["4mm", "6mm", "8mm", "10mm"]
+     },
+    {
+        "id": 11,
+        "cat": ["earrings"],
+        "title": "Super Cuff",
+        "description": "Such a Heart-Breaker!",
+        "image": "https://www.superstack.me/cdn/shop/files/cuff_gold_3cbfb00f-1c46-4b01-9220-ba99d5b6995f_700x.jpg?v=1673881339",
+        "price": [19.90],
+        "rating": 0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["onesize"]
+    },
+    {
+        "id": 12,
+        "cat": ["piercings"],
+        "title": "Super Trio Sparkle",
+        "description": "We have a little secret: our Piercing Super Trio Sparkle is so tiny it won't break your heart. ",
+        "image": "https://www.superstack.me/cdn/shop/files/trio_sparkle_silber_e356bad4-32d1-4967-b9f8-031775205df5_700x.jpg?v=1673881503",
+        "price": [29.90],
+        "rating": 5.0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["4mm", "6mm", "8mm", "10mm"]
+     },
+     {
+        "id": 13,
+        "cat": ["earrings"],
+        "title": "Super Basic Gems",
+        "description": "Such Delights!",
+        "image": "https://www.superstack.me/cdn/shop/files/stein_gross_silber_700x.jpg?v=1666351488",
+        "price": [16.90],
+        "rating": 4,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["2mm", "3mm", "5mm"]
+    },
+    {
+        "id": 14,
+        "cat": ["piercings"],
+        "title": "Super Basic Clicker",
+        "description": "We have a little secret: our Piercing Super Basic Clicker is so tiny it won't break your heart. ",
+        "image": "https://www.superstack.me/cdn/shop/files/hoop_mittel_gold_700x.jpg?v=1666351810",
+        "price": [16.90],
+        "rating": 5.0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["12mm"]
+     },   
+      {
+        "id": 15,
+        "cat": ["piercings", "clickers"],
+        "title": "Super Rookie",
+        "description": "We have a little secret: our Piercing Super Rookie is so tiny it won't break your heart. ",
+        "image": "https://www.superstack.me/cdn/shop/products/62_f3bfe637-fb09-4419-9e53-6f5ef7fb1a15.png?v=1671048129&width=493",
+        "price": [24.90],
+        "rating": 4.0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["6mm", "8mm"]
+     },   
+      {
+        "id": 16,
+        "cat": ["earrings"],
+        "title": "Super Gem Scorpio ",
+        "description": " He is so tiny he will break your heart. ",
+        "image": "https://www.superstack.me/cdn/shop/products/124_450x450_crop_center.jpg?v=1665080812",
+        "price": [16.90],
+        "rating": 5.0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["onesize"]
+     },
+     {
+        "id": 17,
+        "cat": ["earrings"],
+        "title": "Super Mushroom",
+        "description": " He is so tiny he will break your heart. ",
+        "image": "https://www.superstack.me/cdn/shop/products/119_450x450_crop_center.jpg?v=1665080872",
+        "price": [16.90],
+        "rating": 5.0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["onesize"]
+     },
+     {
+        "id": 18,
+        "cat": ["chains-dangles"],
+        "title": "Super Helix Huggies",
+        "description": "Get in to those Chains! ",
+        "image": "https://www.superstack.me/cdn/shop/products/91_450x450_crop_center.png?v=1665071784",
+        "price": [24.90],
+        "rating": 4.0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["8mm"]
+     },
+     {
+        "id": 19,
+        "cat": ["chains-dangles"],
+        "title": "Super Chain",
+        "description": "Get in to those Chains!",
+        "image": "https://www.superstack.me/cdn/shop/products/109_450x450_crop_center.jpg?v=1665071550",
+        "price": [24.90],
+        "rating": 5.0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["10mm"]
+     },
+     {
+        "id": 20,
+        "cat": ["piercings"],
+        "title": "Super Tiny Flash",
+        "description": "baZZZZzzZzzz!",
+        "image": "https://www.superstack.me/cdn/shop/products/56_450x450_crop_center.png?v=1665073112",
+        "price": [17.90],
+        "rating": 5.0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "variant":["single","pair"],
+        "colors": ["gold", "silver"],  
+        "sizes": ["4mm", "6mm","8mm","10mm"]
+     }
+]

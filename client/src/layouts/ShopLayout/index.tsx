@@ -1,5 +1,6 @@
 'use client';
 import { NavLink, Outlet } from 'react-router-dom';
+import './index.css'
 
 function CategoryLinkBtn({ relatedUrl, children }) {
     if (relatedUrl === '.') {
@@ -9,8 +10,8 @@ function CategoryLinkBtn({ relatedUrl, children }) {
                 end
                 className={({ isActive, isPending }) =>
                     [
-                        isActive ? "h-10 text-lg  whitespace-nowrap  active:border active:border-black  rounded-lg  px-4 py-0.5 tracking-wider" : "tracking-wider h-10 text-lg  whitespace-nowrap border border-transparent rounded-lg  px-4 py-0.5 hover:border hover:border-black",
-                        isPending ? "h-10 text-lg  whitespace-nowrap  border border-black  rounded-lg  px-4 py-0.5 tracking-wider" : "tracking-wider h-10 text-lg  whitespace-nowrap border border-transparent rounded-lg  px-4 py-0.5 hover:border hover:border-black"
+                        isActive ? 'btn-active' : 'btn-inactive',
+                        isPending ? 'pending' : 'notpending'
                     ].join(" ")
                 }>
                 {children}
@@ -22,8 +23,8 @@ function CategoryLinkBtn({ relatedUrl, children }) {
                 to={relatedUrl}
                 className={({ isActive, isPending }) =>
                     [
-                        isActive ? "h-10 text-lg  whitespace-nowrap  active:border active:border-black border border-black  rounded-lg  px-4 py-0.5 tracking-wider" : " tracking-wider h-10 text-lg  whitespace-nowrap border border-transparent rounded-lg  px-4 py-0.5 hover:border hover:border-black",
-                        isPending ? "h-10 text-lg  whitespace-nowrap  border border-black  rounded-lg  px-4 py-0.5 tracking-wider" : "tracking-wider h-10 text-lg  whitespace-nowrap border border-transparent rounded-lg  px-4 py-0.5 hover:border hover:border-black"
+                        isActive ? 'btn-active' : 'btn-inactive',
+                        isPending ? 'pending' : 'notpending'
                     ].join(" ")
                 }>
                 {children}
@@ -34,7 +35,7 @@ function CategoryLinkBtn({ relatedUrl, children }) {
 
 function LayoutWrapper({ children }) {
     return (
-        <nav className="flex flex-row justify-between w-full h-full gap-px px-2 pt-20 pb-2 overflow-x-auto text-gray-900 flex-nowrap bg-lavendel">
+        <nav className="flex flex-row justify-between w-full h-full gap-px px-2 pt-[4.5rem] pb-2 overflow-x-auto text-gray-900 flex-nowrap bg-lavendel">
             {children}
         </nav>
     );

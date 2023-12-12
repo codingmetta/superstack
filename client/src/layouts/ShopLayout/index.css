@@ -1,0 +1,15 @@
+.btn-active {
+    @apply h-8 whitespace-nowrap border ring-black ring-1 rounded-lg px-2 py-0.5 tracking-wider
+}
+
+.btn-inactive {
+    @apply  h-8 whitespace-nowrap border border-transparent rounded-lg px-4 py-0.5 hover:ring-1 hover:ring-black tracking-wider
+}
+
+.pending {
+    @apply h-8 text-gray-400 whitespace-nowrap border ring-black ring-1 rounded-lg px-2 py-0.5 tracking-wider
+}
+
+.notpending {
+    @apply h-8  text-black whitespace-nowrap border border-transparent rounded-lg px-4 py-0.5 hover:ring-1 hover:ring-black tracking-wider
+}

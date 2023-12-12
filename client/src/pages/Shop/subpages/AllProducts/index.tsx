@@ -5,24 +5,20 @@ import { StoreContext } from "src/context/StoreContext";
 import { useContext } from "react";
 import FilterAndSortSection from "src/pages/Shop/components/FilterAndSortSection";
 import MainWrapper from "src/pages/Shop/components/MainWrapper";
-import { getByCategory } from 'src/utils/get-piercings.js'
 
 
+function AllProducts() {
 
-
-function Earrings() {
     const { productCollection } = useContext(StoreContext)
-    const earringsList = getByCategory(productCollection, 'earrings')
 
     return (
         <MainWrapper>
-            <FilterAndSortSection title="Earrings" />
+            <FilterAndSortSection title="Alle Produkte" />
             <ProductListWrapper>
-                <ProductList productList={earringsList} />
+                <ProductList productList={productCollection} />
             </ProductListWrapper>
         </MainWrapper>
     )
 }
 
-
-export default Earrings
+export default AllProducts

@@ -4,18 +4,21 @@ import ProductListWrapper from "src/features/ProductGalleryWithSearch/ProductLis
 import { StoreContext } from "src/context/StoreContext";
 import { useContext } from "react";
 import FilterAndSortSection from "src/pages/Shop/components/FilterAndSortSection";
+import MainWrapper from "src/pages/Shop/components/MainWrapper";
+import { getByCategory } from 'src/utils/get-piercings.js'
 
 
 function HoopsAndHuggies() {
     const { productCollection } = useContext(StoreContext)
-
+    const HoopsAndHuggiesList = getByCategory(productCollection, 'hoops-huggies')
+    
     return (
-        <main className="flex flex-col w-full px-1.5 ">
+        <MainWrapper>
             <FilterAndSortSection title="Hoops & Huggies" />
             <ProductListWrapper>
-                <ProductList productList={productCollection} />
+                <ProductList productList={HoopsAndHuggiesList} />
             </ProductListWrapper>
-        </main>
+        </MainWrapper>
     )
 }
 

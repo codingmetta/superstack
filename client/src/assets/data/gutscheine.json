@@ -1,0 +1,30 @@
+[
+    {
+        "id": 17,
+        "cat": ["gutschein"],
+        "title": "Physischer Gutschein",
+        "description": "Ab 20.00 €",
+        "image": "https://www.superstack.me/cdn/shop/files/Gutschein_450x450_crop_center.png?v=1700995450",
+        "price": "ab 20€",
+        "rating": 5.0,
+        "materials": {
+            "base": "Titan ASTM F-136",
+            "coating": "24K Gold PVD"
+        },
+        "sizes": ["12mm"]
+    },   
+    {
+        "id": 18,
+        "cat": ["gutschein"],
+        "title": "E-Gutschein",
+        "description": "Ab 20.00 €",
+        "image": "https://www.superstack.me/cdn/shop/files/E-Gutschein_1c077579-7b32-4daf-8c52-679cd43ef422_450x450_crop_center.png?v=1700911394",
+        "price": "ab 20€",
+        "rating": 0,
+        "materials": {
+            "base": "",
+            "coating": ""
+        },
+        "sizes": ["20€", "45€","55€","80€","100€","150€"]
+    }
+]

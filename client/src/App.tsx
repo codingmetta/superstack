@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { StoreContext } from './context/StoreContext'
 import { MenuContext } from './context/MenuContext'
 import { AppContext } from './context/AppContext'
@@ -12,7 +12,7 @@ import ChainsAndDangles from './pages/Shop/subpages/ChainsAndDangles'
 import Clickers from './pages/Shop/subpages/Clickers'
 import HoopsAndHuggies from './pages/Shop/subpages/HoopsAndHuggies'
 import Earrings from './pages/Shop/subpages/Earrings'
-import productData from './assets/data/products.json'
+import productData from './assets/data/productCollection.json'
 
 
 
