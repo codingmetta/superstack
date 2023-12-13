@@ -6,6 +6,7 @@ import { useContext, useState } from "react";
 import FilterAndSortSection from "../../components/FilterAndSortSection";
 import MainWrapper from "src/pages/Shop/components/MainWrapper";
 import { CategoryContext } from "src/context/CategoryContext";
+
 function AllProducts() {
 
     const { productCollection } = useContext(StoreContext);

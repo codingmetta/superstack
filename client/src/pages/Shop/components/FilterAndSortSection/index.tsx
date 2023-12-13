@@ -1,7 +1,8 @@
 'use client';
-import { MapSortDescending } from 'src/utils/sort.js'
+import { sortByPriceAsc, sortByPriceDesc } from 'src/utils/sort.js'
 import { CategoryContext } from "src/context/CategoryContext";
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
+import { Dropdown } from 'flowbite-react';
 
 function BtnFilter({ children }) {
     return (
@@ -14,24 +15,37 @@ function BtnFilter({ children }) {
     )
 }
 
-/*
-    MapSortDescending(productCollection.slice(2, 22));
-*/
-
 function BtnSort({ children }) {
-    const { categoryProducts ,setCategoryProducts } = useContext(CategoryContext);
-    function handleSort() {
-        setCategoryProducts(MapSortDescending(categoryProducts));
+    const { categoryProducts, setCategoryProducts } = useContext(CategoryContext);
+    function handleSortDesc() {
+        setCategoryProducts(sortByPriceDesc(categoryProducts));
     }
-    
+    function handleSortAscend() {
+        setCategoryProducts(sortByPriceAsc(categoryProducts));
+    }
+
     return (
-        <button
-            onClick={handleSort}
-            type="button"
-            className='w-1/2 xl:w-1/6 h-full px-4 py-1.5 text-lg text-black bg-transparent border border-black rounded-lg tracking-wider '
+        <Dropdown
+            label=""
+            dismissOnClick={false}
+            renderTrigger={() =>
+                <span
+                    className='w-1/2 xl:w-1/6 h-full text-center px-4 py-1.5 text-lg text-black bg-transparent border border-black rounded-lg tracking-wider '
+                >
+                    {children}
+                </span>}
         >
-            {children}
-        </button>
+            <Dropdown.Item
+                onClick={handleSortAscend}>
+                Preis, niedrig nach hoch
+            </Dropdown.Item>
+            <Dropdown.Item
+                onClick={handleSortDesc}>
+                Preis, hoch nach niedrig
+            </Dropdown.Item>
+
+        </Dropdown>
+
     )
 }
 

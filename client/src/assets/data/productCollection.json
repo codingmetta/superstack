@@ -1,6 +1,6 @@
 [     
     {
-    "id": 17,
+    "id": 1,
     "cat": ["gutschein"],
     "title": "Physischer Gutschein",
     "description": "Ab 20.00 €",
@@ -16,7 +16,7 @@
     "sizes": ["onesize"]
  },   
   {
-    "id": 18,
+    "id": 2,
     "cat": ["gutschein"],
     "title": "E-Gutschein",
     "description": "Ab 20.00 €",
@@ -32,7 +32,7 @@
     "sizes": ["onesize"]
  },
     {
-        "id": 1,
+        "id": 3,
         "cat": ["piercings"],
         "title": "Super Indian Sparkle Flower",
         "description": "",
@@ -48,7 +48,7 @@
         "sizes": ["4mm", "6mm", "8mm", "10mm"]
     },
     {
-        "id": 2,
+        "id": 4,
         "cat": ["piercings"],
         "title": "Super Big Moon",
         "description": "Ok, we admit it: our Piercing Super Big Moon is our favorite!",
@@ -64,7 +64,7 @@
         "sizes": ["4mm", "6mm", "8mm", "10mm"]
     },
     {
-        "id": 3,
+        "id": 5,
         "cat": ["piercings"],
         "title": "Super Small Ball",
         "description": "",
@@ -80,7 +80,7 @@
         "sizes": ["4mm", "6mm", "8mm", "10mm"]
     },
     {
-        "id": 4,
+        "id": 6,
         "cat": ["piercings"],
         "title": "Super Sparkle Flower BIG",
         "description": "",
@@ -96,7 +96,7 @@
         "sizes": ["4mm", "6mm", "8mm", "10mm"]
     },
     {
-        "id": 5,
+        "id": 7,
         "cat": ["piercings", "hoops-huggies","clickers"],
         "title": "Super Twist",
         "description": "Plot twist mit unserem",
@@ -112,7 +112,7 @@
         "sizes": ["5mm", "6mm", "8mm"]
     },
     {
-        "id": 6,
+        "id": 8,
          "cat": ["piercings","hoops-huggies", "clickers"],
         "title": "Super Sparkle Clicker",
         "description": "All the basic stuff you need, mit unserem",
@@ -128,7 +128,7 @@
         "sizes": ["8mm", "10mm"]
     },
     {
-        "id": 7,
+        "id": 9,
         "cat": ["piercings","hoops-huggies","clickers"],
         "title": "Super Basic Clicker",
         "description": "All the basic stuff you need, mit unserem",
@@ -141,7 +141,7 @@
         "sizes": ["5mm","6mm","8mm","10mm","11mm","12mm"]
     },
     {
-        "id": 8,
+        "id": 10,
         "cat": ["piercings", "hoops-huggies","clickers"],
         "title": "Super Bamboo",
         "description": "Say hello to our",
@@ -157,7 +157,7 @@
         "sizes": ["8mm"]
     },  
     {
-        "id": 9,
+        "id": 11,
         "cat": ["piercings"],
         "title": "Super Big Heart",
         "description": "Such a Heart-Breaker!",
@@ -173,7 +173,7 @@
         "sizes": ["4mm", "6mm", "8mm", "10mm"]
     },
     {
-        "id": 10,
+        "id": 12,
         "cat": ["piercings"],
         "title": "Super Tiny Butterfly",
         "description": "We have a little secret: our Piercing Super Tiny Butterfly is so tiny it won't break your heart. ",
@@ -189,7 +189,7 @@
         "sizes": ["4mm", "6mm", "8mm", "10mm"]
      },
     {
-        "id": 11,
+        "id": 13,
         "cat": ["earrings"],
         "title": "Super Cuff",
         "description": "Such a Heart-Breaker!",
@@ -205,7 +205,7 @@
         "sizes": ["onesize"]
     },
     {
-        "id": 12,
+        "id": 14,
         "cat": ["piercings"],
         "title": "Super Trio Sparkle",
         "description": "We have a little secret: our Piercing Super Trio Sparkle is so tiny it won't break your heart. ",
@@ -221,7 +221,7 @@
         "sizes": ["4mm", "6mm", "8mm", "10mm"]
      },
      {
-        "id": 13,
+        "id": 15,
         "cat": ["earrings"],
         "title": "Super Basic Gems",
         "description": "Such Delights!",
@@ -237,8 +237,8 @@
         "sizes": ["2mm", "3mm", "5mm"]
     },
     {
-        "id": 14,
-        "cat": ["piercings"],
+        "id": 16,
+        "cat": ["piercings", "clickers"],
         "title": "Super Basic Clicker",
         "description": "We have a little secret: our Piercing Super Basic Clicker is so tiny it won't break your heart. ",
         "image": "https://www.superstack.me/cdn/shop/files/hoop_mittel_gold_700x.jpg?v=1666351810",
@@ -253,7 +253,7 @@
         "sizes": ["12mm"]
      },   
       {
-        "id": 15,
+        "id": 17,
         "cat": ["piercings", "clickers"],
         "title": "Super Rookie",
         "description": "We have a little secret: our Piercing Super Rookie is so tiny it won't break your heart. ",
@@ -269,7 +269,7 @@
         "sizes": ["6mm", "8mm"]
      },   
       {
-        "id": 16,
+        "id": 18,
         "cat": ["earrings"],
         "title": "Super Gem Scorpio ",
         "description": " He is so tiny he will break your heart. ",
@@ -285,7 +285,7 @@
         "sizes": ["onesize"]
      },
      {
-        "id": 17,
+        "id": 19,
         "cat": ["earrings"],
         "title": "Super Mushroom",
         "description": " He is so tiny he will break your heart. ",
@@ -301,7 +301,7 @@
         "sizes": ["onesize"]
      },
      {
-        "id": 18,
+        "id": 20,
         "cat": ["chains-dangles"],
         "title": "Super Helix Huggies",
         "description": "Get in to those Chains! ",
@@ -317,7 +317,7 @@
         "sizes": ["8mm"]
      },
      {
-        "id": 19,
+        "id": 21,
         "cat": ["chains-dangles"],
         "title": "Super Chain",
         "description": "Get in to those Chains!",
@@ -333,7 +333,7 @@
         "sizes": ["10mm"]
      },
      {
-        "id": 20,
+        "id": 22,
         "cat": ["piercings"],
         "title": "Super Tiny Flash",
         "description": "baZZZZzzZzzz!",

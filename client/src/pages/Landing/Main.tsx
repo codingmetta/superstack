@@ -7,15 +7,9 @@ import SuperStackAboutSection from './components/SuperStackAboutSection'
 import BasicProductsSection from './components/BasicProductsSection'
 import Carousel from './components/Carousel'
 import ProductGallerySection from './components/ProductGallerySection'
-import { MapSortDescending, MapSortAscending, sortByPriceAscending } from 'src/utils/sort.js'
-import { useContext } from 'react';
-import { StoreContext } from 'src/context/StoreContext'
 
 function Main() {
 
-    const { productCollection } = useContext(StoreContext);
-    MapSortDescending(productCollection.slice(2, 22));
-    //MapSortAscending(productCollection.slice(2, 22));
     return (
         <main>
             <Carousel />

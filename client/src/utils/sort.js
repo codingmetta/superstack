@@ -1,48 +1,25 @@
 import { quickSortDescend, quickSortAscend } from './sorting-algorithms/quicksort'
 
-const sortByPriceAscending = (products) => {
-    const pricesArr = getPricesArr(products);
-    const ascendingItems = quickSortAscend(pricesArr, 0, pricesArr.length - 1)
-    console.log('ascend: ' + ascendingItems);
-}
-const sortByPriceDescending = (products) => {
-    const pricesArr = getPricesArr(products);
-    const descendingItems = quickSortDescend(pricesArr, 0, pricesArr.length - 1)
-    console.log('desc: ' + descendingItems);
-}
 
-const getPricesArr = (products) => {
-    const pricesArr = [];
-
-    for (let i = 0; i < products.length; i++) {
-        pricesArr.push(products[i].price[0]);
-    }
-    return pricesArr;
-}
-
-
-/************************/
-
-const MapSortAscending = (products) => {
-    let unsortedProducts = products.slice();
+const sortByPriceAsc = (products) => {
+    const unsortedProducts = products.slice();
     let newOrder = {};
-    let sortedProducts;
 
-    const map = getProductsAsMap(products);
+    const map = getProductsAsMap(unsortedProducts);
     const mapAscending = sortEntriesInAscendingOrder(map);
     const ascKeysArr = extractKeys(mapAscending);
 
     ascKeysArr.forEach(function (a, i) { newOrder[a] = i; });
-    sortedProducts = sortFinal(unsortedProducts, newOrder);
+    const sortedProducts = sortFinal(unsortedProducts, newOrder);
     return sortedProducts;
 
 }
-const MapSortDescending = (products) => {
+const sortByPriceDesc = (products) => {
     let unsortedProducts = products.slice();
     let newOrder = {};
     let sortedProducts;
 
-    const map = getProductsAsMap(products);
+    const map = getProductsAsMap(products.slice());
     const mapDescending = sortEntriesInDescendingOrder(map);
     const descKeysArr = extractKeys(mapDescending);
 
@@ -75,10 +52,30 @@ const getProductsAsMap = (products) => {
     for (let i = 0; i < products.length; i++) {
         map.set(products[i].id, products[i].price[0]);
     }
-    // console.log('before sorting');
-    // console.log(map);
     return map;
 }
 
+/************************/
 
-export { sortByPriceDescending, sortByPriceAscending, MapSortDescending, MapSortAscending }
+
+const qsPriceAscending = (products) => {
+    const pricesArr = getPricesArr(products);
+    const ascendingItems = quickSortAscend(pricesArr, 0, pricesArr.length - 1)
+}
+const qsPriceDescending = (products) => {
+    const pricesArr = getPricesArr(products);
+    const descendingItems = quickSortDescend(pricesArr, 0, pricesArr.length - 1)
+}
+
+const getPricesArr = (products) => {
+    const pricesArr = [];
+
+    for (let i = 0; i < products.length; i++) {
+        pricesArr.push(products[i].price[0]);
+    }
+    return pricesArr;
+}
+
+/************************/
+
+export { sortByPriceAsc, sortByPriceDesc }
