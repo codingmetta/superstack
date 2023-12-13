@@ -13,7 +13,7 @@ function CategoryBtn({ title, imgURL, alt, url }) {
     return (
         <Link
             onClick={() => setShowMenu(false)}
-            to={`shop/${url}`}
+            to={url}
             className='flex flex-col w-40 gap-2'>
             <img
                 className="rounded-xl"
@@ -32,18 +32,36 @@ function CategoriesWrapper({ children }) {
         </section>
     );
 }
+function LocationBtn({ title, imgURL, alt, url }) {
+    const { setShowMenu } = useContext(StoreContext)
 
-
-function LocationBtn({ title, imgURL, alt }) {
     return (
-        <article className=' w-[6.5rem] p-0 m-0  '>
-            <button className='flex flex-col w-full gap-1 p-0 m-0 border-none rounded-2xl'>
-                <img className="object-fill rounded-2xl" src={imgURL} alt={alt} />
-                <h3 className='text-sm font-light tracking-wider text-start'>{title}</h3>
-            </button>
-        </article>
+            <Link
+                onClick={() => setShowMenu(false)}
+                to={url}
+                className='flex  w-[6.5rem] p-0 m-0 flex-col  gap-1  border-none rounded-2xl'>
+                <img 
+                    className="object-fill rounded-2xl" 
+                    src={imgURL} 
+                    alt={alt} />
+                <h3 className='text-sm font-light tracking-wider text-start'>
+                    {title}
+                </h3>
+            </Link>
     );
 }
+
+
+// function LocationBtn({ title, imgURL, alt }) {
+//     return (
+//         <article className=' w-[6.5rem] p-0 m-0  '>
+//             <button className='flex flex-col w-full gap-1 p-0 m-0 border-none rounded-2xl'>
+//                 <img className="object-fill rounded-2xl" src={imgURL} alt={alt} />
+//                 <h3 className='text-sm font-light tracking-wider text-start'>{title}</h3>
+//             </button>
+//         </article>
+//     );
+// }
 
 function LocationsWrapper({ children }) {
     return (
@@ -86,7 +104,12 @@ function ShopTab() {
 
                             {
                                 piercingLocationsData.map((cat) => (
-                                    <LocationBtn key={cat.id} title={cat.title} imgURL={cat.imgURL} alt={cat.alt} />
+                                    <LocationBtn 
+                                        key={cat.id}
+                                        url={cat.url} 
+                                        title={cat.title} 
+                                        imgURL={cat.imgURL} 
+                                        alt={cat.alt} />
                                 ))
                             }
 
@@ -94,8 +117,8 @@ function ShopTab() {
                     </Accordion.Content>
                 </Accordion.Panel>
             </Accordion>
-            <span className="px-6 py-4 text-lg font-extrabold tracking-wide text-black border-b bg-anti-flash">
-                Supersets <span className="text-xs align-top">Coming Soon</span>
+            <span className="px-6 py-4 text-lg font-extrabold tracking-wide text-black text-gray-500 border-b bg-anti-flash">
+                Supersets <span className="text-xs text-black align-top">Coming Soon</span>
             </span>
         </>
     );

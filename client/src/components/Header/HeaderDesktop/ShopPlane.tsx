@@ -2,8 +2,9 @@
 import categories from 'src/assets/data/categories.json'
 import piercingLocations from 'src/assets/data/piercing-locations.json'
 import PlaneWrapper from './PlaneWrapper';
+import { Link } from 'react-router-dom';
 
-function SubNavigationWrapper({ children }) {
+function SubNavWrapper({ children }) {
     return (
         <div
             className="flex flex-col self-start w-1/3 gap-2 tracking-wider uppercase ">
@@ -12,7 +13,7 @@ function SubNavigationWrapper({ children }) {
     );
 }
 
-function SubNavigation({ section, title }) {
+function SubNav({ section, title }) {
     return (
         <>
             <h3 className="text-xl font-black xl:w-44 2xl:w-44">
@@ -21,9 +22,12 @@ function SubNavigation({ section, title }) {
             <ul className="flex flex-col gap-2 ">
                 {
                     section.map((navItem) => (
-                        <li key={navItem.id}>
-                            <a href='#'>{navItem.title}</a>
-                        </li>
+                        <Link
+                            key={navItem.id}
+                            to={navItem.url}
+                        >
+                            {navItem.title}
+                        </Link>
                     ))
                 }
             </ul>
@@ -36,19 +40,19 @@ function ShopPlane() {
     return (
         <PlaneWrapper>
             <div className='flex flex-row justify-between w-7/12 gap-28 '>
-                <SubNavigationWrapper>
-                    <SubNavigation
+                <SubNavWrapper>
+                    <SubNav
                         section={categories}
                         title="Piercings & Earrings" />
-                </SubNavigationWrapper>
+                </SubNavWrapper>
 
-                <SubNavigationWrapper>
-                    <SubNavigation
+                <SubNavWrapper>
+                    <SubNav
                         section={piercingLocations}
                         title="Ear Location" />
-                </SubNavigationWrapper>
+                </SubNavWrapper>
 
-                <SubNavigationWrapper>
+                <SubNavWrapper>
                     <h3 className="text-xl font-black ">
                         Supersets
                     </h3>
@@ -57,7 +61,7 @@ function ShopPlane() {
                             Coming soon
                         </li>
                     </ul>
-                </SubNavigationWrapper>
+                </SubNavWrapper>
             </div>
             <figure className='relative w-5/12 overflow-hidden bg-white border border-black rounded-full h-2/3'>
                 <img

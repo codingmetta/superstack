@@ -2,22 +2,31 @@
 import ProductList from "src/features/ProductGalleryWithSearch/ProductList";
 import ProductListWrapper from "src/features/ProductGalleryWithSearch/ProductListWrapper";
 import { StoreContext } from "src/context/StoreContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import FilterAndSortSection from "../../components/FilterAndSortSection";
 import MainWrapper from "src/pages/Shop/components/MainWrapper";
-
-
+import { CategoryContext } from "src/context/CategoryContext";
 function AllProducts() {
 
-    const { productCollection } = useContext(StoreContext)
+    const { productCollection } = useContext(StoreContext);
+    const [categoryProducts, setCategoryProducts] = useState(productCollection.slice())
+
 
     return (
+        <CategoryContext.Provider
+        value={{
+            categoryProducts, setCategoryProducts
+        }} >
         <MainWrapper>
-            <FilterAndSortSection title="Alle Produkte" />
+            <FilterAndSortSection
+                title="Alle Produkte"
+            />
             <ProductListWrapper>
-                <ProductList productList={productCollection} />
+                <ProductList productList={categoryProducts} />
             </ProductListWrapper>
         </MainWrapper>
+        </CategoryContext.Provider>
+
     )
 }
 

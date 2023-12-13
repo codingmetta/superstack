@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect  } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { StoreContext } from './context/StoreContext'
 import { MenuContext } from './context/MenuContext'
@@ -13,6 +13,7 @@ import Clickers from './pages/Shop/subpages/Clickers'
 import HoopsAndHuggies from './pages/Shop/subpages/HoopsAndHuggies'
 import Earrings from './pages/Shop/subpages/Earrings'
 import productData from './assets/data/productCollection.json'
+import { MEDIA_BREAKPOINT_DESKTOP } from 'src/utils/constants'
 
 
 
@@ -28,12 +29,27 @@ function App() {
 
   const [currentTab, setCurrentTab] = useState('SHOP');
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < MEDIA_BREAKPOINT_DESKTOP);
+      if(window.innerWidth >= MEDIA_BREAKPOINT_DESKTOP){
+        setShowMenu(false)
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // clean up the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <AppContext.Provider
       value={{
         isServerRequestPending,
-        isMobile, setIsMobile
+        isMobile
       }}>
       <MenuContext.Provider
         value={{
@@ -69,7 +85,6 @@ function App() {
           </BrowserRouter>
         </StoreContext.Provider>
       </MenuContext.Provider>
-
     </AppContext.Provider>
   );
 }
