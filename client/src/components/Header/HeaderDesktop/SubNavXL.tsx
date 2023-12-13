@@ -10,7 +10,7 @@ function SubNavXLBtn({ onClick, viewState, relatedPlane, children }) {
             <li>
                 <Link
                     to={'booking'}
-                    className={`xl:w-48 2xl:w-52 py-0.5 xl:text-lg 2xl:text-xl tracking-wider uppercase border border-black rounded-lg bg-mint`}>
+                    className={`xl:w-48 2xl:w-52 py-0.5 xl:text-lg 2xl:text-xl tracking-wider uppercase border border-black rounded-lg bg-mint xl:px-3`}>
                     {children}
                 </Link>
             </li>

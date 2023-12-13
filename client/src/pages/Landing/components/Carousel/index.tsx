@@ -2,20 +2,28 @@
 import './index.css';
 import { CarouselCard, CarouselCardHeading, CarouselCardSubHeading } from './CarouselCard';
 import CustomFlowBiteCarousel from './CustomFlowBiteCarousel';
+import { Link } from 'react-router-dom';
 
-function CarouselBottom({ children }) {
+function CarouselBottom() {
     return (
         <div className='flex flex-col justify-center gap-4 pb-4 xl:w-5/12 2xl:w-4/12 lg:w-1/2 lg:flex-row xl:justify-between xl:pb-10'>
-            {children}
+            <CarouselBtn color='bg-mint' url='booking'>
+                Termin Buchen
+            </CarouselBtn>
+            <CarouselBtn color='bg-white' url='shop'>
+                Shop Jewelry
+            </CarouselBtn>
         </div>
     );
 }
 
-function CarouselBtn({ color, children }) {
+function CarouselBtn({ color, url, children }) {
     return (
-        <button className={`${color} w-52 lg:w-1/2 h-14 text-xl xl:px-6 lg:h-16 tracking-wide border whitespace-nowrap border-black cursor-pointer rounded-xl`}>
+        <Link
+            to={url}
+            className={`${color} w-52 lg:w-1/2 h-14 text-xl xl:px-6 lg:h-16 tracking-wide border whitespace-nowrap border-black cursor-pointer rounded-xl flex items-center justify-center`}>
             {children}
-        </button>
+        </Link>
     );
 }
 
@@ -43,14 +51,7 @@ function Carousel() {
                     <CarouselCard color='white'>
                         <CarouselCardHeading> Say Hello to your future ear piercings</CarouselCardHeading>
                     </CarouselCard>
-                    <CarouselBottom>
-                        <CarouselBtn color='bg-mint'>
-                            Termin Buchen
-                        </CarouselBtn>
-                        <CarouselBtn color='bg-white'>
-                            Shop Jewelry
-                        </CarouselBtn>
-                    </CarouselBottom>
+                    <CarouselBottom />
                 </CarouselPanel>
 
                 <CarouselPanel pos={'2'} >
@@ -58,14 +59,9 @@ function Carousel() {
                         <CarouselCardHeading>Hypoallergene Piercings</CarouselCardHeading>
                         <CarouselCardSubHeading>speziell für sensible Ohren</CarouselCardSubHeading>
                     </CarouselCard>
-                    <CarouselBottom>
-                        <CarouselBtn color='bg-mint' >
-                            Termin Buchen
-                        </CarouselBtn>
-                        <CarouselBtn color='bg-white' >
-                            Shop Jewelry
-                        </CarouselBtn>
-                    </CarouselBottom>
+                    <CarouselBottom />
+
+
                 </CarouselPanel>
 
                 <CarouselPanel pos={'3'} >
@@ -73,14 +69,7 @@ function Carousel() {
                         <CarouselCardHeading>Hypoallergene Piercings</CarouselCardHeading>
                         <CarouselCardSubHeading> für sensible Ohren</CarouselCardSubHeading>
                     </CarouselCard>
-                    <CarouselBottom>
-                        <CarouselBtn color='bg-mint' >
-                            Termin Buchen
-                        </CarouselBtn>
-                        <CarouselBtn color='bg-white' >
-                            Shop Jewelry
-                        </CarouselBtn>
-                    </CarouselBottom>
+                    <CarouselBottom />
                 </CarouselPanel>
             </CustomFlowBiteCarousel>
         </CarouselWrapper>

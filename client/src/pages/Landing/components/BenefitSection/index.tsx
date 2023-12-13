@@ -1,4 +1,6 @@
 'use client';
+import { Link } from "react-router-dom";
+import backToTop from 'src/utils/window.js';
 
 function BenefitCard({ imgURL, imgAlt, children }) {
     return (
@@ -29,7 +31,12 @@ function BenefitSection() {
                     Vertrauenswürdige Partner, die auf faire Bedingungen achten.
                 </BenefitCard>
             </div>
-            <button className='w-40 h-10 text-sm font-extrabold tracking-widest uppercase border border-black rounded-3xl bg-mauve'>View more</button>
+            <Link
+                to={'.'}
+                onClick={() => backToTop()}
+                className='flex items-center justify-center w-40 h-10 text-sm font-extrabold tracking-widest uppercase border border-black rounded-3xl bg-mauve'>
+                View more
+            </Link>
         </section>
     )
 }

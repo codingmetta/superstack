@@ -1,5 +1,6 @@
 'use client';
-
+import { Link } from "react-router-dom";
+import backToTop from 'src/utils/window.js';
 
 function SparklesDecoration() {
   return (
@@ -28,9 +29,12 @@ function CardStoreInfo() {
       <p className="text-sm tracking-wider text-center">
         Piercen heißt, sich absolut wohlzufühlen und genau das wollen wir mit unserem Piercing Pop-Up Store erreichen. Bei uns erwartet dich eine individuelle Beratung in Bezug auf Lifestyle und Anatomie, hypoallergener, cooler Erstschmuck aus Titan, erfahrene Piercer:innen und eine individuelle Nachsorgeberatung. On top findest du uns in einer großartigen Location mitten in Köln. We can’t wait to pierce you!
       </p>
-      <button type='button' className="w-40 py-2 border border-black lg:w-48 lg:py-1 lg:absolute lg:translate-y-64 rounded-xl bg-mint" >
+      <Link
+        to={'booking'}
+        onClick={() =>backToTop()}
+        className="flex items-center justify-center w-40 py-2 border border-black lg:w-48 lg:py-1 lg:absolute lg:translate-y-64 rounded-xl bg-mint" >
         Get pierced
-      </button>
+      </Link>
       <SparklesDecoration />
     </article>
   )

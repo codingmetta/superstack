@@ -3,7 +3,7 @@ import ArrowUpIcon from "@heroicons/react/24/outline/esm/ArrowUpIcon";
 import { FaPinterest, FaInstagram, FaSnapchat, FaTiktok } from "react-icons/fa";
 import NavSections from 'src/assets/data/navSections.json'
 import PaymentContainer from "./FooterPayment";
-
+import backToTop from 'src/utils/window.js'
 
 function FooterLogo() {
     return (
@@ -16,15 +16,13 @@ function FooterLogo() {
     );
 }
 
-function backToTop() {
-    window.scrollTo(0, 0);
-}
+
 
 function ScrollTopBtn() {
     return (
         <button
             className='absolute z-10 flex items-center justify-center w-8 h-8 font-bold -translate-y-24 border border-black rounded-full translate-x-28 lg:translate-x-96 bg-mint '
-            onClick={backToTop}
+            onClick={() =>backToTop()}
             id="footer-to-top-button"
             title="Go To Top">
             <ArrowUpIcon className="w-4 h-4" strokeWidth={3.5} />
