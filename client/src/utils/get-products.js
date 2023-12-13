@@ -1,4 +1,3 @@
-
 const getByCategory = (products, categoryString) => {
     return products.filter((product) => {
         return (

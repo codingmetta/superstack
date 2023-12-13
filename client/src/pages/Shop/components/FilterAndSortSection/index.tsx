@@ -1,5 +1,5 @@
 'use client';
-import { sortByPriceAsc, sortByPriceDesc } from 'src/utils/sorting-algorithms/mapsort.js'
+import { sortByPriceAsc, sortByPriceDesc, sortByAlphabeticalOrder,    sortByReverseAlphabeticalOrder} from 'src/utils/sort/map-sort.js'
 import { CategoryContext } from "src/context/CategoryContext";
 import { useContext } from 'react';
 import { Dropdown } from 'flowbite-react';
@@ -7,8 +7,9 @@ import { Dropdown } from 'flowbite-react';
 function BtnFilter({ children }) {
     return (
         <button
+            disabled
             type="button"
-            className='w-1/2 xl:w-1/6 h-full px-4 py-1.5 text-lg text-black bg-transparent border border-black rounded-lg tracking-wider '
+            className='w-1/2 xl:w-1/6 h-full px-4 py-1.5 text-lg text-gray-400 bg-transparent border border-gray-400 rounded-lg tracking-wider '
         >
             {children}
         </button>
@@ -23,7 +24,14 @@ function BtnSort({ children }) {
     function handleSortAscend() {
         setCategoryProducts(sortByPriceAsc(categoryProducts));
     }
+    function handleSortAlpha() {
+        setCategoryProducts(sortByAlphabeticalOrder(categoryProducts));
+    }
 
+    function handleSortAlphaReverse() {
+        setCategoryProducts(sortByReverseAlphabeticalOrder(categoryProducts));
+    }
+    
     return (
         <Dropdown
             label=""
@@ -42,6 +50,14 @@ function BtnSort({ children }) {
             <Dropdown.Item
                 onClick={handleSortDesc}>
                 Preis, hoch nach niedrig
+            </Dropdown.Item>
+            <Dropdown.Item
+                onClick={handleSortAlpha}>
+                Alphabetisch, A-Z
+            </Dropdown.Item>
+            <Dropdown.Item
+                onClick={handleSortAlphaReverse}>
+                Alphabetisch, Z-A
             </Dropdown.Item>
 
         </Dropdown>

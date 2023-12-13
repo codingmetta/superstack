@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
-import { filterData } from 'src/utils/filterData.js'
+import { filterData } from 'src/utils/filter-data.js'
 import NothingFoundPlaceHolder from './NothingFoundPlaceHolder.js';
 import ProductList from './ProductList';
 import ProductListWrapper from './ProductListWrapper';

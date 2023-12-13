@@ -12,7 +12,7 @@ import ChainsAndDangles from './pages/Shop/subpages/ChainsAndDangles'
 import Clickers from './pages/Shop/subpages/Clickers'
 import HoopsAndHuggies from './pages/Shop/subpages/HoopsAndHuggies'
 import Earrings from './pages/Shop/subpages/Earrings'
-import productData from './assets/data/productCollection.json'
+import productData from './assets/data/product-collection.json'
 import { MEDIA_BREAKPOINT_DESKTOP } from 'src/utils/constants'
 
 

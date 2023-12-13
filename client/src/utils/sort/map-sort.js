@@ -20,6 +20,22 @@ const sortByPriceDesc = (products) => {
     return sortedProducts;
 
 }
+const sortByAlphabeticalOrder = (products) => {
+    const unsortedProducts = copyProducts(products);
+    const ordered = unsortedProducts.sort((a, b) => a.title.localeCompare(b.title))
+    console.log(ordered);
+    return ordered;
+}
+const sortByReverseAlphabeticalOrder = (products) => {
+    const unsortedProducts = copyProducts(products);
+    const ordered = unsortedProducts.reverse((a, b) => a.title.localeCompare(b.title))
+    console.log(ordered);
+    return ordered;
+}
+
+
+
+/* HELPERS */
 
 const copyProducts = (products) => {
     return products.slice();
@@ -53,6 +69,8 @@ const sortProductsByGivenOrder = (unsortedProducts, newOrder) => {
 }
 
 
+
+
 // const sortByPriceAsc = (products) => {
 //     const unsortedProducts = products.slice();
 //     let newOrder = {};
@@ -82,4 +100,4 @@ const sortProductsByGivenOrder = (unsortedProducts, newOrder) => {
 // }
 
 
-export { sortByPriceAsc, sortByPriceDesc }
+export { sortByPriceAsc, sortByPriceDesc, sortByAlphabeticalOrder, sortByReverseAlphabeticalOrder }
