@@ -51,10 +51,10 @@ const quickSortAscend = (items, left, right) => {
     if (items.length > 1) {
         index = partitionAscending(items, left, right);
         if (left < index - 1) {
-            quickSortAscend (items, left, index - 1);
+            quickSortAscend(items, left, index - 1);
         }
         if (index < right) {
-            quickSortAscend (items, index, right);
+            quickSortAscend(items, index, right);
         }
     }
     return items;
@@ -73,4 +73,36 @@ const quickSortDescend = (items, left, right) => {
     }
     return items;
 }
-export {  quickSortDescend, quickSortAscend }
+
+const getPricesArr = (products) => {
+    const pricesArr = [];
+
+    for (let i = 0; i < products.length; i++) {
+        pricesArr.push(products[i].price[0]);
+    }
+    return pricesArr;
+}
+
+
+/************************/
+
+
+const qsPriceAscending = (products) => {
+    const pricesArr = getPricesArr(products);
+    const ascendingItems = quickSortAscend(pricesArr, 0, pricesArr.length - 1)
+    return ascendingItems;
+}
+const qsPriceDescending = (products) => {
+    const pricesArr = getPricesArr(products);
+    const descendingItems = quickSortDescend(pricesArr, 0, pricesArr.length - 1)
+    return descendingItems;
+
+}
+
+
+
+/************************/
+
+
+
+export { qsPriceAscending, qsPriceDescending }

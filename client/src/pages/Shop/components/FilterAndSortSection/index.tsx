@@ -1,5 +1,5 @@
 'use client';
-import { sortByPriceAsc, sortByPriceDesc } from 'src/utils/sort.js'
+import { sortByPriceAsc, sortByPriceDesc } from 'src/utils/sorting-algorithms/mapsort.js'
 import { CategoryContext } from "src/context/CategoryContext";
 import { useContext } from 'react';
 import { Dropdown } from 'flowbite-react';

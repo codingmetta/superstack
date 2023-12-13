@@ -4,7 +4,6 @@ import AllProducts from "./subpages/AllProducts";
 
 function Shop() {
 
-
     return (
         <AllProducts />
     )
