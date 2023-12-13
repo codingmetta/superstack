@@ -26,6 +26,8 @@ const sortByAlphabeticalOrder = (products) => {
     console.log(ordered);
     return ordered;
 }
+
+
 const sortByReverseAlphabeticalOrder = (products) => {
     const unsortedProducts = copyProducts(products);
     const ordered = unsortedProducts.reverse((a, b) => a.title.localeCompare(b.title))

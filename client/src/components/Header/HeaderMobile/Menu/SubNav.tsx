@@ -1,16 +1,20 @@
 'use client';
 import { MenuContext } from 'src/context/MenuContext';
 import { useContext } from 'react'
-
+import { Link } from 'react-router-dom';
+import { StoreContext } from 'src/context/StoreContext';
 function SubNavBtn({ onClick, viewState, relatedTab, children }) {
+    const { setShowMenu } = useContext(StoreContext)
+    
     if (relatedTab === 'BOOKING') {
         return (
             <li className='w-full'>
-                <button
-                    onClick={() => onClick(relatedTab)}
+                <Link
+                    onClick={() => setShowMenu(false)}
+                    to={'booking'}
                     className={`block px-4 py-0.5 tracking-wider whitespace-nowrap border border-black rounded-lg bg-mint`}>
                     {children}
-                </button>
+                </Link>
             </li>
         )
     } else {

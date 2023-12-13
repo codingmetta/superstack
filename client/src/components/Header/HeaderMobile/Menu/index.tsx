@@ -36,9 +36,9 @@ function Menu() {
             {
                 currentTab === 'STORE' && <></>
             }
-            {
+            {/* {
                 currentTab === 'BOOKING' && <></>
-            }
+            } */}
         </MenuWrapper>
     );
 }

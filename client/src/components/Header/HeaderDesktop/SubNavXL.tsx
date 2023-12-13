@@ -1,18 +1,18 @@
 'use client';
 import { useContext } from 'react';
 import { PlaneContext } from 'src/context/PlaneContext';
-
+import { Link } from 'react-router-dom';
 
 function SubNavXLBtn({ onClick, viewState, relatedPlane, children }) {
 
     if (relatedPlane === 'BOOKING') {
         return (
             <li>
-                <button
-                    onMouseEnter={() => onClick(relatedPlane)}
+                <Link
+                    to={'booking'}
                     className={`xl:w-48 2xl:w-52 py-0.5 xl:text-lg 2xl:text-xl tracking-wider uppercase border border-black rounded-lg bg-mint`}>
                     {children}
-                </button>
+                </Link>
             </li>
         )
     } else {

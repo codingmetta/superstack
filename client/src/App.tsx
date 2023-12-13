@@ -1,4 +1,4 @@
-import { useState, useEffect  } from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { StoreContext } from './context/StoreContext'
 import { MenuContext } from './context/MenuContext'
@@ -14,7 +14,7 @@ import HoopsAndHuggies from './pages/Shop/subpages/HoopsAndHuggies'
 import Earrings from './pages/Shop/subpages/Earrings'
 import productData from './assets/data/product-collection.json'
 import { MEDIA_BREAKPOINT_DESKTOP } from 'src/utils/constants'
-
+import Booking from './pages/Booking'
 
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < MEDIA_BREAKPOINT_DESKTOP);
-      if(window.innerWidth >= MEDIA_BREAKPOINT_DESKTOP){
+      if (window.innerWidth >= MEDIA_BREAKPOINT_DESKTOP) {
         setShowMenu(false)
       }
     };
@@ -77,8 +77,10 @@ function App() {
                   <Route path="clickers" element={<Clickers />} />
                   <Route path="earrings" element={<Earrings />} />
                   <Route path="hoops-huggies" element={<HoopsAndHuggies />} />
-                  <Route path="chains-dangles" element={<ChainsAndDangles/>} />
+                  <Route path="chains-dangles" element={<ChainsAndDangles />} />
                 </Route>
+                <Route path="booking" element={<Booking />} />
+
               </Route>
 
             </Routes>

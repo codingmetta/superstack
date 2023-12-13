@@ -1,5 +1,5 @@
 'use client';
-import { sortByPriceAsc, sortByPriceDesc, sortByAlphabeticalOrder,    sortByReverseAlphabeticalOrder} from 'src/utils/sort/map-sort.js'
+import { sortByPriceAsc, sortByPriceDesc, sortByAlphabeticalOrder, sortByReverseAlphabeticalOrder } from 'src/utils/sort/map-sort.js'
 import { CategoryContext } from "src/context/CategoryContext";
 import { useContext } from 'react';
 import { Dropdown } from 'flowbite-react';
@@ -18,12 +18,15 @@ function BtnFilter({ children }) {
 
 function BtnSort({ children }) {
     const { categoryProducts, setCategoryProducts } = useContext(CategoryContext);
+
     function handleSortDesc() {
         setCategoryProducts(sortByPriceDesc(categoryProducts));
     }
+
     function handleSortAscend() {
         setCategoryProducts(sortByPriceAsc(categoryProducts));
     }
+
     function handleSortAlpha() {
         setCategoryProducts(sortByAlphabeticalOrder(categoryProducts));
     }
@@ -31,7 +34,7 @@ function BtnSort({ children }) {
     function handleSortAlphaReverse() {
         setCategoryProducts(sortByReverseAlphabeticalOrder(categoryProducts));
     }
-    
+
     return (
         <Dropdown
             label=""
@@ -59,7 +62,6 @@ function BtnSort({ children }) {
                 onClick={handleSortAlphaReverse}>
                 Alphabetisch, Z-A
             </Dropdown.Item>
-
         </Dropdown>
 
     )
