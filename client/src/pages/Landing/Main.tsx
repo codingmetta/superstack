@@ -1,12 +1,15 @@
-import TabStrip from './components/TabStrip'
-import BenefitSection from './components/BenefitSection'
-import StoreInfoSection from './components/StoreInfoSection'
 import NewEarsSection from './components/NewEarsSection'
-import NewProductsSection from './components/NewProductsSection'
-import SuperStackAboutSection from './components/SuperStackAboutSection'
 import BasicProductsSection from './components/BasicProductsSection'
-import Carousel from './components/Carousel'
 import ProductGallerySection from './components/ProductGallerySection'
+
+import { lazy } from 'react';
+const TabStrip = lazy(() => import('./components/TabStrip'))
+const Carousel = lazy(() => import('./components/Carousel'))
+const SuperStackAboutSection = lazy(() => import('./components/SuperStackAboutSection'))
+const BenefitSection = lazy(() => import('./components/BenefitSection'))
+const NewProductsSection = lazy(() => import('./components/NewProductsSection'))
+const StoreInfoSection = lazy(() => import('./components/StoreInfoSection'))
+
 
 function Main() {
 

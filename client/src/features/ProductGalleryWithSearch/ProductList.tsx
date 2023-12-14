@@ -1,5 +1,6 @@
 'use client';
-import ProductCard from "src/components/ProductCard";
+import { lazy } from 'react';
+const ProductCard = lazy(() => import("src/components/ProductCard"));
 import { nanoid } from "nanoid";
 
 function ProductList({ productList }) {

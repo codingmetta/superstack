@@ -1,16 +1,19 @@
 'use client';
-import { useState } from 'react';
+import { useState, lazy } from 'react';
 
 import { PlaneContext } from "src/context/PlaneContext";
 
 import SearchBtn from "src/components/ui/SearchBtn";
 import CartBtn from "src/components/ui/CartBtn";
 import Logo from "src/components/ui/Logo";
-
 import SubNavXL from "./SubNavXL";
-import ShopPlane from "./ShopPlane";
-import AboutPlane from "./AboutPlane";
-import GuidesPlane from "./GuidesPlane";
+
+
+const ShopPlane = lazy(() => import('./ShopPlane'));
+const AboutPlane = lazy(() => import('./AboutPlane'));
+const GuidesPlane = lazy(() => import('./GuidesPlane'));
+
+
 
 
 

@@ -5,9 +5,10 @@ import Rating from 'src/components/ui/Rating';
 import { StoreContext } from 'src/context/StoreContext.js'
 import { calculateProductVariantPrice } from 'src/utils/calculate.js'
 import { formatRatingToRoundedValue, formatPrice } from 'src/utils/format.js'
-import Card from './Card'
 import SkeletonCard from './Card/SkeletonCard';
 import { AppContext } from 'src/context/AppContext';
+import Card from './Card';
+
 
 function ProductCard({ product, size }) {
     const { isServerRequestPending } = useContext(AppContext)
