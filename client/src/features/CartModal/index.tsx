@@ -3,9 +3,11 @@ import Cart from './Cart';
 
 function CartModal() {
     return (
-        <CustomModalFlowbite>
-            <Cart />
-        </CustomModalFlowbite>
+        <div className='transition-opacity duration-500 '>
+            <CustomModalFlowbite>
+                <Cart />
+            </CustomModalFlowbite>
+        </div>
     )
 }
 

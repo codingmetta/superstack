@@ -9,7 +9,7 @@ function BtnFilter({ children }) {
         <button
             disabled
             type="button"
-            className='w-1/2 xl:w-1/6 h-full px-4 py-1.5 text-lg text-gray-400 bg-transparent border border-gray-400 rounded-lg tracking-wider '
+            className='w-1/2 sm:w-4/12 md:w-3/12 xl:w-3/12 2xl:w-1/6 h-full px-4 py-1.5 text-lg text-gray-400 bg-transparent border border-gray-400 rounded-lg tracking-wider '
         >
             {children}
         </button>
@@ -37,28 +37,33 @@ function BtnSort({ children }) {
 
     return (
         <Dropdown
+        inline
             label=""
             dismissOnClick={false}
             renderTrigger={() =>
                 <span
-                    className='w-1/2 xl:w-1/6 h-full text-center px-4 py-1.5 text-lg text-black bg-transparent border border-black rounded-lg tracking-wider '
+                    className='w-1/2 sm:w-4/12 md:w-3/12 xl:w-3/12 2xl:w-1/6 h-full text-center px-4 py-1.5 text-lg text-black bg-transparent border border-black rounded-lg tracking-wider '
                 >
                     {children}
                 </span>}
         >
             <Dropdown.Item
+                className=' lg:px-12 xl:px-16 2xl:px-12'
                 onClick={handleSortAscend}>
-                Preis, niedrig nach hoch
+                Preis, niedrig zu hoch
             </Dropdown.Item>
             <Dropdown.Item
+                className='lg:px-12 xl:px-16 2xl:px-12'
                 onClick={handleSortDesc}>
-                Preis, hoch nach niedrig
+                Preis, hoch zu niedrig
             </Dropdown.Item>
             <Dropdown.Item
+                className=' lg:px-12 xl:px-16 2xl:px-12'
                 onClick={handleSortAlpha}>
                 Alphabetisch, A-Z
             </Dropdown.Item>
             <Dropdown.Item
+                className=' lg:px-12 xl:px-16 2xl:px-12'
                 onClick={handleSortAlphaReverse}>
                 Alphabetisch, Z-A
             </Dropdown.Item>
@@ -76,7 +81,7 @@ function FilterAndSortSection({ title }) {
             <h2 className="self-start text-2xl xl:text-3xl font-unbounded">
                 {title}
             </h2>
-            <span className="flex flex-row justify-around w-full gap-3 xl:justify-center flex-nowrap">
+            <span className="flex flex-row justify-around w-full gap-3 sm:justify-center flex-nowrap">
                 <BtnFilter>Filter</BtnFilter>
                 <BtnSort>Sortieren</BtnSort>
             </span>

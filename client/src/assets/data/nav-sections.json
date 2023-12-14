@@ -5,12 +5,12 @@
         {
           "id": 1,
           "title": "Piercings & Earrings",
-          "url": "pages/collections-all"
+          "url": "/shop"
         },
         {
           "id": 2,
           "title": "Ear Location",
-          "url": "pages/collections-all"
+          "url": "/shop"
         }
       ]
     },
@@ -20,22 +20,22 @@
         {
           "id": 1,
           "title": "About us",
-          "url": "pages/about"
+          "url": "#"
         },
         {
           "id": 2,
           "title": "Piercing Guide",
-          "url": "pages/piercing-guide"
+          "url": "#"
         },
         {
           "id": 3,
           "title": "Pflege Guide",
-          "url": "pages/care-guide"
+          "url": "#"
         },
         {
           "id": 4,
           "title": "Stacking Guide",
-          "url": "pages/stacking-guide"
+          "url": "#"
         },
         {
           "id": 5,
@@ -65,7 +65,7 @@
         {
           "id": 1,
           "title": "Kontakt",
-          "url": "#"
+          "url": "/booking"
         },
         {
           "id": 2,

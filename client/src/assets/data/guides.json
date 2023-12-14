@@ -2,19 +2,19 @@
     {
         "id": 1,
         "title": "Piercing Guide",
-        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/SUPERSTACK_Logo_CHROME-06.png?v=84989003078048534971658436396",
+        "imgURL": "/images/letters/chrome-p.webp",
         "alt": "Metallic P Letter"
     },
     {
         "id": 2,
         "title": "Care Guide",
-        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/SUPERSTACK_Logo_CHROME-04.png?v=92526243057158668521658436406",
+        "imgURL": "/images/letters/chrome-c.webp",
         "alt": "Metallic C Letter"
     },
     {
         "id": 3,
         "title": "Stack Guide",
-        "imgURL": "https://www.superstack.me/cdn/shop/t/1/assets/SUPERSTACK_Logo_CHROME-02.png?v=73535193274550876861658436414",
+        "imgURL": "/images/letters/chrome-s.webp",
         "alt": "Metallic S Letter"
     }
 ]

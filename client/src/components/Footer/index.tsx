@@ -1,7 +1,7 @@
 'use client';
 import ArrowUpIcon from "@heroicons/react/24/outline/esm/ArrowUpIcon";
 import { FaPinterest, FaInstagram, FaSnapchat, FaTiktok } from "react-icons/fa";
-import NavSections from 'src/assets/data/navSections.json'
+import NavSections from 'src/assets/data/nav-sections.json'
 import PaymentContainer from "./FooterPayment";
 import backToTop from 'src/utils/window.js'
 

@@ -85,7 +85,7 @@ function TabStrip() {
                             Stacking Guide
                         </button>
                     </div>
-                    <img className="object-contain translate-y-12 h-96 lg:translate-y-12 lg:-translate-x-6 lg:h-[33rem] " src="/images/woman-standing-removebg-preview.png" alt="Brown haired white woman standing bend forward with a light smile" />
+                    <img className="object-contain translate-y-12 h-96 lg:translate-y-12 lg:-translate-x-6 lg:h-[33rem] " src="/images/woman-standing-removebg-preview.webp" alt="Brown haired white woman standing bend forward with a light smile" />
                 </TabPane>
             </Tabs>
         </div>

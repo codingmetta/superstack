@@ -66,7 +66,7 @@ function ShopPlane() {
             <figure className='relative w-5/12 overflow-hidden bg-white border border-black rounded-full h-2/3'>
                 <img
                     className='object-fill object-center xl:-translate-y-20 2xl:-translate-y-32'
-                    src="https://www.superstack.me/cdn/shop/t/1/assets/No%20one%20ever_cuttet.jpg?v=29823939530713551471659083188"
+                    src="/images/woman-sunglass-cutout.webp"
                     alt="White brunette woman with sunglasses"
                 />
             </figure>

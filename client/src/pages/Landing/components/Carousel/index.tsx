@@ -27,9 +27,9 @@ function CarouselBtn({ color, url, children }) {
     );
 }
 
-function CarouselPanel({ children, pos }) {
+function CarouselPanel({ children, bgImg }) {
     return (
-        <div className={`flex min-w-screen flex-col min-h-[89vh] lg:min-h-[72vh] xl:min-h-[86vh] 2xl:min-h-[100vh] pt-28 pb-12 px-3 items-center lg:items-start lg:justify-center lg:gap-12 lg:px-14  xl:px-16  justify-between bg-gray-400 dark:bg-gray-700 dark:text-white banner-${pos}`}>
+        <div className={`flex min-w-screen flex-col min-h-[89vh] lg:min-h-[72vh] xl:min-h-[86vh] 2xl:min-h-[100vh] pt-28 pb-12 px-3 items-center lg:items-start lg:justify-center lg:gap-12 lg:px-14  xl:px-16  justify-between bg-gray-400 dark:bg-gray-700 dark:text-white bg-no-repeat bg-cover bg-center  ${bgImg} `}>
             {children}
         </div>
     );
@@ -47,14 +47,14 @@ function Carousel() {
     return (
         <CarouselWrapper>
             <CustomFlowBiteCarousel>
-                <CarouselPanel pos={'1'} >
+                <CarouselPanel bgImg={'bg-[url(/images/woman-on-skateboard.webp)]'} >
                     <CarouselCard color='white'>
                         <CarouselCardHeading> Say Hello to your future ear piercings</CarouselCardHeading>
                     </CarouselCard>
                     <CarouselBottom />
                 </CarouselPanel>
 
-                <CarouselPanel pos={'2'} >
+                <CarouselPanel bgImg={'bg-[url(/images/piercingstudio.webp)]'}   >
                     <CarouselCard color='black' >
                         <CarouselCardHeading>Hypoallergene Piercings</CarouselCardHeading>
                         <CarouselCardSubHeading>speziell für sensible Ohren</CarouselCardSubHeading>
@@ -64,7 +64,7 @@ function Carousel() {
 
                 </CarouselPanel>
 
-                <CarouselPanel pos={'3'} >
+                <CarouselPanel bgImg={'bg-[url(/images/pink-hair-white-guy-standing.webp)]'}  >
                     <CarouselCard color='black' >
                         <CarouselCardHeading>Hypoallergene Piercings</CarouselCardHeading>
                         <CarouselCardSubHeading> für sensible Ohren</CarouselCardSubHeading>
