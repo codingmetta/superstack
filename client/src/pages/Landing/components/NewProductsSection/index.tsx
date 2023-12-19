@@ -1,8 +1,7 @@
 'use client';
-import { useContext } from 'react';
-import ProductCard from 'src/components/ProductCard/index';
+import { useContext, lazy  } from 'react';
 import { StoreContext } from 'src/context/StoreContext';
-
+const ProductCard = lazy(() => import('src/components/ProductCard/index'));
 
 export default function NewProductsSection() {
     const { productCollection } = useContext(StoreContext)

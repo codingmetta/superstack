@@ -1,6 +1,6 @@
 'use client';
-import { useContext } from 'react';
-import ProductCard from 'src/components/ProductCard/index';
+import { useContext, lazy  } from 'react';
+const ProductCard = lazy(() => import('src/components/ProductCard/index'));
 import { StoreContext } from 'src/context/StoreContext';
 
 
