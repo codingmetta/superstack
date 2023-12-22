@@ -25,7 +25,7 @@ function Tabs(props) {
                 ))}
             </ul>
             <div className="w-full h-full p-0 m-0 border-b-2 border-l-2 border-r-2 border-white rounded-b-2xl">
-                {/* show selcted tab by index*/}
+                {/* show selected tab by index*/}
                 {children[selectedTabIndex]}
             </div>
         </section>

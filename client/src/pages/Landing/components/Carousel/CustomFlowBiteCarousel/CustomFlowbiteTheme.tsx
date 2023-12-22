@@ -1,6 +1,6 @@
 import type { FlowbiteCarouselTheme } from 'flowbite-react';
 
-export const customTheme: FlowbiteCarouselTheme = { /* eslint-disable-line */
+export const customTheme: FlowbiteCarouselTheme = { 
     root: {
         base: "relative h-full w-full",
         leftControl: "absolute top-0 left-0 flex h-full items-center justify-center px-4 focus:outline-none",

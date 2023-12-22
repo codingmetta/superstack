@@ -4,8 +4,8 @@ import ImageMap from './ImageMap'
 import './index.css'
 import { motion } from 'framer-motion'
 
-
-function TabPane({ children, ...rest }) {
+/* eslint-disable-next-line */
+function TabPane({ children , ...rest  }) {
     return (
         <motion.article
             initial={{ opacity: 0, scale: 0.5 }}
