@@ -15,7 +15,11 @@ export default {
       'lila': '#7800d7',
       'lavendel': "#cca5f8", 
       'footer-mauve': '#d2aaff',
-      'mauve': '#d4b3fe'
+      'mauve': '#d4b3fe',
+      'apricot': '#f5f5f5',
+      'purple-blue': '#592ff4',
+      'paypal-yellow': '#f2ba36',
+      'amazon-yellow': '#fad676',
     },
     fontFamily:{
       'brico': ['Bricolage Grotesque'],

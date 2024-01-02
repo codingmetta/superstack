@@ -15,6 +15,7 @@ import Earrings from './pages/Shop/subpages/Earrings'
 import productData from './assets/data/product-collection.json'
 import { MEDIA_BREAKPOINT_DESKTOP } from 'src/utils/constants'
 import Booking from './pages/Booking'
+import Checkout from './pages/Checkout'
 
 
 function App() {
@@ -80,9 +81,8 @@ function App() {
                   <Route path="chains-dangles" element={<ChainsAndDangles />} />
                 </Route>
                 <Route path="booking" element={<Booking />} />
-
               </Route>
-
+              <Route path="/checkout" element={<Checkout />} />
             </Routes>
           </BrowserRouter>
         </StoreContext.Provider>

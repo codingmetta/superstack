@@ -52,17 +52,6 @@ function LocationBtn({ title, imgURL, alt, url }) {
 }
 
 
-// function LocationBtn({ title, imgURL, alt }) {
-//     return (
-//         <article className=' w-[6.5rem] p-0 m-0  '>
-//             <button className='flex flex-col w-full gap-1 p-0 m-0 border-none rounded-2xl'>
-//                 <img className="object-fill rounded-2xl" src={imgURL} alt={alt} />
-//                 <h3 className='text-sm font-light tracking-wider text-start'>{title}</h3>
-//             </button>
-//         </article>
-//     );
-// }
-
 function LocationsWrapper({ children }) {
     return (
         <section className='flex flex-row flex-wrap items-center justify-start w-full h-full gap-1.5  bg-anti-flash'>
