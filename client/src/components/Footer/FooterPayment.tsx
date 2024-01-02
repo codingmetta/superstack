@@ -30,7 +30,7 @@ function FooterPayment() {
                         <img
                             className="object-scale-down w-full max-h-4"
                             src="https://upload.wikimedia.org/wikipedia/commons/8/87/Giropay.svg"
-                            alt="Mastercard Logo"
+                            alt="Giropay Logo"
                         />
                     </div>
                 </li>
@@ -39,7 +39,7 @@ function FooterPayment() {
                         <img
                             className="object-scale-down w-full max-h-4"
                             src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg"
-                            alt="Mastercard Logo"
+                            alt="Google Pay Logo"
                         />
                     </div>
                 </li>
