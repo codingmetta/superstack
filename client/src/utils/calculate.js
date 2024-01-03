@@ -32,4 +32,8 @@ const determineExpression = (dir) => {
     return null;
 }
 
-export { calculateItemsInCartTotal, calculateTotalPrice, calculateProductVariantPrice, determineExpression } 
+const calculateMwSt = (price) => {
+    return 0.19*price;
+}
+
+export { calculateMwSt, calculateItemsInCartTotal, calculateTotalPrice, calculateProductVariantPrice, determineExpression } 

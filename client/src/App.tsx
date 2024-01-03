@@ -82,7 +82,7 @@ function App() {
                 </Route>
                 <Route path="booking" element={<Booking />} />
               </Route>
-              <Route path="/checkout" element={<Checkout />} />
+              <Route path="checkout" element={<Checkout />} />
             </Routes>
           </BrowserRouter>
         </StoreContext.Provider>

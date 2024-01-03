@@ -1,4 +1,6 @@
 'use client';
+import { Link } from "react-router-dom";
+import backToTop from 'src/utils/window.js';
 
 function CartCheckout({ totalPrice }) {
     return (
@@ -15,9 +17,12 @@ function CartCheckout({ totalPrice }) {
                 <h3>Zwischensumme</h3>
                 <p>{totalPrice} €</p>
             </div>
-            <button className='w-full text-sm text-white bg-black rounded h-14 text-bold'>
+            <Link
+                onClick={() => backToTop()}
+                to="/checkout"
+                className='flex items-center justify-center w-full text-white bg-black rounded text-md h-14 text-bold'>
                 Checkout
-            </button>
+            </Link>
         </section>
     )
 }

@@ -9,13 +9,15 @@ import { useState } from 'react'
 function Main() {
 
     const [selectedPanel, setSelectedPanel] = useState('KREDITKARTE')
-    
+    const [deliveryDetails, setDeliveryDetails] = useState({})
     
     return (
         <CheckoutContext.Provider
             value={{
                 selectedPanel, 
-                setSelectedPanel
+                setSelectedPanel,
+                deliveryDetails, 
+                setDeliveryDetails
             }}>
             <main className="flex flex-col w-full h-full min-h-screen gap-4 bg-apricot">
                 <OverviewAccordion />

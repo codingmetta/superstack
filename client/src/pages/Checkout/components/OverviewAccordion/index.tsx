@@ -1,16 +1,22 @@
 import OrderOverview from '../OrderOverview'
 import { Accordion } from 'flowbite-react'
 import { customAccordionTheme } from './CustomAccordionTheme'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { StoreContext } from 'src/context/StoreContext';
+import { calculateTotalPrice } from 'src/utils/calculate.js'
+import { formatPrice } from 'src/utils/format.js'
 
 function OverviewAccordion() {
 
     const [isOpen, setIsOpen] = useState(false)
-
+    const { cart } = useContext(StoreContext)
+    
     function handleClick() {
         setIsOpen(prev => !prev)
     }
+
+    const totalPrice = formatPrice(calculateTotalPrice(cart));
 
     return (
         <Accordion
@@ -28,7 +34,9 @@ function OverviewAccordion() {
                             </p>
                             {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
                         </span>
-                        <p className='text-lg text-black whitespace-nowrap'>17,90 €</p>
+                        <p className='text-lg text-black whitespace-nowrap'>
+                            {totalPrice} €
+                        </p>
                     </div>
                 </Accordion.Title>
                 <Accordion.Content>

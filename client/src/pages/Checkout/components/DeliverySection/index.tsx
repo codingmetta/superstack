@@ -1,4 +1,5 @@
 import DeliveryForm from '../DeliveryForm';
+import ShippingInfoPanel from '../ShippingInfoPanel';
 
 function DeliverySection() {
     return (
@@ -8,7 +9,7 @@ function DeliverySection() {
             <DeliveryForm />
 
             <h3 className='pt-3 text-lg font-semibold'>Versand</h3>
-            <p className='p-4 text-sm text-gray-600 border border-transparent rounded bg-apricot'>Gib deine Lieferadresse ein, um verfügbare Versandarten anzuzeigen.</p>
+            <ShippingInfoPanel />
         </section>
     )
 }
