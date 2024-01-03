@@ -14,8 +14,8 @@ function OverviewAccordion() {
 
     return (
         <Accordion
-            collapseAll
             theme={customAccordionTheme}
+            collapseAll
         >
             <Accordion.Panel>
                 <Accordion.Title >
@@ -30,7 +30,6 @@ function OverviewAccordion() {
                         </span>
                         <p className='text-lg text-black whitespace-nowrap'>17,90 €</p>
                     </div>
-
                 </Accordion.Title>
                 <Accordion.Content>
                     <OrderOverview />

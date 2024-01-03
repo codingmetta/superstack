@@ -10,7 +10,7 @@ export const customAccordionTheme: FlowbiteAccordionTheme =
         }
     },
     "content": {
-        "base": "py-0 px-5 "
+        "base": " "
     },
     "title": {
         "arrow": {

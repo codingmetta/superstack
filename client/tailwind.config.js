@@ -20,7 +20,8 @@ export default {
       'purple-blue': '#592ff4',
       'paypal-yellow': '#f2ba36',
       'amazon-yellow': '#fad676',
-      'off-white': '#f3f4f6'
+      'off-white': '#f3f4f6',
+      'paypal-blue': '#0070ba'
     },
     fontFamily:{
       'brico': ['Bricolage Grotesque'],

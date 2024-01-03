@@ -1,8 +1,12 @@
 import { Accordion } from 'flowbite-react';
 import { customAccordionTheme } from './CusAccordionTheme';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { SiVisa, SiKlarna } from 'react-icons/si';
-
+import DeliveryForm from '../../DeliveryForm';
+import { LuLock } from "react-icons/lu";
+import { IoHelpCircleOutline } from "react-icons/io5";
+import { CheckoutContext } from 'src/context/CheckoutContext';
+import RedirectInfoPanel from '../../RedirectInfoPanel';
 
 function LogoWrapper({ children }) {
     return (
@@ -23,13 +27,59 @@ function TitleWrapper({ children, currentPanel, handleClick }) {
     );
 }
 
+function PaymentDetailsForm() {
+    return (
+        <section className='flex flex-col gap-3'>
+            <span className='relative flex flex-row items-center justify-center w-full'>
+                <input
+                    type="text"
+                    className='block w-full h-12 text-sm border border-gray-300 rounded focus:border-footer-mauve'
+                    placeholder='Kartennummer'
+                />
+                <span className="absolute inset-y-0 flex items-center pr-4 pointer-events-none end-0">
+                    <LuLock className="w-5 h-4 text-gray-500" />
+                </span>
+            </span>
+
+            <input
+                type="text"
+                className='block w-full h-12 text-sm border border-gray-300 rounded focus:border-footer-mauve'
+                placeholder='Gültig bis (MM/JJ)'
+            />
+
+            <span className='relative flex flex-row items-center justify-center w-full'>
+                <input
+                    type="text"
+                    className='block w-full h-12 text-sm border border-gray-300 rounded focus:border-footer-mauve'
+                    placeholder='Kartennummer'
+                />
+                <span className="absolute inset-y-0 flex items-center pr-4 pointer-events-none end-0">
+                    <IoHelpCircleOutline className="w-5 h-5 text-gray-500" />
+                </span>
+            </span>
+
+            <input
+                type="text"
+                className='block w-full h-12 text-sm border border-gray-300 rounded focus:border-footer-mauve'
+                placeholder='Name des Karteninhabers'
+            />
+
+        </section>
+    );
+
+}
 
 function PaymentAccordion() {
 
-    const [selectedPanel, setSelectedPanel] = useState('KREDITKARTE')
+    const { selectedPanel, setSelectedPanel } = useContext(CheckoutContext)
+    const [adressIsIdentical, setAdressIsIdentical] = useState(false);
 
     function handleClick(panel) {
         setSelectedPanel(panel)
+    }
+
+    function handleSameAdressSelected() {
+        setAdressIsIdentical(prev => !prev)
     }
     return (
 
@@ -74,10 +124,34 @@ function PaymentAccordion() {
                     </TitleWrapper>
                 </Accordion.Title>
                 <Accordion.Content>
+                    <div className='flex flex-col w-full h-full gap-5'>
 
+                        <PaymentDetailsForm />
+
+                        <span className='flex justify-between w-full gap-3 '>
+                            <input
+                                onChange={handleSameAdressSelected}
+                                type="checkbox"
+                                className='border-gray-300 rounded accent-pink-500 '
+                            />
+                            <p className='text-sm text-gray-700'>Lieferadresse als Rechnungsadresse verwenden</p>
+                        </span>
+
+
+                        {
+                            !adressIsIdentical &&
+
+                            <div className='flex flex-col gap-3'>
+                                <h3 className='text-lg font-semibold'>Rechnungsadresse</h3>
+                                <DeliveryForm />
+                            </div>
+
+                        }
+                    </div>
 
                 </Accordion.Content>
             </Accordion.Panel>
+
             <Accordion.Panel>
                 <Accordion.Title>
                     <TitleWrapper handleClick={handleClick} currentPanel={'PAYPAL'}>
@@ -93,14 +167,11 @@ function PaymentAccordion() {
                                 src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
                                 alt="Paypal Logo"
                             />
-                            {/* <span className='w-8 bg-white'></span> */}
                         </div>
                     </TitleWrapper>
                 </Accordion.Title>
-                <Accordion.Content>
-
-                </Accordion.Content>
             </Accordion.Panel>
+
             <Accordion.Panel>
                 <Accordion.Title>
                     <TitleWrapper handleClick={handleClick} currentPanel={'AMAZON'}>
@@ -118,14 +189,14 @@ function PaymentAccordion() {
                                 "
                                 alt="Amazon Pay Logo"
                             />
-                            {/* <span className='w-8 bg-white'></span> */}
                         </div>
                     </TitleWrapper>
                 </Accordion.Title>
                 <Accordion.Content>
-
+                <RedirectInfoPanel paymentProvider='Amazon' />
                 </Accordion.Content>
             </Accordion.Panel>
+
             <Accordion.Panel>
                 <Accordion.Title>
                     <TitleWrapper handleClick={handleClick} currentPanel={'KLARNA'}>
@@ -140,14 +211,14 @@ function PaymentAccordion() {
                             <div className="flex items-center justify-center w-10 h-6 overflow-hidden bg-[#ffb3c7] border-transparent rounded">
                                 <SiKlarna className="w-8" />
                             </div>
-                            {/* <span className='w-8 bg-white'></span> */}
                         </div>
                     </TitleWrapper>
                 </Accordion.Title>
                 <Accordion.Content>
-
+                <RedirectInfoPanel paymentProvider='Klarna' />
                 </Accordion.Content>
             </Accordion.Panel>
+
             <Accordion.Panel>
                 <Accordion.Title>
                     <TitleWrapper handleClick={handleClick} currentPanel={'SOFORT'}>
@@ -171,9 +242,10 @@ function PaymentAccordion() {
 
                 </Accordion.Title>
                 <Accordion.Content>
-
+                <RedirectInfoPanel paymentProvider='Sofortüberweisung' />
                 </Accordion.Content>
             </Accordion.Panel>
+
             <Accordion.Panel>
                 <Accordion.Title>
                     <TitleWrapper handleClick={handleClick} currentPanel={'GIRO'}>
@@ -197,7 +269,7 @@ function PaymentAccordion() {
 
                 </Accordion.Title>
                 <Accordion.Content>
-
+                    <RedirectInfoPanel paymentProvider='Giropay' />
                 </Accordion.Content>
             </Accordion.Panel>
 
