@@ -10,14 +10,17 @@ function Main() {
 
     const [selectedPanel, setSelectedPanel] = useState('KREDITKARTE')
     const [deliveryDetails, setDeliveryDetails] = useState({})
-    
+    const [isValidForm, setIsValidForm] = useState(false);
+
     return (
         <CheckoutContext.Provider
             value={{
                 selectedPanel, 
                 setSelectedPanel,
                 deliveryDetails, 
-                setDeliveryDetails
+                setDeliveryDetails,
+                isValidForm,
+                setIsValidForm
             }}>
             <main className="flex flex-col w-full h-full min-h-screen gap-4 bg-apricot">
                 <OverviewAccordion />

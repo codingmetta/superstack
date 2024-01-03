@@ -1,26 +1,55 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import MagnifyingGlassIcon from '@heroicons/react/20/solid/esm/MagnifyingGlassIcon';
 import { CheckoutContext } from "src/context/CheckoutContext";
 
 
-/*TODO: Input Validation for PLZ, city, name*/
+/*TODO: 
+    - Input Validation for PLZ, city, name etc
+    - Validation for Form Completion
+    - Calculate shipping cost depending on total price/distance
+*/
+
+
 export default function DeliveryForm() {
 
 
     const [showInput, setShowInput] = useState(false);
-    const { deliveryDetails, setDeliveryDetails } = useContext(CheckoutContext)
-    // const [isValidForm, setIsValidForm] = useState(false);
+    const { deliveryDetails, setDeliveryDetails, setIsValidForm } = useContext(CheckoutContext)
+
+    useEffect(() => {
+        setDeliveryDetails(
+            {
+                ...deliveryDetails,
+                country: 'Deutschland'
+            }
+        )
+    }, [])
 
 
+    function validator() {
+        if (deliveryDetails.country !== undefined &&
+            deliveryDetails.firstName !== undefined &&
+            deliveryDetails.lastName !== undefined &&
+            deliveryDetails.postcode !== undefined &&
+            deliveryDetails.adress !== undefined &&
+            deliveryDetails.city !== undefined) {
+            if (
+                deliveryDetails.country.length > 0 &&
+                deliveryDetails.firstName.length > 0 &&
+                deliveryDetails.lastName.length > 0 &&
+                deliveryDetails.postcode.length > 0 &&
+                deliveryDetails.adress.length > 0 &&
+                deliveryDetails.city.length > 0) {
+                setIsValidForm(true)
+            } else {
+                setIsValidForm(false)
+            }
 
-    // function validate(deliveryDetails) {
-    //     if (deliveryDetails.hasAttribute('firstName')) {
-    //         setIsValidForm(true);
-    //     }
-    //     else {
-    //         setIsValidForm(false);
-    //     }
-    // }
+        }
+        else {
+            setIsValidForm(false)
+        }
+    }
 
     function handleOnClick() {
         setShowInput(prev => !prev)
@@ -33,6 +62,7 @@ export default function DeliveryForm() {
                 firstName: e.target.value
             }
         )
+        validator();
     }
 
     function handleLastNameChanged(e) {
@@ -42,6 +72,7 @@ export default function DeliveryForm() {
                 lastName: e.target.value
             }
         )
+        validator();
     }
 
     function handleAdressChanged(e) {
@@ -51,6 +82,7 @@ export default function DeliveryForm() {
                 adress: e.target.value
             }
         )
+        validator();
     }
 
     function handleFloorChanged(e) {
@@ -60,6 +92,7 @@ export default function DeliveryForm() {
                 floor: e.target.value
             }
         )
+        validator();
     }
 
     function handlePostcodeChanged(e) {
@@ -69,6 +102,7 @@ export default function DeliveryForm() {
                 postcode: e.target.value
             }
         )
+        validator();
     }
 
     function handleCityChanged(e) {
@@ -78,6 +112,7 @@ export default function DeliveryForm() {
                 city: e.target.value
             }
         )
+        validator();
     }
     function handleCountryChanged(e) {
         setDeliveryDetails(
@@ -86,14 +121,14 @@ export default function DeliveryForm() {
                 country: e.target.value
             }
         )
+        validator();
     }
 
     console.log(deliveryDetails)
     return (
         <>
             <select
-                onChange={(e) => handleCountryChanged(e)}
-                value="Deutschland"
+                onClick={(e) => handleCountryChanged(e)}
                 id="country"
                 name="country"
                 className='h-12 text-sm border border-gray-300 rounded focus:border-footer-mauve' >
