@@ -15,7 +15,7 @@ function LogoWrapper({ children }) {
 function TitleWrapper({ children, currentPanel, handleClick }) {
     return (
         <div
-            className='absolute z-20 flex flex-row items-center justify-between h-16 gap-4 pl-6 -translate-x-5 -translate-y-8 border border-transparent rounded-lg w-80'
+            className='absolute z-20 flex flex-row items-center justify-between w-full h-16 px-8 -translate-x-10 -translate-y-8 border border-transparent rounded-lg'
             onClick={() => handleClick(currentPanel)}
         >
             {children}
@@ -39,14 +39,14 @@ function PaymentAccordion() {
             <Accordion.Panel>
                 <Accordion.Title>
                     <TitleWrapper handleClick={handleClick} currentPanel={'KREDITKARTE'}>
-                        <div className='flex flex-row gap-2'>
+                        <div className='flex flex-row gap-2 '>
                             <span
                                 className={`w-5 h-5  rounded-full  ${selectedPanel === 'KREDITKARTE' ? ' border-footer-mauve bg-black border-[0.45rem]' : 'border border-gray-300'}`}>
                             </span>
                             <h3 className='text-sm'>Kreditkarte</h3>
                         </div>
 
-                        <div className='flex flex-row gap-1'>
+                        <div className='flex flex-row gap-1 '>
                             <LogoWrapper>
                                 <SiVisa />
                             </LogoWrapper>
