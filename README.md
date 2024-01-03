@@ -1,6 +1,6 @@
 # Project Overview (IN PROGRESS)
 
-This React App is a frontend clone of a webshop called [Superstack](https://www.superstack.me/). You can add and delete configurated products to your cart. 
+This React App is a frontend clone of a webshop called [Superstack](https://www.superstack.me/). You can add and delete configurated products to your cart, search and sort for the products in the shop, checkout your shoppingcart and find creative info material on the landing page. 
 
 ## Demo
 
@@ -8,7 +8,7 @@ Visit https://superstacked.web.app/ to see the current demo.
 
 ## Tech Stack
 
-`react18`, `vite` , `tailwind-css`, `flowbite-react`, `framer-motion`
+`react18`, `vite` , `tailwind-css`, `flowbite-react`, `framer-motion`, `react-router`
 
 # Installation Instructions
 
